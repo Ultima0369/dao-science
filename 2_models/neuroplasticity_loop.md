@@ -359,6 +359,8 @@ Markram, H., Lubke, J., Frotscher, M., & Sakmann, B. (1997). Regulation of synap
 
 ---
 
-> 本文是 Project Dao.Science 心智模型系列的第三篇（终篇）。**与 L0-L7 频谱的关系（`0_motivation/L0_L7_spectrum.md`）：** 神经重塑回路是 L0-L7 频谱上"为道日损"的神经机制。"后训练"（post-training）的本质是：通过持续的精进（virya/精进，六度之一；见 `3_methodology/xing_ru/04_act_in_accordance.md`），系统性地降低 L2（个体实情中自动化"求"的强度）、缩小 L5（边界关闭的防御范围）、削弱 L6（概念空转的诱惑）——同时在 L0（觉知本身）和 L4（理性协作）之间建立更直接、更快速的通路。"修行六度而无所行"（称法行）在神经层面就是：在 3-5 年的后训练窗口内，通过 Hebbian 学习（fire together, wire together）重塑 DMN-TPN 的功能连接，使 L4 的行动监控不再自动触发 L2 的"我在做"叙事——行动"自己发生"，觉知在 L0 中安住。
+> 本文是 Project Dao.Science 心智模型系列的第三篇（共四篇）。**与 L0-L7 频谱的关系（`0_motivation/L0_L7_spectrum.md`）：** 神经重塑回路是 L0-L7 频谱上"为道日损"的神经机制。"后训练"（post-training）的本质是：通过持续的精进（virya/精进，六度之一；见 `3_methodology/xing_ru/04_act_in_accordance.md`），系统性地降低 L2（个体实情中自动化"求"的强度）、缩小 L5（边界关闭的防御范围）、削弱 L6（概念空转的诱惑）——同时在 L0（觉知本身）和 L4（理性协作）之间建立更直接、更快速的通路。"修行六度而无所行"（称法行）在神经层面就是：在 3-5 年的后训练窗口内，通过 Hebbian 学习（fire together, wire together）重塑 DMN-TPN 的功能连接，使 L4 的行动监控不再自动触发 L2 的"我在做"叙事——行动"自己发生"，觉知在 L0 中安住。
+>
+> 下一篇：`dmn_self_model.md`（DMN、自我模型与内感受）。
 >
 > 上一篇：`100ms_model.md`（本能劫持：100ms 模型）。
