@@ -228,7 +228,25 @@
 | `ai_governance.md` | 应用 | 知止不殆+碳硅共生 | `04_act_in_accordance.md` | `education_by_field.md` |
 | `education_by_field.md` | 应用 | 境教=环境设计作为教学法 | `ai_governance.md` | `clinical_mental_health.md` |
 | `clinical_mental_health.md` | 应用 | 四行在临床中的应用 | `education_by_field.md` | `creativity_innovation.md` |
-| `creativity_innovation.md` | 应用 | 无为的创造+酝酿-顿悟 | `clinical_mental_health.md` | — |
+| `creativity_innovation.md` | 应用 | 无为的创造+酝酿-顿悟 | `clinical_mental_health.md` | `carbon_silicon_symbiosis.md` |
+| `carbon_silicon_symbiosis.md` | 应用 | 碳硅共生+被需要+知止 | `creativity_innovation.md` | — |
+
+---
+
+## 9. 学术预印本索引
+
+| # | 标题 | 来源模块 | 核心方程 | 参考文献 |
+|---|------|---------|---------|---------|
+| 1 | [道作为过程](paper/preprint_1/main.tex) | `01_dao_as_process.md` | 道 ≡ -∇_π G(π)（21 方程） | 15 |
+| 2 | [L0-L7 事实频谱](paper/preprint_2/main.tex) | `L0_L7_spectrum.md` | L0-L7 认知频谱框架 | 11 |
+| 3 | [DMN-自我-内感受三角](paper/preprint_3/main.tex) | `dmn_self_model.md` | DMN-岛叶双稳态 ODE（6 方程） | 18 |
+| 4 | [科学知识的认知层级](paper/preprint_4/main.tex) | `04_philosophy_of_science.md` | 贝叶斯后验归纳（1 方程） | 12 |
+| 5 | [社会认知与镜像共鸣](paper/preprint_5/main.tex) | `social_cognition.md` | SAB(t) 操作化（2 方程） | 22 |
+| 6 | [创造力与创新](paper/preprint_6/main.tex) | `creativity_innovation.md` | DMN-ECN 耦合 ODE（3 方程） | 15 |
+| 7 | [碳硅共生](paper/preprint_7/main.tex) | `carbon_silicon_symbiosis.md` | 知止 EFE 形式化（2 方程） | 12 |
+| 8 | [境教](paper/preprint_8/main.tex) | `education_by_field.md` | 四大道场设计原则 | 12 |
+
+所有预印本使用标准 LaTeX 编译（`pdflatex main.tex` × 2）。详见 `paper/README.md`。
 
 ---
 

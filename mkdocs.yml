@@ -8,6 +8,7 @@ theme:
     - search.highlight
 nav:
   - 首页: README.md
+  - 项目图谱: 0_motivation/project_map.md
   - 动机:
     - 为什么重要: 0_motivation/why_this_matters.md
     - L0-L7 事实频谱: 0_motivation/L0_L7_spectrum.md
