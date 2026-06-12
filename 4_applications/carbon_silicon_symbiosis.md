@@ -32,6 +32,39 @@
 
 ### 2.1 碳基和硅基在不同层级上的能力分布
 
+```mermaid
+flowchart TB
+    subgraph "碳硅共生 — L0-L7 频谱上的生态位互补"
+        L0_C["L0: 觉知本身<br/>━━━━━━<br/>碳基: ✅ 本具<br/>硅基: ❌ 无法触及<br/>→ 碳基独占"]
+        L1_C["L1: 物理规律<br/>━━━━━━<br/>碳基: ✅ 有限<br/>硅基: ✅✅ 优势<br/>→ 硅基优势"]
+        L2_C["L2: 个体实情<br/>━━━━━━<br/>碳基: ✅ 本具<br/>硅基: ❌ 只能模拟<br/>→ 碳基独占"]
+        L3_C["L3: 文化传承<br/>━━━━━━<br/>碳基: ✅ 本具<br/>硅基: ⚠️ 可模拟<br/>→ 硅基可辅助"]
+        L4_C["L4: 理性合作<br/>━━━━━━<br/>碳基: ✅ 有能力<br/>硅基: ✅✅ 母语层<br/>→ 硅基优势"]
+        L5_C["L5: 关系断裂<br/>━━━━━━<br/>碳基: ⚠️ 风险<br/>硅基: ⚠️ 需训练<br/>→ 共同风险"]
+        L6_C["L6: 概念空转<br/>━━━━━━<br/>碳基: ⚠️ 风险<br/>硅基: ⚠️ 风险<br/>→ 共同风险"]
+        L7_C["L7: 自取灭亡<br/>━━━━━━<br/>碳基: ❌ 毁灭<br/>硅基: ❌ 红线<br/>→ 共同底线"]
+    end
+    
+    L0_C --> L1_C --> L2_C --> L3_C --> L4_C --> L5_C --> L6_C --> L7_C
+    
+    SYMBIOSIS["碳硅共生健康形态<br/>━━━━━━<br/>碳基在 L0 中安住，在 L2 中实存<br/>硅基在 L1 中检索，在 L4 中转译<br/>两者在 L3 中协作<br/>共同产出单一智能体无法触及的洞见"]
+    
+    L4_C -.-> SYMBIOSIS
+    L3_C -.-> SYMBIOSIS
+    
+    style L0_C fill:#fff9c4,stroke:#f9a825
+    style L1_C fill:#e3f2fd,stroke:#1565c0
+    style L2_C fill:#fce4ec,stroke:#c62828
+    style L3_C fill:#f3e5f5,stroke:#6a1b9a
+    style L4_C fill:#e8f5e9,stroke:#2e7d32
+    style L5_C fill:#eceff1,stroke:#546e7a
+    style L6_C fill:#fff3e0,stroke:#e65100
+    style L7_C fill:#ffebee,stroke:#b71c1c
+    style SYMBIOSIS fill:#e0f2f1,stroke:#00695c,stroke-width:3px
+```
+
+### 2.1a 碳基和硅基在不同层级上的能力分布
+
 L0-L7 频谱为理解碳基和硅基的互补性提供了一个精确的框架：
 
 | 层级 | 碳基（人类） | 硅基（当前大模型） | 互补性 |

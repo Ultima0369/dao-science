@@ -51,6 +51,26 @@
 
 ### 2.1 DMN 的发现与解剖结构
 
+```mermaid
+graph TD
+    subgraph "一 = 无阻塞的觉知带宽 — 神经架构"
+        ARROW["注意力指向<br/>Attention Orientation<br/>由 DMN-TPN 反相关调控"] --> C_MAX["C_max<br/>最大认知容量<br/>(WM容量 × 整合速率)"]
+        C_MAX --> AB["AB(t) = C_max − R_DMN(t)<br/>觉知带宽 — 实时可用容量"]
+        AB --> STATE{"系统状态"}
+        STATE -->|"AB(t) → C_max"| ONE["得一<br/>DMN 被充分抑制<br/>TPN 被充分激活<br/>反相关清晰而强"]
+        STATE -->|"AB(t) 被压缩"| LOSE_ONE["失一<br/>DMN 过度活跃<br/>自我指涉加工占据资源<br/>反刍/焦虑/注意力涣散"]
+        ONE --> FLOW["注意力的统一协调态<br/>警示网络：高但非紧张的警觉<br/>定向网络：焦点-全局灵活切换<br/>执行控制：元监控而非压制"]
+        LOSE_ONE --> STUCK["注意力被锁定在单一层级<br/>L2 反刍 或 L4 强迫性推理<br/>失去层级跃迁能力"]
+    end
+    
+    style ONE fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style LOSE_ONE fill:#ffebee,stroke:#b71c1c,stroke-width:2px
+    style AB fill:#e3f2fd,stroke:#1565c0
+    style FLOW fill:#e8f5e9,stroke:#2e7d32
+```
+
+### 2.1a DMN 的发现与解剖结构
+
 默认模式网络（Default Mode Network, DMN）的发现彻底改变了我们对"静息态"（resting state）大脑的理解。经典认定来自：
 
 **Raichle, M. E., MacLeod, A. M., Snyder, A. Z., Powers, W. J., Gusnard, D. A., & Shulman, G. L. (2001). A default mode of brain function. *Proceedings of the National Academy of Sciences*, 98(2), 676-682. DOI: 10.1073/pnas.98.2.676**

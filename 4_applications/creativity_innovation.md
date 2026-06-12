@@ -16,6 +16,26 @@
 
 ### 1.1 "努力"与"放手"的悖论
 
+```mermaid
+flowchart LR
+    subgraph "创造力周期：为学日益 ↔ 为道日损"
+        direction TB
+        ACCUM["为学日益<br/>━━━━━━<br/>准备 + 验证<br/>L1/L4 占优<br/>TPN 激活<br/>技能积累 / 逻辑检验<br/>注意力高度聚焦 (α→1)"]
+        RELEASE["知止<br/>━━━━━━<br/>酝酿<br/>L4→L0 回撤<br/>从 TPN 切换到 DMN<br/>精度景观扁平化<br/>注意力散布 (α→0)"]
+        INSIGHT["为道日损<br/>━━━━━━<br/>顿悟 / 明朗<br/>L0 瞬时裸露<br/>DMN-ECN 突然耦合<br/>生成模型大规模重构<br/>多巴胺 VTA→NAc '啊哈!'"]
+        
+        ACCUM -->|"主动停止聚焦<br/>在疲劳临界点前"| RELEASE
+        RELEASE -->|"自由联想漫游<br/>旧框架瓦解"| INSIGHT
+        INSIGHT -->|"新框架涌现<br/>重新锚定回 L4 验证"| ACCUM
+    end
+    
+    style ACCUM fill:#e3f2fd,stroke:#1565c0
+    style RELEASE fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style INSIGHT fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+```
+
+### 1.1a "努力"与"放手"的悖论
+
 任何经历过创造性工作的人——无论是写代码、做数学、作曲还是写作——都熟悉以下两种截然不同的体验：
 
 - **"为学日益"模式**：持续积累知识、练习技能、优化技术。这是"一万小时"的刻意练习（Ericsson et al., 1993）。注意力高度聚焦（α → 1），在 L4（理性协作——精密推理、逻辑验证）高效运作。

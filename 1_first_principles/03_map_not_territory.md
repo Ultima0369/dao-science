@@ -265,6 +265,33 @@
 
 ## 6. 综合：多重收敛
 
+### 6.0 五层防御：为什么感知永远是"相"而非"物自体"
+
+```mermaid
+graph TD
+    ENERGY["🔴 物理能量<br/>电磁辐射 / 声波 / 分子<br/>客观世界——疆域本身"]
+    
+    ENERGY -->|"第一关：感觉转导<br/>Kandel et al. 2012"| TRANSDUCE["🟠 神经编码<br/>动作电位频率与时序<br/>不再是光、声、压力本身"]
+    
+    TRANSDUCE -->|"第二关：锁脑<br/>Eagleman 2020"| LOCKED["🟡 颅骨内的封闭系统<br/>大脑从不见物理世界<br/>唯一原材料：神经脉冲流"]
+    
+    LOCKED -->|"第三关：预测加工<br/>Friston 2010; Clark 2013"| PREDICT["🟢 受控的幻觉<br/>感知=大脑的'最佳猜测'<br/>不是接收信号，是主动构建"]
+    
+    PREDICT -->|"第四关：概念中介<br/>Dharmakirti/Dignaga c. 5-6C"| CONCEPT["🔵 共相/地图<br/>凡能被认知、言说、推理的<br/>都是共相——永非自相本身"]
+    
+    CONCEPT -->|"第五关：进化设计<br/>Hoffman et al. 2015"| INTERFACE["🟣 适应性界面<br/>自然选择淘汰'真实感知'<br/>保留简化、扭曲但有效的'UI'"]
+    
+    INTERFACE --> RESULT["⚪ 心智内容 = 万物之相 ≠ 万物全部"]
+    
+    style ENERGY fill:#ff5252,stroke:#b71c1c,color:#fff
+    style TRANSDUCE fill:#ff9800,stroke:#e65100
+    style LOCKED fill:#ffc107,stroke:#f9a825
+    style PREDICT fill:#4caf50,stroke:#388e3c
+    style CONCEPT fill:#2196f3,stroke:#1565c0,color:#fff
+    style INTERFACE fill:#9c27b0,stroke:#6a1b9a,color:#fff
+    style RESULT fill:#eceff1,stroke:#546e7a,stroke-width:3px
+```
+
 上述五条学术传统——（1）科日布斯基与普通语义学，（2）佛教量论/瑜伽行派，（3）认知神经科学的感官替代与预测加工，（4）分析哲学的感知问题，（5）神经生物学的感觉转导——从不同起点、用不同方法，独立收敛于同一核心洞见：
 
 > **心智内容百分百是万物之相（表征/地图/内部模型），而非万物全部（实在/疆域/外部世界）。**

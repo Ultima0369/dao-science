@@ -14,6 +14,27 @@
 
 ### 1.1 "身教"的传统与局限
 
+```mermaid
+flowchart LR
+    subgraph "教育范式的演进：从言教到境教"
+        direction LR
+        YAN["言教<br/>Teaching by Words<br/>━━━━━━<br/>言语指令<br/>知识传授<br/>'你应该...'"]
+        SHEN["身教<br/>Teaching by Example<br/>━━━━━━<br/>行为示范<br/>观察学习 (Bandura)<br/>'我示范给你看'"]
+        JING["境教<br/>Field Education<br/>━━━━━━<br/>环境设计<br/>可供性 + 助推<br/>'环境自己会教'"]
+        
+        YAN -->|"《论语》:'其身不正<br/>虽令不从'"| SHEN
+        SHEN -->|"局限: 依赖教育者<br/>持续在场和行为一致性"| JING
+        JING -->|"《道德经》:'处无为之事<br/>行不言之教'"| TAO["道场<br/>Dao-Field<br/>━━━━━━<br/>减少 DMN 触发线索<br/>增强内感受可及性<br/>建模收放自如的节奏<br/>使地图-疆域区分可见"]
+    end
+    
+    style YAN fill:#eceff1,stroke:#546e7a
+    style SHEN fill:#e3f2fd,stroke:#1565c0
+    style JING fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style TAO fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+```
+
+### 1.1a "身教"的传统与局限
+
 在东亚教育传统中，"身教"（teaching by example / embodied teaching）被置于"言教"（teaching by words）之上。《论语·子路》："其身正，不令而行；其身不正，虽令不从。"——教育者的行为示范比其言语指令更具影响力。这一洞见在当代社会学习理论（Bandura, 1977）中获得了实证支持：观察学习（observational learning）是行为习得的基本机制，人类通过观察模型（models）的行为及其后果来学习，而非仅通过直接强化或言语指导。
 
 然而，"身教"范式存在一个结构性局限：它依赖于教育者个体的持续在场和行为一致性。在规模上——一个教师对数十名学生，一个管理者对数百名员工——"身教"的覆盖范围受限于个体注意力和示范带宽。更重要的是，"身教"仍然是一个"主体-主体"（subject-to-subject）的范式——它假设行为的传递必须经由一个有意识的、有意图的教育者。

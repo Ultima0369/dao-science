@@ -16,6 +16,39 @@
 
 ### 1.1 文本来源与结构
 
+```mermaid
+flowchart TB
+    subgraph "二入四行 — 认知重构的双轨体系"
+        direction TB
+        LI_RU["理入 (Entrance through Principle)<br/>藉教悟宗 — 通过正确概念理解<br/>建立对心智本质的准确见地<br/><br/>操作: 更新生成模型的<br/>最高层级先验"]
+        XING_RU["行入 (Entrance through Practice)<br/>四行 — 通过实际修行实践<br/>亲证并巩固见地<br/><br/>操作: 通过反复经验<br/>巩固更新后的先验"]
+        
+        LI_RU -->|"提供概念框架"| XING_RU
+        XING_RU -->|"验证并巩固"| LI_RU
+        
+        subgraph "四行 (Four Practices)"
+            P1["报冤行<br/>Embrace Suffering<br/>重塑对苦难的理解回路"]
+            P2["随缘行<br/>Flow with Causes<br/>随顺因缘而不变初心"]
+            P3["无所求行<br/>Seek Nothing<br/>停止对外部结果的执着"]
+            P4["称法行<br/>Act in Accordance<br/>与实相相应的行动"]
+        end
+        
+        XING_RU --> P1
+        XING_RU --> P2
+        XING_RU --> P3
+        XING_RU --> P4
+    end
+    
+    style LI_RU fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style XING_RU fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style P1 fill:#fce4ec,stroke:#c62828
+    style P2 fill:#f3e5f5,stroke:#6a1b9a
+    style P3 fill:#fff9c4,stroke:#f9a825
+    style P4 fill:#e0f2f1,stroke:#00695c
+```
+
+### 1.1a 文本来源与结构
+
 "二入四行"（Two Entrances and Four Practices）是禅宗初祖菩提达摩（Bodhidharma, c. 5th-6th century CE）的核心教义，记载于《二入四行论》（*Treatise on the Two Entrances and Four Practices*），其最完整的早期版本保存在敦煌写本中（Broughton, 1999）。该文本的结构如下：
 
 - **二入（Two Entrances）**：

@@ -108,6 +108,33 @@ Dao.Science 项目识别到我们这个时代的"第二轴心时刻"（Second Ax
 
 ### 4.1 预测编码作为成熟的科学框架
 
+```mermaid
+flowchart TB
+    subgraph "四重历史性收敛 — 为什么必须是现在"
+        direction TB
+        C1["🔵 预测编码的成熟<br/>━━━━━━<br/>Friston 自由能原理 (2010)<br/>Clark 预测加工 (2013/2016)<br/>Seth 受控的幻觉 (2021)<br/>Parr 主动推理 (2022)<br/><br/>提供了统一的形式化语言<br/>来翻译古代内观洞见"]
+        C2["🟢 冥想神经科学的高质量产出<br/>━━━━━━<br/>Brewer et al. DMN 下调 (2011)<br/>Fox et al. 灰质重塑元分析 (2014)<br/>Tang et al. 正念综述 (2015)<br/><br/>提供了可检验的神经机制<br/>来验证古代修行主张"]
+        C3["🟠 AI 安全的紧迫性<br/>━━━━━━<br/>Bostrom 超级智能 (2014)<br/>Russell 人类兼容 (2019)<br/>Amodei et al. AI 安全 (2016)<br/><br/>提供了文明级的应用场景<br/>来检验'知止不殆'原则"]
+        C4["🔴 全球心理健康危机<br/>━━━━━━<br/>DMN 过度活跃的跨诊断标记<br/>MBCT/MBSR 的临床验证<br/>青少年心理健康的恶化趋势<br/><br/>提供了大规模的社会需求<br/>来部署心性训练框架"]
+        
+        C1 --> CONVERGE["⚪ 四重收敛<br/>━━━━━━<br/>Project Dao.Science<br/>的学术窗口"]
+        C2 --> CONVERGE
+        C3 --> CONVERGE
+        C4 --> CONVERGE
+        
+        CONVERGE --> OUTPUT["统一的心性科学<br/>━━━━━━<br/>以科学为语言<br/>以东方心性实践为经验基础<br/>以可检验假设为核心<br/>以可操作实践为方法<br/>以可修正理论为目标"]
+    end
+    
+    style C1 fill:#e3f2fd,stroke:#1565c0
+    style C2 fill:#e8f5e9,stroke:#2e7d32
+    style C3 fill:#fff3e0,stroke:#e65100
+    style C4 fill:#ffebee,stroke:#c62828
+    style CONVERGE fill:#fff9c4,stroke:#f9a825,stroke-width:3px
+    style OUTPUT fill:#e0f2f1,stroke:#00695c,stroke-width:2px
+```
+
+### 4.1a 预测编码作为成熟的科学框架
+
 预测编码（Predictive Coding; Rao & Ballard, 1999）和主动推理（Active Inference; Friston et al., 2017）在近二十年中已从边缘假说发展为认知神经科学中最具解释力和数学严密性的统一框架之一。其核心主张——大脑是一个通过最小化预测误差来维持其存在的、层级化的贝叶斯推理机——不仅在计算层面提供了优雅的形式化（以自由能原理为其数学基础），而且在神经生物学层面获得了大量实证支持（综述见 Clark, 2016; Hohwy, 2013; Seth, 2021）。
 
 至关重要的是，**预测编码框架为东方心智传统的核心概念提供了天然的形式化语言**（详见 `1_first_principles/01_dao_as_process.md` 的概念映射表）。"道"可以精确地定义为预期自由能上的梯度流（Dao ≡ -∇π G(π)），"德"可以定义为生成模型的精度（Π_gen ≡ precision matrix），"观"可以定义为展平的精度景观（Π^attn_guan ≈ kI），"一"可以定义为最大化觉知带宽的神经认知配置（见 `1_first_principles/02_one_as_bandwidth.md`）。这不再是模糊的类比，而是精确的形式化映射。这一映射的历史性意义在于：**它使得数千年的东方心性实践积累的现象学数据，第一次能够被纳入当代神经科学的可检验框架中进行系统研究。**
