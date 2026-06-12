@@ -37,6 +37,26 @@
 
 ### 2.1 "随缘行"作为奖励预测的重新校准
 
+```mermaid
+flowchart TB
+    subgraph "随缘行 — 奖励系统的重新校准"
+        REWARD["顺境触发<br/>成功/荣誉/获得<br/>正面事件发生"] --> DA_PHASIC["多巴胺相位性放电<br/>VTA→NAc<br/>正预测误差<br/>'比预期的好!'"]
+        DA_PHASIC --> HEDONIC["享乐适应风险<br/>━━━━━━━━━━<br/>预期基线上调<br/>需要越来越大的奖励<br/>才能产生相同的愉悦"]
+        HEDONIC --> SUI_YUAN["随缘行介入<br/>━━━━━━━━━━<br/>'缘尽还无，何喜之有？'<br/>主动将正面事件<br/>框架化为暂时的"]
+        SUI_YUAN --> RECALIBRATE["预期修正<br/>━━━━━━━━━━<br/>奖励预期基线<br/>被维持在较低水平<br/>Π_incentive ↓"]
+        RECALIBRATE --> EQUANIMITY["平等心<br/>━━━━━━━━━━<br/>'得失从缘，心无增减'<br/>腹侧纹状体对得失<br/>反馈的低反应性<br/>不因获得而膨胀<br/>不因失去而收缩"]
+    end
+    
+    style REWARD fill:#e8f5e9,stroke:#2e7d32
+    style DA_PHASIC fill:#c8e6c9,stroke:#388e3c
+    style HEDONIC fill:#ffebee,stroke:#c62828
+    style SUI_YUAN fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style RECALIBRATE fill:#e3f2fd,stroke:#1565c0
+    style EQUANIMITY fill:#e0f2f1,stroke:#00695c,stroke-width:2px
+```
+
+### 2.1a "随缘行"作为奖励预测的重新校准
+
 "随缘行"的核心操作——在顺境中提醒自己"这是过去因缘的成熟，不是'我'的功劳，且终将过去"——在神经科学层面对应于对大脑奖励系统（reward system）的重新校准。
 
 奖励系统——以中脑边缘多巴胺通路（mesolimbic dopamine pathway）为核心，包括腹侧被盖区（ventral tegmental area, VTA）、伏隔核（nucleus accumbens, NAc）和腹侧纹状体（ventral striatum）——是驱动"想要"（wanting）和"喜欢"（liking）的神经基础。Schultz等人（1997, doi:10.1126/science.275.5306.1593）的经典研究发现，中脑多巴胺神经元编码的不是奖励本身，而是**奖励预测误差**（reward prediction error, RPE）——即实际奖励与预期奖励之间的差异。

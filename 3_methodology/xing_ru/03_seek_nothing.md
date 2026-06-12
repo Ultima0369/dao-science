@@ -38,6 +38,28 @@
 
 ### 2.1 "无所求行"作为注意力的重新导向
 
+```mermaid
+flowchart TB
+    subgraph "无所求行 — 从 '想要' 到 '喜欢' 的神经再平衡"
+        CRAVING["'求' 的状态<br/>━━━━━━━━━━<br/>持续结果预期<br/>'必须得到X才能幸福'<br/>'没有Y我就无法忍受'<br/>Π_outcome_expectation 过高"]
+        CRAVING --> DA_DRIVE["多巴胺驱动的<br/>激励突显性<br/>VTA→NAc<br/>'想要' (Wanting)<br/>注意力被奖励线索劫持"]
+        DA_DRIVE --> SUFFERING["有求皆苦<br/>━━━━━━━━━━<br/>'求不得' — 挫败<br/>'求得后' — 享乐适应<br/>'害怕失去' — 焦虑"]
+        
+        SUFFERING --> WU_SUO_QIU["无所求行介入<br/>━━━━━━━━━━<br/>Π_outcome_expectation ↓<br/>降低结果预期的精度<br/>'想要' ≠ '需要'"]
+        WU_SUO_QIU --> REBALANCE["神经再平衡<br/>━━━━━━━━━━<br/>多巴胺 Wanting ↓<br/>阿片类 Liking →<br/>'喜欢'保留但'想要'降低"]
+        REBALANCE --> PEACE["无求乃乐<br/>━━━━━━━━━━<br/>行动仍然有效<br/>但不再被结果<br/>的执着所驱动<br/>'安心无为，形随运转'"]
+    end
+    
+    style CRAVING fill:#ffebee,stroke:#c62828
+    style DA_DRIVE fill:#ffcdd2,stroke:#d32f2f
+    style SUFFERING fill:#ff5252,stroke:#b71c1c,color:#fff
+    style WU_SUO_QIU fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style REBALANCE fill:#e3f2fd,stroke:#1565c0
+    style PEACE fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+```
+
+### 2.1a "无所求行"作为注意力的重新导向
+
 "无所求行"的核心操作可以被精确地描述为：**将注意力从"结果预期"（outcome expectation）拉回"当下过程"（present-moment process）。**
 
 在认知心理学中，"结果预期"指的是对某个行为将产生何种结果的信念和期待。结果预期是驱动目标导向行为（goal-directed behavior）的核心心理机制——我们之所以行动，是因为我们预期行动将产生我们想要的结果。然而，当结果预期变得过度活跃时——即当心智持续地、自动地模拟未来的结果并评估其"好/坏"——它就从"有用的规划工具"变成了"持续的心理负担"。

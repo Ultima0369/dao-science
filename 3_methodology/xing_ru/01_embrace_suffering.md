@@ -48,6 +48,26 @@
 
 ### 2.1 "报冤行"作为认知重新评估
 
+```mermaid
+flowchart LR
+    subgraph "报冤行 — 从逆境触发到认知重构的神经通路"
+        TRIGGER["逆境触发<br/>痛苦/不公/损失<br/>刺激呈现后 0-200ms"] --> AMYGDALA["杏仁核激活<br/>威胁检测 + 负面情感<br/>自动反应: 指责/愤怒/反刍"]
+        AMYGDALA --> GOLDEN["黄金窗口<br/>200-500ms<br/>━━━━━━━━━━<br/>认知重新评估<br/>还来得及介入"]
+        GOLDEN --> LABEL["情感命名<br/>vlPFC 激活<br/>━━━━━━━━━━<br/>'此是我过去<br/>习气成熟显现<br/>非他人错'"]
+        LABEL --> INHIBIT["杏仁核抑制<br/>vlPFC→vmPFC<br/>→杏仁核<br/>自上而下调控"]
+        INHIBIT --> ACCEPT["甘心忍受<br/>都无冤诉<br/>━━━━━━━━━━<br/>情绪反应被重新校准<br/>从 '为什么是我?'<br/>到 '这是我成长的机缘'"]
+    end
+    
+    style TRIGGER fill:#ffebee,stroke:#c62828
+    style AMYGDALA fill:#ffcdd2,stroke:#d32f2f
+    style GOLDEN fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style LABEL fill:#e3f2fd,stroke:#1565c0
+    style INHIBIT fill:#c8e6c9,stroke:#388e3c
+    style ACCEPT fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+```
+
+### 2.1a "报冤行"作为认知重新评估
+
 "报冤行"的核心操作——在逆境中执行一个特定的、预先训练好的自我陈述来改变对逆境的理解——精确地对应于认知神经科学中的"认知重新评估"（cognitive reappraisal）策略。重新评估被定义为"在情绪反应完全展开之前，重新解释刺激的意义，从而改变情绪反应的方向和强度"（Gross, 1998, 2002）。
 
 在Gross的情绪调节过程模型中，重新评估属于"前提导向策略"（antecedent-focused strategy）——它在情绪反应的生成阶段进行干预，而非在反应已经产生后进行抑制。这一定位使得重新评估比表达抑制（expressive suppression）更有效且心理代价更低（Gross, 2002）。

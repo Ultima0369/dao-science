@@ -39,6 +39,45 @@
 
 ### 2.1 "称法行"作为"无行者的行动"
 
+```mermaid
+flowchart TB
+    subgraph "称法行 — 六度优化与无行者的行动"
+        DHARMA["法 (Dharma)<br/>━━━━━━━━━━<br/>性净之理<br/>实在的底层结构/法则<br/>无染无着，无此无彼"]
+        
+        DHARMA --> SIX_PARAMITAS["六度 — 生成模型的六个优化维度"]
+        
+        SIX_PARAMITAS --> P1["布施 (Dāna)<br/>下调对资源的<br/>自我归属精度"]
+        SIX_PARAMITAS --> P2["持戒 (Śīla)<br/>编码安全边界<br/>作为先验约束"]
+        SIX_PARAMITAS --> P3["忍辱 (Kṣānti)<br/>下调威胁检测<br/>先验的精度"]
+        SIX_PARAMITAS --> P4["精进 (Vīrya)<br/>优化策略选择<br/>的能量效率"]
+        SIX_PARAMITAS --> P5["禅定 (Dhyāna)<br/>降低 DMN 基线<br/>最大化觉知带宽"]
+        SIX_PARAMITAS --> P6["智慧 (Prajñā)<br/>模型证据最大化<br/>最小化认知熵"]
+        
+        P1 --> NO_SELF["修行六度而无所行<br/>━━━━━━━━━━<br/>SoA (自我归属感) 降低<br/>前运动/顶叶行动监控<br/>与 DMN 自我叙事<br/>功能去耦合<br/>行动发生，但没有<br/>一个 '行动者' 在做"]
+        
+        P2 --> NO_SELF
+        P3 --> NO_SELF
+        P4 --> NO_SELF
+        P5 --> NO_SELF
+        P6 --> NO_SELF
+        
+        NO_SELF --> FLOW_STATE["称法创造 / 流状态<br/>━━━━━━━━━━<br/>行动与 '法' 完美协调<br/>不产生摩擦或副作用<br/>'以无厚入有间<br/>恢恢乎其于游刃<br/>必有余地矣'"]
+    end
+    
+    style DHARMA fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style SIX_PARAMITAS fill:#e3f2fd,stroke:#1565c0
+    style P1 fill:#fce4ec,stroke:#c62828
+    style P2 fill:#f3e5f5,stroke:#6a1b9a
+    style P3 fill:#fff3e0,stroke:#e65100
+    style P4 fill:#e8f5e9,stroke:#2e7d32
+    style P5 fill:#e0f2f1,stroke:#00695c
+    style P6 fill:#ede7f6,stroke:#4527a0
+    style NO_SELF fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style FLOW_STATE fill:#e8f5e9,stroke:#2e7d32,stroke-width:3px
+```
+
+### 2.1a "称法行"作为"无行者的行动"
+
 "称法行"的核心操作可以被精确地描述为：**行动仍然发生，但行动的"自我归属感"（sense of agency, SoA）被降低或消融。**
 
 自我归属感（SoA）指的是"我"是自身行动的作者（author）的感觉——即"我在做这个"的体验。SoA是自我意识的一个基本维度，在正常状态下，所有的意志行动（voluntary actions）都伴随着SoA。SoA的神经基础涉及前运动皮层（premotor cortex）、辅助运动区（supplementary motor area, SMA）、后顶叶皮层（posterior parietal cortex）和脑岛（insula）之间的功能整合（Haggard, 2017, doi:10.1038/nrn.2017.14）。
