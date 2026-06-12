@@ -242,4 +242,4 @@ Dao.Science 不是一个宗教项目，不是一个"东方智慧"普及项目，
 
 ---
 
-*本文为 Dao.Science 项目动机文件。后续理论推导见第一性原理系列：`1_first_principles/01_dao_as_process.md`（道作为预测编码梯度流）、`1_first_principles/02_one_as_bandwidth.md`（一作为觉知带宽）、`1_first_principles/03_map_not_territory.md`（心智内容 = 万物之相）。*
+*本文为 Dao.Science 项目动机文件。后续理论推导见第一性原理系列：`1_first_principles/01_dao_as_process.md`（道作为预测编码梯度流）、`1_first_principles/02_one_as_bandwidth.md`（一作为觉知带宽）、`1_first_principles/03_map_not_territory.md`（心智内容 = 万物之相）。认知频谱框架见 `0_motivation/L0_L7_spectrum.md`（L0-L7 事实与关系频谱）。*

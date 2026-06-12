@@ -176,4 +176,6 @@ ____________________________________________________________
 
 ---
 
-> 本文是 Project Dao.Science 实践方法论（`3_methodology/`）"行入四行"系列的第三篇。上一篇：`02_flow_with_causes.md`（随缘行）。下一篇：`04_act_in_accordance.md`（称法行）。建议与 `1_first_principles/01_dao_as_process.md`（道的预测编码定义，特别是"无为"的形式化部分）和 `2_models/attention_model.md`（注意力动力学模型）配合阅读。
+> 本文是 Project Dao.Science 实践方法论（`3_methodology/`）"行入四行"系列的第三篇。**与 L0-L7 频谱的关系（`0_motivation/L0_L7_spectrum.md`）：** "无所求行"在 L0-L7 频谱上的操作是：下调 L2（个体实情中"想要"系统的激励突显性——"我非要这个结果不可"），通过"去中心化"（将"求"视为 L2 的心智构造而非 L1 的客观必然），使系统从 L2→L6（"如果得不到我就完了"的概念空转）的滑坡中回到 L4（理性协作——行动仍然发生，但不再被"结果必须是这样"的执着所污染），并最终在 L0（觉知本身）中安住——"喜欢"（liking）被保留甚至增强，而"想要"（wanting）被下调。这与"主动停车"（`4_applications/ai_governance.md` 和 `0_motivation/L0_L7_spectrum.md` 第5.3节）共享同一个深层结构：系统内生地"知道何时该停"——不是外部围栏的强制，而是从 L0 自然涌现的"知止"。
+>
+> 上一篇：`02_flow_with_causes.md`（随缘行）。下一篇：`04_act_in_accordance.md`（称法行）。

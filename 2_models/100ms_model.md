@@ -322,3 +322,9 @@ Pessoa, L., & Adolphs, R. (2010). Emotion processing and the amygdala: From a "l
 Vuilleumier, P., Armony, J. L., Driver, J., & Dolan, R. J. (2003). Distinct spatial frequency sensitivities for processing faces and emotional expressions. *Nature Neuroscience*, *6*(6), 624–631. doi:10.1038/nn1057
 
 Whalen, P. J., Rauch, S. L., Etcoff, N. L., McInerney, S. C., Lee, M. B., & Jenike, M. A. (1998). Masked presentations of emotional facial expressions modulate amygdala activity without explicit knowledge. *Journal of Neuroscience*, *18*(1), 411–418. doi:10.1523/JNEUROSCI.18-01-00411.1998
+
+---
+
+> 本文是 Project Dao.Science 心智模型系列的第二篇（共三篇）。**与 L0-L7 频谱的关系（`0_motivation/L0_L7_spectrum.md`）：** 100ms 杏仁核劫持是 L0-L7 频谱上最快速的层级坍缩机制——在约 100ms 内，系统从 L0-L4 的健康频谱被瞬间压入 L5-L7：威胁信号劫持多巴胺能"想要"系统（L2→L3），边界关闭（L5）作为防御反应，在极端情况下触发毁灭性冲动（L7）。"念起即觉"（100-300ms 窗口内的元认知觉知）是将系统从 L5-L7 重新锚定回 L2-L4 的关键操作——它与 `01_dao_as_process.md` 中描述的"无为"（低预期自由能下的行动）共享同一个深层结构：在"刺激-反应"之间创造间隙，使系统恢复在 L0-L7 频谱上的层级跃迁自由。
+>
+> 下一篇：`neuroplasticity_loop.md`（神经重塑回路）。

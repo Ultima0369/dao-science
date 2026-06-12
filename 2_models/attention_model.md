@@ -289,3 +289,9 @@ Posner, M. I., & Petersen, S. E. (1990). The attention system of the human brain
 Rao, R. P. N., & Ballard, D. H. (1999). Predictive coding in the visual cortex: A functional interpretation of some extra-classical receptive-field effects. *Nature Neuroscience*, *2*(1), 79–87. doi:10.1038/4580
 
 Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., & Polosukhin, I. (2017). Attention is all you need. *Advances in Neural Information Processing Systems*, *30*, 5998–6008. doi:10.48550/arXiv.1706.03762
+
+---
+
+> 本文是 Project Dao.Science 心智模型系列的第一篇（共三篇）。**与 L0-L7 频谱的关系（`0_motivation/L0_L7_spectrum.md`）：** 注意力指向是 L0-L7 层级跃迁的开关。α → 1（收/聚焦）使系统在 L4（理性合作/契约精神）高效运作——高精度后验、快速信息处理、任务导向。α → 0（放/散布）使系统向 L0（觉知本身）敞开——精度景观扁平化、全景式觉知、"观"的状态。注意力的"收放自如"本质上是在 L0-L7 频谱上的层级跃迁能力：能够在 L4 的契约逻辑和 L0 的觉知本身之间自由移动，不被任何单一层级锁死。L6（妄想）和 L7（毁灭）可被重新理解为 α 参数的病理性僵化——注意力被锁定在特定层级的语义空转或暴力冲动中，丧失了层级跃迁的灵活性。
+>
+> 下一篇：`100ms_model.md`（本能劫持：100ms 模型）。

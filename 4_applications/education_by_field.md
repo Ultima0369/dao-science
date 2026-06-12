@@ -271,3 +271,5 @@ DMN 的核心功能是自我指涉加工（self-referential processing）——"
 ---
 
 *本文为 Dao.Science 项目应用层论文。前置理论基础：`1_first_principles/01_dao_as_process.md`（道作为预测编码梯度流）、`1_first_principles/02_one_as_bandwidth.md`（一作为觉知带宽）、`1_first_principles/03_map_not_territory.md`（心智内容 = 万物之相）、`2_models/attention_model.md`（"收放自如"注意力动力学模型）。并联应用论文：`4_applications/ai_governance.md`（"知止不殆"在 AI 治理中的应用）。方法论基础：`3_methodology/li_ru.md`（理入：见地建立）、`3_methodology/xing_ru/`（行入：实践四行）。*
+>
+> **与 L0-L7 频谱的关系（`0_motivation/L0_L7_spectrum.md`）：** "境教"（通过环境设计进行教育）在 L0-L7 频谱上的操作是：通过精心设计的 L1（物理环境）和 L3（文化氛围/叙事），绕过 L4（说教/契约逻辑）的认知抵抗，直接塑造 L2（个体实情——安全感、归属感、好奇心）。这正是"不言之教"（《道德经》第二章）的现代工程化：不是通过 L4 的语言指令来改变行为，而是通过设计 L1-L3 的"场"（field）来使期望的行为成为系统在该场中的自然梯度流——即"无为而治"的环境设计版。四个境教原则（安全场/模仿场/挑战场/反思场）分别对应于 L0-L7 频谱上的四个锚点：安全场→L2（个体实情的被承托），模仿场→L3（文化传承的镜像神经元激活），挑战场→L4（理性协作的最优挑战），反思场→L0（从 L1-L4 的内容中回撤，体认觉知本身）。
