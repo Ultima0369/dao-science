@@ -292,4 +292,4 @@ $$\alpha \cdot B(t) > w_{DD} \cdot \sigma(D^*) + S_D(t) - \theta_I$$
 
 > 本文是 Project Dao.Science 心智模型系列的补充文件，连接了注意力动力学模型（`2_models/attention_model.md`）和神经重塑回路（`2_models/neuroplasticity_loop.md`）。**与 L0-L7 频谱的关系（`0_motivation/L0_L7_spectrum.md`）：** DMN 是 L2（个体实情/叙事自我）和 L3（文化传承/社会自我）的核心神经基质——它是"相"在神经层面的生成引擎。内感受（岛叶）是 L0（觉知本身）最直接的神经锚点——当下身体的感觉是唯一始终在"此时此地"的信号。冥想的"重心转移"（从 DMN→岛叶）在 L0-L7 频谱上对应从 L2-L3（被过去/未来叙事劫持）向 L0（觉知本身的裸露）的层级跃迁。"吾丧我"（叙事自我的暂时性解构）是这一跃迁的神经现象学描述。
 >
-> 下一篇：见应用层 `4_applications/ai_governance.md` 和 `4_applications/education_by_field.md`。
+> 下一篇：见 `2_models/social_cognition.md`（社会认知与镜像共鸣——"同体大悲"的神经现象学）。

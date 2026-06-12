@@ -218,8 +218,9 @@
 | `attention_model.md` | 心智模型 | α 参数收放自如 | `03_map_not_territory.md` | `100ms_model.md` |
 | `100ms_model.md` | 心智模型 | 念起即觉 + 竞争动力学 | `attention_model.md` | `neuroplasticity_loop.md` |
 | `neuroplasticity_loop.md` | 心智模型 | 后训练 + Hebbian 重塑 | `100ms_model.md` | `dmn_self_model.md` |
-| `dmn_self_model.md` | 心智模型 | DMN-岛叶-内感受三角 | `neuroplasticity_loop.md` | `li_ru.md` |
-| `li_ru.md` | 实践方法 | 理入=下调叙事自我先验精度 | `dmn_self_model.md` | `01_embrace_suffering.md` |
+| `dmn_self_model.md` | 心智模型 | DMN-岛叶-内感受三角 | `neuroplasticity_loop.md` | `social_cognition.md` |
+| `social_cognition.md` | 心智模型 | 镜像共鸣+心智化+同体大悲 | `dmn_self_model.md` | `li_ru.md` |
+| `li_ru.md` | 实践方法 | 理入=下调叙事自我先验精度 | `social_cognition.md` | `01_embrace_suffering.md` |
 | `01_embrace_suffering.md` | 实践方法 | 报冤行↔认知重评+ACT | `li_ru.md` | `02_flow_with_causes.md` |
 | `02_flow_with_causes.md` | 实践方法 | 随缘行↔RPE无常修正 | `01_embrace_suffering.md` | `03_seek_nothing.md` |
 | `03_seek_nothing.md` | 实践方法 | 无所求行↔下调wanting | `02_flow_with_causes.md` | `04_act_in_accordance.md` |
