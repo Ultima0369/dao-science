@@ -31,3 +31,7 @@ nav:
     - AI 治理: 4_applications/ai_governance.md
     - 境教: 4_applications/education_by_field.md
     - 临床心理健康: 4_applications/clinical_mental_health.md
+    - 创造力与创新: 4_applications/creativity_innovation.md
+  - 附录:
+    - 概念索引与术语表: GLOSSARY.md
+    - 贡献指南: CONTRIBUTING.md
