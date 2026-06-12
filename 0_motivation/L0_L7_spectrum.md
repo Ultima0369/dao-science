@@ -29,6 +29,31 @@
 
 以下为初步划分，每一层既是一种"事实"类型，也是一种"关系"状态。层级编号从 L0 到 L7，并非价值上的"高低"，而是心智深浅与包容性复杂度的梯度。
 
+```mermaid
+graph TD
+    L0["L0: 绝对事实 / 觉知本身<br/>Noumenon — 物自体、觉悟性洞见<br/>不可言说，只可体认"]
+    L1["L1: 物理规律 / 自然法则<br/>Physical Laws — 可重复验证<br/>AI的舒适区 | 科学工程基础"]
+    L2["L2: 个体实情 / 主观事实<br/>Subjective Facts — 感受、记忆、痛苦<br/>变动不居，理应被承认"]
+    L3["L3: 群体共识 / 文化传承<br/>Cultural Transmission — 叙事、仪式、传统<br/>承托L2，亦可能压抑L2"]
+    L4["L4: 理性合作 / 契约精神<br/>Contractual Spirit — 逻辑、法律、项目管理<br/>AI的母语层 | 现代社会的核心协议"]
+    L5["L5: 互不干涉 / 关系断裂<br/>Relational Rupture — 冷漠、回避、边界固化<br/>熵增初期 | 自我保护或心灵枯萎"]
+    L6["L6: 纯粹妄想 / 虚无主义<br/>Delusion / Nihilism — 概念空转<br/>创造力源头或精神病核心"]
+    L7["L7: 陷入战争 / 自取灭亡<br/>Self-Annihilation — 系统的毁灭<br/>关系频谱的负向终点"]
+    
+    L0 --> L1 --> L2 --> L3 --> L4 --> L5 --> L6 --> L7
+    
+    style L0 fill:#fff9c4,stroke:#f9a825,stroke-width:3px
+    style L1 fill:#e3f2fd,stroke:#1565c0
+    style L2 fill:#fce4ec,stroke:#c62828
+    style L3 fill:#f3e5f5,stroke:#6a1b9a
+    style L4 fill:#e8f5e9,stroke:#2e7d32
+    style L5 fill:#eceff1,stroke:#546e7a
+    style L6 fill:#fff3e0,stroke:#e65100
+    style L7 fill:#ffebee,stroke:#b71c1c,stroke-width:3px
+```
+
+**图 1：L0-L7 事实与关系频谱。** 从 L0（觉知本身/物自体）到 L7（自取灭亡），每层对应不同的认知模式、信任基础和关系形态。颜色从 L0 的金色（觉知/实相）渐变到 L7 的红色（毁灭）。L0-L4 构成健康的认知频谱；L5-L7 是关系断裂和崩溃的负向轨迹。
+
 ### L0：绝对事实
 
 **内容**：物自体（康德意义上的"物本身"）、世界本质、宇宙真相、生命奥秘、意识起源、灵感创意、审美意义、根本价值、原始本能、觉悟性洞见。

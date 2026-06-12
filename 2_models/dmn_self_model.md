@@ -12,6 +12,30 @@
 
 ---
 
+```mermaid
+graph TD
+    subgraph "DMN-自我-内感受 神经三角"
+        DMN["🧠 默认模式网络 (DMN)<br/>mPFC + PCC + 角回<br/>叙事自我 | 自传体记忆 | 未来模拟"]
+        INS["🫀 岛叶 (Insula)<br/>前岛叶 + 后岛叶<br/>内感受 | 最小自我 | 当下身体状态"]
+        SN["⚡ 突显网络 (Salience Network)<br/>前岛叶 + dACC<br/>DMN ↔ TPN 切换"]
+        TPN["🎯 任务正性网络 (TPN)<br/>背侧注意网络<br/>外部任务 | 知觉加工"]
+    end
+    
+    DMN <-->|"抗相关<br/>anti-correlation"| TPN
+    SN -->|"切换控制"| DMN
+    SN -->|"切换控制"| TPN
+    INS -->|"内感受信号<br/>身体→大脑"| SN
+    DMN -->|"叙事自我<br/>'我是谁'"| INS
+    INS -->|"最小自我<br/>'我在这里'"| DMN
+    
+    style DMN fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style INS fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style SN fill:#fff9c4,stroke:#f9a825,stroke-width:2px
+    style TPN fill:#fce4ec,stroke:#c62828,stroke-width:2px
+```
+
+**图 1：DMN-自我-内感受的神经三角。** DMN（蓝）生成叙事自我——"我是谁"的故事。岛叶（绿）生成最小自我——"我在这里，现在"的身体感觉。突显网络（黄）在 DMN 和 TPN 之间切换。冥想的"重心转移"是从 DMN 主导（叙事自我）向岛叶主导（最小自我）的移动。
+
 ## 1. 默认模式网络（DMN）
 
 ### 1.1 DMN 的解剖与功能

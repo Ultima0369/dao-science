@@ -22,6 +22,31 @@
 
 我们将注意力操作化定义为两个正交维度的动态平衡：
 
+```mermaid
+graph LR
+    subgraph "注意力连续谱"
+        F["🔍 焦点注意 (Focus)<br/>α → 1<br/>高精度，窄范围<br/>高效任务处理<br/>对应 L4 理性协作"]
+        P["🌐 全局觉知 (Periphery)<br/>α → 0<br/>低精度，宽范围<br/>全景式觉知<br/>对应 L0 觉知本身"]
+    end
+    
+    F <-->|"α 参数动态调制<br/>收放自如"| P
+    
+    subgraph "病理状态"
+        R["🔒 反刍 (Rumination)<br/>α 僵化于 L2-L6<br/>DMN过度活跃<br/>被自我叙事劫持"]
+        D["💥 解离 (Dissociation)<br/>α 崩溃<br/>L5 边界关闭<br/>与体验脱节"]
+    end
+    
+    F -.->|"病理性过度"| R
+    P -.->|"病理性过度"| D
+    
+    style F fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style P fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style R fill:#ffcdd2,stroke:#c62828
+    style D fill:#eceff1,stroke:#546e7a
+```
+
+**图 1：注意力作为焦点-全局连续谱。** α 参数控制精度矩阵的集中度。α → 1（会聚）专注于少数通道，高效但可能闭锁。α → 0（散布）均匀分配精度，全景式觉知但可能分散。病理状态对应于 α 的僵化——无法根据情境需求灵活调节。
+
 - **焦点注意（Focal Attention, FA）**：对特定对象或特征的高分辨率处理，具有高精确度（precision）和窄带宽（bandwidth）。在神经层面，这对应于感觉皮层的增益调制（gain modulation）和感受野的收缩（receptive field narrowing）。
 - **全局觉知（Peripheral Awareness, PA）**：对整体情境的低分辨率但广覆盖的监测，具有低精确度和宽带宽。在神经层面，这对应于默认模式网络（default mode network, DMN）的活动和全局神经信号的去同步化（desynchronization）。
 

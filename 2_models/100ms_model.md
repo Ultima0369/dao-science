@@ -18,6 +18,23 @@
 
 LeDoux（1996, 2000）提出的双通路理论（dual-pathway theory）是理解情绪处理速度差异的基石。该理论识别出从感觉输入到杏仁核的两条解剖和功能上不同的通路：
 
+```mermaid
+flowchart LR
+    S["👁️ 感觉输入<br/>Sensory Input"] --> T["丘脑<br/>Thalamus"]
+    T -->|"⚡ 低通路 (Low Road)<br/>~50-80ms<br/>单突触/寡突触"| A["杏仁核<br/>Amygdala<br/>快速威胁检测"]
+    T -->|"🐢 高通路 (High Road)<br/>~250-500ms<br/>多突触"| C["感觉皮层<br/>Sensory Cortex<br/>精细特征分析"]
+    C --> A
+    A --> R["🏃 自动化反应<br/>战斗/逃跑/冻结<br/>~100-150ms"]
+    C --> P["🧠 前额叶 (PFC)<br/>认知重评<br/>~300-1000ms"]
+    P -->|"⏬ 下调"| A
+    
+    style A fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style P fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style T fill:#fff9c4,stroke:#f9a825
+```
+
+**图 1：LeDoux 情绪双通路模型。** 低通路（红色虚线）在 ~50-80ms 内将威胁信号从丘脑直接送至杏仁核——绕过皮层，牺牲准确性换取速度。高通路（蓝色实线）在 ~250-500ms 内经过皮层做精细分析。"念起即觉"的窗口（100-300ms）正是 PFC 对杏仁核进行认知重评的关键时间间隙。
+
 **低通路（Low Road）：丘脑→杏仁核**
 - 解剖路径：感觉丘脑（sensory thalamus）→ 外侧杏仁核（lateral amygdala, LA）
 - 传输速度：约50-80毫秒（单突触或寡突触连接）

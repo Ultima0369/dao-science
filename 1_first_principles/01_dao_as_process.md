@@ -34,6 +34,19 @@
 
 我们将道的动态过程分解为三个连续且递归的子过程：
 
+```mermaid
+flowchart LR
+    A[🌐 全局信息空间<br/>所有可用的感官/概念通道] --> B[🎯 注意力指向<br/>Attention Direction<br/>精度矩阵 Π 的动态调制]
+    B --> C[🔍 焦点选择<br/>Focal Selection<br/>假设修剪 + 同步振荡]
+    C --> D[🏃 行动反馈<br/>Action Feedback<br/>主动采样 → 最小化 G(π)]
+    D --> E[📥 新的感官数据<br/>确认/修正生成模型预测]
+    E --> A
+    
+    style B fill:#e1f5fe,stroke:#0288d1
+    style C fill:#f3e5f5,stroke:#7b1fa2
+    style D fill:#e8f5e9,stroke:#388e3c
+```
+
 **（a）注意力指向（Attention Direction）**：系统从全局可用信息空间中，基于当前的后验信念（posterior beliefs），将高精度权重（high precision weight）分配至特定的感官通道（sensory channel）或概念领域（conceptual domain）。在预测编码框架中，这一过程对应于精度矩阵（precision matrix）$\Pi$ 的动态调制（Feldman & Friston, 2010）。
 
 **（b）焦点选择（Focal Selection）**：在指向的方向上，系统进一步缩小其采样范围至特定的假设空间。这对应于贝叶斯推理中的假设修剪（hypothesis pruning）——将后验概率质量集中于少数高似然假设上。在神经实现层面，这涉及皮层锥体细胞（cortical pyramidal cells）的同步振荡（synchronous oscillation）与侧向抑制（lateral inhibition）动态（Bastos et al., 2012）。

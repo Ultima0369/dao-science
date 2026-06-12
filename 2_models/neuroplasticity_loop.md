@@ -12,6 +12,25 @@
 
 ---
 
+```mermaid
+flowchart TD
+    A["🧘 理入 (见地建立)<br/>下调叙事自我先验精度<br/>建立L0-L4认知框架"] --> B["📋 行入 (四行实践)<br/>报冤行 | 随缘行 | 无所求行 | 称法行<br/>每日行为/注意力训练"]
+    B --> C["⚡ Hebbian学习<br/>Fire together, wire together<br/>被反复共同激活的神经元<br/>形成更强的突触连接"]
+    C --> D["🔄 LTP/LTD/STDP<br/>NMDA受体依赖性可塑性<br/>Ca²⁺内流 → 级联信号<br/>突触增强或减弱"]
+    D --> E["🧠 结构重塑<br/>灰质密度增加 (岛叶/PFC)<br/>DMN内部连接降低<br/>岛叶-PFC功能连接增强"]
+    E --> F["📉 特质效应<br/>基线DMN活动降低<br/>内感受精度提升<br/>\"想要\"系统下调"]
+    F -->|"3-5年后训练窗口<br/>从量变到质变"| A
+    
+    style A fill:#e8f5e9,stroke:#2e7d32
+    style B fill:#e3f2fd,stroke:#1565c0
+    style C fill:#fff9c4,stroke:#f9a825
+    style D fill:#f3e5f5,stroke:#6a1b9a
+    style E fill:#fce4ec,stroke:#c62828
+    style F fill:#e0f2f1,stroke:#00695c
+```
+
+**图 1：神经重塑回路——从见地到特质效应的完整循环。** 理入建立正确的见地（最高层级先验），行入通过反复的行为实践激活 Hebbian 学习机制，LTP/LTD/STDP 在突触层面编码这些变化，结构重塑在宏观脑层面反映这些微观变化的累积，最终形成稳定的特质效应——"理入的正确见地"从"我理性知道"变成"我身体性地体验到"。
+
 ## 1. Hebbian学习：可塑性的基本法则
 
 ### 1.1 Hebb的原始洞见
