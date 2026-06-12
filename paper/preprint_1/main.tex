@@ -1,11 +1,677 @@
-\documentclass{article}
-\title{道作为过程：一个连接东方心学与认知科学的可计算心智模型}
-\author{Anonymous}
+\documentclass[11pt,a4paper]{article}
+
+% --- Layout ---
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+
+% --- Language & Fonts ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx} % Times-like font
+\usepackage[english]{babel}
+
+% --- Math ---
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{mathtools}
+
+% --- Graphics & Color ---
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+% --- Floats ---
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{caption}
+
+% --- Misc ---
+\usepackage{enumitem}
+\usepackage{csquotes}
+
+% --- Theorem environments ---
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{definition}[proposition]{Definition}
+\newtheorem{hypothesis}[proposition]{Hypothesis}
+
+% --- Title ---
+\title{\textbf{Dao as Process: An Operational Definition Connecting\\Eastern Contemplative Science and Cognitive Neuroscience}\\%
+\large Dao as the Dynamic Process of Consciousness Activation:\\A Predictive Coding and Active Inference Framework}
+
+\author{Ultima0369\\
+\texttt{dao-science@proton.me}\\[4pt]
+\textit{Project Dao.Science}\\
+\texttt{https://github.com/Ultima0369/dao-science}}
+\date{Preprint v1.0 — June 12, 2026}
+
 \begin{document}
 \maketitle
+
 \begin{abstract}
-本文提出一个操作化定义：道即意识启用的动态过程，并映射至预测编码与主动推理框架。
+This paper proposes an operational, mathematically precise definition of \textit{Dao} (道)---conceptualizing it as the dynamic process of consciousness activation, formalized through the predictive coding and active inference theoretical framework. The core proposition is: the operation of Dao is equivalent to gradient flow on expected free energy, i.e., $\text{Dao} \equiv -\nabla_\pi G(\pi)$. Within this framework, \textit{Wu-wei} (无为, effortless action) corresponds to action under low expected free energy states; \textit{De} (德, virtue/potency) corresponds to the precision of the generative model; \textit{Ziran} (自然, spontaneity) corresponds to self-organized dynamics; \textit{Guan} (观, open monitoring) corresponds to a flattened precision landscape; and \textit{Ming} (明, clarity) corresponds to high-precision posterior beliefs. We derive a set of testable neuroscientific predictions, thereby formally integrating classical Chinese philosophical concepts into the computational framework of contemporary cognitive science.
+
+\textbf{Keywords:} Dao, predictive coding, active inference, free energy principle, consciousness, attention, gradient flow, generative model
 \end{abstract}
-\section{引言}
-...
+
+% =================================================================
+\section{Introduction}
+% =================================================================
+
+\textit{``The Dao that can be spoken is not the eternal Dao.''} --- \textit{Daodejing}, Chapter 1
+
+Laozi's opening line presents a fundamental epistemological challenge: ultimate reality cannot be fully captured by language. Yet this declaration has not prevented over two millennia of exegetical tradition from attempting to elucidate the meaning of Dao. Contemporary advances in cognitive science and computational neuroscience provide unprecedented conceptual tools, making an operational definition of Dao possible. Specifically, the theoretical frameworks of Predictive Coding \cite{Rao1999,Friston2010,Clark2015} and Active Inference \cite{Friston2017} offer a mathematically rigorous language for understanding the structure of conscious experience---a structure that exhibits deep isomorphism with classical Daoist descriptions of mental functioning.
+
+The central thesis of this paper is: \textbf{Dao can be precisely defined as the dynamic process of consciousness activation---that is, the complete loop composed of attention direction, focal selection, and action feedback.} This loop is computationally equivalent to the gradient flow that minimizes expected free energy. In other words, ``following the Dao'' is not mystical intuition but the selection of cognitive-action policies that minimize expected free energy given a generative model.
+
+The paper is structured as follows: Section 2 provides the operational definition of Dao; Section 3 outlines the predictive coding and active inference framework and introduces core mathematical formalisms; Section 4 presents the formal model of Dao as gradient flow; Section 5 reinterprets attention as precision optimization and maps it to the Daoist concept of \textit{shou-fang-zi-ru} (收放自如, flexible focus); Section 6 provides a complete Daoist--predictive coding concept mapping table; Section 7 derives testable empirical predictions; Section 8 discusses philosophical implications and limitations; Section 9 concludes.
+
+% =================================================================
+\section{Operational Definition of Dao}
+% =================================================================
+
+\subsection{Beyond Ineffability: Why Operationalization Is Possible}
+
+Laozi's ``The Dao that can be spoken is not the eternal Dao'' is typically interpreted as placing ultimate reality beyond linguistic representation. However, this statement points to the ontological dimension of Dao---Dao as transcategorical reality---rather than its dimension as mental process. The Daoist tradition itself distinguishes between the ``unutterable Dao'' (道体, Dao as ontological ground, transcending conceptual discrimination) and the ``utterable Dao'' (道用, Dao as function, manifesting in the realm of experience). What we operationalize is precisely the latter---Dao as the dynamic process of consciousness.
+
+This approach is not a philosophical transgression. In fact, the \textit{Zhuangzi}'s ``I lose myself'' (吾丧我) description, and the \textit{Daodejing}'s Chapter 16---``Attain extreme emptiness, maintain absolute stillness. The ten thousand things arise together; I observe their return''---both point to what can be phenomenologically described as the temporary dissolution of the self-model and the open monitoring state of attention, a state for which contemporary consciousness science has precise neurocomputational models \cite{Seth2021,Lutz2008}.
+
+\subsection{The Triple Loop: Attention Direction $\rightarrow$ Focal Selection $\rightarrow$ Action Feedback}
+
+We decompose the dynamic process of Dao into three sequential and recursive sub-processes:
+
+\textbf{(a) Attention Direction.} The system allocates high precision weight to specific sensory channels or conceptual domains from the globally available information space, based on current posterior beliefs. In the predictive coding framework, this corresponds to the dynamic modulation of the precision matrix $\Pi$ \cite{Feldman2010}.
+
+\textbf{(b) Focal Selection.} Within the directed domain, the system further narrows its sampling range to a specific hypothesis space. This corresponds to hypothesis pruning in Bayesian inference---concentrating posterior probability mass on a small number of high-likelihood hypotheses. At the neural implementation level, this involves synchronous oscillation of cortical pyramidal cells and lateral inhibition dynamics \cite{Bastos2012}.
+
+\textbf{(c) Action Feedback.} The system alters its interaction with the environment through effectors, thereby actively sampling sensory data consistent with or favorable to current generative model predictions. In the active inference framework, this is modeled as the selection of action policies $\pi$ aimed at minimizing expected free energy $G(\pi)$ \cite{Friston2017}.
+
+These three sub-processes constitute a closed perception-action loop: attention direction determines which sensory modalities are sampled, focal selection constrains the set of hypotheses to be tested, and action modifies sensory input to confirm or revise generative model predictions. Each complete cycle of this loop is one instantaneous instance of the operation of Dao.
+
+\subsection{Faithful to the Classics, Compatible with Science}
+
+This definition satisfies two key constraints:
+
+\textbf{Faithfulness.} \textit{Daodejing} Chapter 25 states: ``There was something undifferentiated and yet complete, born before heaven and earth. Silent and void, it stands alone and does not change, goes round and does not weary. It can be the mother of all under heaven. I do not know its name; I style it Dao. Forced to give it a name, I call it Great. Great means passing on; passing on means going far; going far means returning.'' The ``goes round and does not weary'' (周行而不殆) and ``going far means returning'' (远曰反) precisely describe the cyclical nature of the perception-action loop. The dynamic view of Dao is not a modern imposition---it is the intrinsic meaning of the classical text.
+
+\textbf{Testability.} By mapping the triple loop onto the mathematical framework of predictive coding and active inference, we can derive concrete, falsifiable empirical predictions. This moves discourse about Dao from the philosophical-phenomenological domain into the natural sciences, without sacrificing philosophical depth.
+
+% =================================================================
+\section{Predictive Coding and Active Inference Framework}
+% =================================================================
+
+\subsection{Core Principles of Predictive Coding}
+
+The central claim of predictive coding is: the brain is a hierarchical prediction engine whose fundamental computational operation is prediction error minimization. In this framework, each cortical level generates predictions about the activity patterns of the level below, and only information inconsistent with predictions (i.e., prediction error signals) is passed upward \cite{Rao1999,Friston2010,Clark2015}.
+
+Formally, let $v^{(i)}$ be the hidden state at level $i$, $g^{(i)}$ be the generative mapping from level $i+1$ to level $i$, $\theta^{(i)}$ be the parameters at level $i$, and $z^{(i)}$ be random fluctuations at level $i$. The hierarchical generative model can be written as:
+
+\begin{equation}
+v^{(i)} = g^{(i)}(v^{(i+1)}, \theta^{(i)}) + z^{(i)}
+\label{eq:gen_model}
+\end{equation}
+
+where $z^{(i)} \sim \mathcal{N}(0, \Pi_{z}^{(i)-1})$, and $\Pi_{z}^{(i)}$ is the precision (inverse variance) of random fluctuations at that level.
+
+The prediction error signal $\xi^{(i)}$ is defined as the difference between sensory input (or lower-level representation) and the prediction from the level above:
+
+\begin{equation}
+\xi^{(i)} = v^{(i)} - g^{(i)}(v^{(i+1)}, \theta^{(i)})
+\label{eq:pred_error}
+\end{equation}
+
+Perceptual inference proceeds via gradient descent to update estimates of hidden states, minimizing prediction error. This process is described by the following dynamic equation:
+
+\begin{equation}
+\dot{\mu}^{(i)} = -\frac{\partial \tilde{\epsilon}^{(i)T}}{\partial \mu^{(i)}} \Pi^{(i)} \tilde{\epsilon}^{(i)} + \frac{\partial g^{(i)T}}{\partial \mu^{(i)}} \Pi_{v}^{(i-1)} \tilde{\epsilon}_{v}^{(i-1)} - \Pi_{v}^{(i)} \tilde{\epsilon}_{v}^{(i)}
+\label{eq:perceptual_inf}
+\end{equation}
+
+where $\mu^{(i)}$ is the expectation of hidden states at level $i$, $\tilde{\epsilon}$ is the generalized prediction error, and $\Pi$ is the precision matrix.
+
+\subsection{The Free Energy Principle}
+
+The Free Energy Principle (FEP) is the theoretical foundation of predictive coding \cite{Friston2010}. It asserts: any self-organizing system that maintains its non-equilibrium steady state must, in appearance, minimize its variational free energy. Free energy is an information-theoretic quantity measuring the gap between two distributions: the system's approximate posterior beliefs about environmental hidden states $Q(s)$, and the true posterior $P(s|o)$ given sensory observations $o$.
+
+Variational free energy $F$ is defined as:
+
+\begin{equation}
+F = D_{KL}[Q(s) \| P(s|o)] - \ln P(o)
+\label{eq:free_energy}
+\end{equation}
+
+where $D_{KL}$ is the Kullback-Leibler divergence. Since $D_{KL} \geq 0$, free energy $F$ is always greater than or equal to negative log model evidence $-\ln P(o)$, also called surprise:
+
+\begin{equation}
+F \geq -\ln P(o)
+\label{eq:fe_bound}
+\end{equation}
+
+Equation (\ref{eq:free_energy}) can be decomposed into accuracy and complexity terms:
+
+\begin{equation}
+F = \underbrace{-E_{Q(s)}[\ln P(o|s)]}_{\text{Inaccuracy}} + \underbrace{D_{KL}[Q(s) \| P(s)]}_{\text{Complexity}}
+\label{eq:fe_decomp}
+\end{equation}
+
+Maximizing accuracy drives the system to select beliefs that better explain sensory data; minimizing complexity keeps beliefs consistent with priors. The balance between the two defines optimal perceptual inference.
+
+\subsection{Active Inference and Expected Free Energy}
+
+Active Inference extends the free energy principle from passive perception to active action. The framework assumes: the system not only passively updates beliefs to fit current sensory data, but also actively selects actions or policies $\pi$ to change its future sensory input to match expectations \cite{Friston2017}.
+
+The key quantity is Expected Free Energy (EFE), which evaluates the expected future free energy under a given policy $\pi$:
+
+\begin{equation}
+G(\pi) = E_{Q(o, s|\pi)}[\ln Q(s|\pi) - \ln P(o, s|\pi)]
+\label{eq:efe}
+\end{equation}
+
+Expected free energy can be decomposed into two components with distinct cognitive functions:
+
+\begin{equation}
+G(\pi) = \underbrace{-E_{Q(o|\pi)}[D_{KL}[Q(s|o, \pi) \| Q(s|\pi)]]}_{\text{Epistemic Value / Information Gain}} - \underbrace{E_{Q(o|\pi)}[\ln P(o|C)]}_{\text{Pragmatic Value}}
+\label{eq:efe_epistemic}
+\end{equation}
+
+Or equivalently decomposed into risk and ambiguity:
+
+\begin{equation}
+G(\pi) = \underbrace{D_{KL}[Q(o|\pi) \| P(o|C)]}_{\text{Risk}} + \underbrace{E_{Q(s|\pi)}[H[P(o|s)]]}_{\text{Ambiguity}}
+\label{eq:efe_risk}
+\end{equation}
+
+where $H[P(o|s)]$ is the conditional entropy of observations $o$ given states $s$, $Q(o|\pi)$ is the predicted observation distribution under policy $\pi$, and $P(o|C)$ is the prior preference distribution, defining the types of sensory states the system expects to receive.
+
+Policy selection is implemented via a softmax function, where the precision parameter $\gamma$ controls the determinacy of selection:
+
+\begin{equation}
+P(\pi) = \sigma(-\gamma \cdot G(\pi)) = \frac{e^{-\gamma G(\pi)}}{\sum_{\pi'} e^{-\gamma G(\pi')}}
+\label{eq:policy}
+\end{equation}
+
+\subsection{Precision-Weighted Prediction Errors}
+
+A key mechanism in the predictive coding framework is precision weighting. Not all prediction errors have equal influence on belief updating---the system weights prediction errors according to their estimated precision \cite{Feldman2010}:
+
+\begin{equation}
+\text{Magnitude of belief update} \propto \text{Precision} \times \text{Magnitude of prediction error}
+\end{equation}
+
+Formally, if precision $\Pi$ (inverse variance) is high, the same magnitude of prediction error produces a larger belief update. This enables the system to dynamically modulate its sensitivity to information from specific sensory channels or hierarchical levels---neurophysiologically corresponding to the control of synaptic gain through neuromodulatory systems.
+
+% =================================================================
+\section{Dao as Gradient Flow}
+% =================================================================
+
+\subsection{Formal Proposition}
+
+The core formal proposition of this paper is:
+
+\begin{equation}
+\boxed{\text{Dao} \equiv -\nabla_\pi G(\pi)}
+\label{eq:dao_gradient}
+\end{equation}
+
+In natural language: \textbf{Dao is equivalent to the negative gradient of expected free energy with respect to possible action policies.}
+
+The implication of this proposition is: the fundamental dynamic faced by a cognitive-action system at any given moment---the ``force'' driving it from its current state toward future states---is precisely the direction that minimizes expected free energy. ``Following the Dao'' means moving along this gradient direction, selecting policies that minimize the expected value of expected free energy.
+
+\subsection{Intuitive Explanation of Gradient Flow Dynamics}
+
+Gradient flow is a core concept in differential geometry and dynamical systems theory. For a potential function $U(x)$ defined on state space or policy space, gradient flow is expressed as:
+
+\begin{equation}
+\dot{x} = -\nabla_x U(x)
+\label{eq:gradient_flow}
+\end{equation}
+
+This means the system always evolves along the direction that causes the fastest decrease of the potential function. In physical systems, this corresponds to a ball rolling down a hill (potential is gravitational); in thermodynamic systems, it corresponds to a system evolving toward the equilibrium state of minimum free energy.
+
+Taking expected free energy $G(\pi)$ as the ``potential'' defined on policy space, we can naturally understand the meaning of ``following the Dao'': it does not mean passively yielding to some external force, but actively moving along the most energy-efficient trajectory in the cognitive-action landscape, maximizing the coordination between action and the world's causal structure.
+
+This aligns closely with the Chinese philosophical concept of \textit{shun-shi-er-wei} (顺势而为, acting in accordance with the natural tendency of things). The \textit{Zhuangzi}'s fable of Cook Ding (庖丁解牛) precisely illustrates how a highly refined generative model---formed through extensive practice---enables action to unfold naturally and effortlessly along the ``gaps'' (paths of minimum expected free energy):
+
+\begin{quote}
+\textit{``Between the joints there are spaces, and the blade's edge has no thickness. To insert what has no thickness into spaces---how abundantly there is room for the blade to move!''}
+\end{quote}
+
+Cook Ding's ``inserting what has no thickness into spaces'' precisely describes the operation of gradient flow in policy space: a high-precision generative model (the anatomical knowledge of the ox internalized through years of practice) constrains the policy space to an extremely narrow channel, such that each cutting operation naturally proceeds along the direction of minimum expected free energy, requiring no ``effort'' or ``computation.''
+
+\subsection{``Following the Dao'' Mapped to Policy Selection}
+
+In the above framework, ``following the Dao'' is precisely operationalized as:
+
+\begin{equation}
+P(\pi_{\text{follow-Dao}}) = \sigma\left(-\gamma \cdot \min_\pi G(\pi)\right)
+\label{eq:follow_dao}
+\end{equation}
+
+That is, the system selects with high probability the policy that minimizes expected free energy. Conversely, ``going against the Dao'' corresponds to selecting policies with high expected free energy---this is not logically impossible, but requires expending more cognitive-metabolic resources to fight against the gradient, and is therefore unsustainable on evolutionary or learning timescales.
+
+Furthermore, we formalize \textit{Wu-wei} (无为) as:
+
+\begin{equation}
+\text{Wu-wei} \equiv \text{Action under policies where } \|\nabla_\pi G(\pi)\| < \tau
+\label{eq:wuwei}
+\end{equation}
+
+where $\tau$ is a small threshold. In other words, \textit{wu-wei} is not non-action, but action when the expected free energy landscape is nearly flat and the gradient is almost zero---at this point, action does not resist any ``natural tendency,'' cognitive friction is minimal, and the consumption of system resources is reduced to a minimum.
+
+\subsection{Generative Model Precision and \textit{De} (德)}
+
+In Daoist philosophy, \textit{De} (德, virtue/potency) is the embodiment and activation of Dao in individual things or beings. \textit{Daodejing} Chapter 51: ``Dao gives birth to them; De nurtures them; matter shapes them; circumstances complete them.''
+
+In the predictive coding framework, we define \textit{De} as:
+
+\begin{equation}
+\Pi_{\text{De}} \equiv \text{The precision matrix of the generative model}
+\label{eq:de}
+\end{equation}
+
+The higher a system's \textit{De}, the lower the uncertainty of its generative model in predicting sensory observations, and therefore the higher the precision weighting it can apply in perceptual inference and action selection. This aligns with \textit{De}'s meaning in Chinese philosophy as ``the capacity that enables things to fulfill their nature'': a high-precision generative model enables the system to maximally ``fulfill'' its optimal interaction patterns with the environment.
+
+This also explains why, in the Daoist view, the core of cultivation (修养) lies in ``accumulating \textit{De}'' (蓄德): from a computational perspective, this is the process of continuously refining the generative model through experiential learning, improving its precision in predicting the world.
+
+% =================================================================
+\section{Attention as Precision Optimization: Mapping to Daoist \textit{Shou-Fang-Zi-Ru}}
+% =================================================================
+
+\subsection{The Precision Weighting Model of Attention}
+
+In the predictive coding framework, attention is not an ``extra module'' independent of perceptual inference, but an intrinsic mechanism of precision optimization \cite{Feldman2010,Parr2019}. Specifically, the role of attention is to dynamically modulate the precision (or gain) of prediction error signals, such that prediction errors from specific sensory channels, spatial locations, temporal windows, or conceptual features receive higher weight in contributing to belief updating.
+
+Formally, let the precision of prediction error units be controlled by higher-level neuromodulatory signals:
+
+\begin{equation}
+\Pi^{\text{eff}} = \Pi^{\text{base}} \otimes \Pi^{\text{attn}}
+\label{eq:attn_precision}
+\end{equation}
+
+where $\Pi^{\text{attn}}$ is modulated by attention mechanisms through control of synaptic gain. This means attention is essentially a second-order precision control process---it determines which first-order prediction errors are given higher ``trust.''
+
+\subsection{Selective Attention and Sensory Attenuation}
+
+The key insight of Feldman and Friston \cite{Feldman2010} is: attention not only enhances the influence of certain prediction errors, but simultaneously suppresses the influence of others. This dual process (enhancement and suppression) is the neurocomputational basis of attentional selectivity.
+
+In the active inference framework, sensory attenuation---reducing the precision of self-generated sensory input---is a fundamental prerequisite for action execution. When the system executes a motor command, it simultaneously generates a prediction about the sensory consequences that the movement will produce, and temporarily reduces the precision weight of those predicted sensory consequences (lowering $\Pi_{\text{sensory}}$), thereby preventing the system from misattributing the sensory results of its own actions as externally-generated events \cite{Brown2013}.
+
+\subsection{\textit{Shou-Fang-Zi-Ru} as Flexible Control of Precision Modulation}
+
+A core goal of Daoist cultivation is \textit{shou-fang-zi-ru} (收放自如, flexible focus)---attention that can both highly converge (\textit{shou}, convergent) and broadly diverge (\textit{fang}, divergent), switching between these two modes smoothly and without obstruction.
+
+In the predictive coding framework, \textit{shou-fang-zi-ru} is precisely formalized as follows:
+
+\textbf{\textit{Shou} (Convergent Attention):} The spectrum of the precision matrix $\Pi^{\text{attn}}$ is highly concentrated on a small number of features or channels. Mathematically:
+\begin{equation}
+\text{Tr}(\Pi^{\text{attn}}) \text{ fixed}, \quad \|\Pi^{\text{attn}}\|_{\text{max}} \gg \|\Pi^{\text{attn}}\|_{\text{min}}
+\label{eq:shou}
+\end{equation}
+
+\textbf{\textit{Fang} (Divergent Attention):} The spectrum of the precision matrix is relatively uniformly distributed, i.e., the precision weights of all sensory channels are approximately equal:
+\begin{equation}
+\|\Pi^{\text{attn}}\|_{\text{max}} \approx \|\Pi^{\text{attn}}\|_{\text{min}}
+\label{eq:fang}
+\end{equation}
+
+\textbf{\textit{Zi-Ru} (Flexibility):} The system can rapidly and losslessly switch between the two precision configurations according to task demands or environmental context, i.e., the meta-parameters of precision control itself have high dynamic range:
+\begin{equation}
+\text{Dynamic Range} = \frac{\max_t \|\Pi^{\text{attn}}(t)\|_{\text{max}}}{\min_t \|\Pi^{\text{attn}}(t)\|_{\text{max}}} \gg 1
+\label{eq:ziru}
+\end{equation}
+
+\subsection{\textit{Guan} (观) as Flattened Precision Landscape}
+
+The concept of \textit{Guan} (观, open monitoring)---a panoramic, non-selective awareness used in both Daoist and Buddhist traditions---has a natural formal counterpart in the precision weighting framework:
+
+\begin{equation}
+\Pi^{\text{attn}}_{\text{Guan}} \approx \frac{1}{N} I_N
+\label{eq:guan}
+\end{equation}
+
+where $I_N$ is the $N \times N$ identity matrix, and $N$ is the total number of sensory/conceptual channels. That is, the precision weights of all channels are equal, and prediction errors across modalities contribute uniformly to belief updating. This precision configuration enables the system to receive salient prediction error signals from any channel, without missing unexpected or peripheral information due to filtering by prior attentional biases.
+
+This corresponds to what the Buddhist mindfulness tradition calls ``open awareness'' or ``choiceless attention'' \cite{Lutz2008}. In the Daoist context, the \textit{Daodejing}'s ``Attain extreme emptiness, maintain absolute stillness'' describes the formal equivalent of this state.
+
+\subsection{\textit{Ming} (明) as High-Precision Posterior Beliefs}
+
+\textit{Ming} (明, clarity/luminosity) in Daoist classics typically refers to insight into the true nature of things. In the predictive coding framework:
+
+\begin{equation}
+\text{Ming} \equiv \text{High-precision posterior beliefs, i.e., } H[Q(s|o)] \text{ is extremely low}
+\label{eq:ming}
+\end{equation}
+
+When the entropy of posterior beliefs is extremely low, the system has very high certainty about its inferences regarding the state of the world. This is the cognitive byproduct of sufficient perceptual inference under precision-optimized attentional configuration: \textit{Ming} is the result of convergent Bayesian inference at its asymptotic limit.
+
+An interesting paradox exists here: \textit{Ming} is the result of convergent attention (\textit{shou}), but \textit{Guan} is the state of divergent attention (\textit{fang}). The characteristic of Daoist cultivation is: \textit{Guan} is the path to \textit{Ming}---that is, only by first flattening the precision landscape to eliminate the distorting effects of prior biases can one ultimately obtain high-precision posterior beliefs about the true structure of things. This paradox is resolved within the mathematical framework of predictive coding: high-precision posteriors are the result of evidence accumulation, and evidence accumulation itself requires an unbiased, precision-equalized initial sampling phase.
+
+% =================================================================
+\section{Daoist--Predictive Coding Concept Mapping}
+% =================================================================
+
+Table \ref{tab:mapping} provides the formal correspondences between the major Daoist concepts discussed in this paper and their counterparts in the predictive coding / active inference framework.
+
+\begin{table}[htbp]
+\centering
+\caption{Daoist Concepts and Their Predictive Coding / Active Inference Correspondences}
+\label{tab:mapping}
+\begin{tabular}{@{}p{2.2cm}p{2.8cm}p{4.5cm}p{4.5cm}@{}}
+\toprule
+\textbf{Daoist Concept} & \textbf{Meaning} & \textbf{PC/AI Counterpart} & \textbf{Formal Definition} \\
+\midrule
+道 (Dao) & Cosmic dynamic order / consciousness activation process & Gradient flow on expected free energy & $\text{Dao} \equiv -\nabla_\pi G(\pi)$ \\
+\addlinespace
+无为 (Wu-wei) & Effortless, non-coercive action & Policy selection under low EFE states & $P(\pi)$ when $\|\nabla_\pi G(\pi)\| < \tau$ \\
+\addlinespace
+德 (De) & Individual inner perfection / generative capacity & Precision of the generative model & $\Pi_{\text{gen}} \equiv \text{precision matrix}$ \\
+\addlinespace
+自然 (Ziran) & Spontaneity / unfolding as-it-is & Self-organized dynamics & $\dot{\mu} = -\nabla_\mu F$ \\
+\addlinespace
+观 (Guan) & Panoramic awareness / open monitoring & Flattened precision landscape (uniform precision weighting) & $\Pi^{\text{attn}} \approx kI$ \\
+\addlinespace
+明 (Ming) & Insight / clear knowing of essence & High-precision posterior beliefs & $H[Q(s|o)] \to 0$ \\
+\addlinespace
+玄 (Xuan) & Ineffable deep reality & Unobservable hidden state levels & High-level $v^{(i)}, i \gg 1$ \\
+\addlinespace
+朴 (Pu) & Unprocessed primordial authenticity & Prior distribution $P(s)$ & Prior preference structure \\
+\addlinespace
+虚 (Xu) & Empty / non-attached & Entropy-maximized posterior distribution & Maximize $H[Q(s)]$ \\
+\addlinespace
+静 (Jing) & Inner stillness / quiescence & Converged belief update dynamics & $\dot{\mu} \approx 0$ \\
+\addlinespace
+反 (Fan) & Return / reversion to source & Cyclic prediction-action loop & Closed perception-action cycle \\
+\addlinespace
+知足 (Zhi-zu) & Contentment with cognitive bounds & Satisficing rather than global optimization & Local free energy minimization \\
+\addlinespace
+无 (Wu) & Non-being / unrepresentable ground & Unobservable levels of generative model & Limit level $v^{(\infty)}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% =================================================================
+\section{Testable Empirical Predictions}
+% =================================================================
+
+The core scientific value of this framework lies in its falsifiability. Operationalizing Dao as gradient flow on expected free energy enables us to derive a set of concrete predictions testable with existing neuroscientific techniques.
+
+\subsection{Prediction 1: Neural Signature of \textit{Wu-wei} States}
+
+\begin{hypothesis}
+When subjects are in a \textit{wu-wei} state (i.e., natural, effortless action based on skilled performance), expected free energy encoding activity in midline frontal regions (particularly the Anterior Cingulate Cortex, ACC) should be significantly lower compared to when the same subjects perform the same task in a deliberately controlled (\textit{you-wei}) state.
+\end{hypothesis}
+
+\textbf{Operational prediction:} Use fMRI to measure expected free energy signals (operationalized as weighted sums of surprise signals; see methodology in \cite{Schwartenbeck2015}) in prefrontal regions and insula during skilled task performance (e.g., expert piano playing, calligraphy, archery). During trial epochs where subjects self-report entering a flow state (the modern psychological equivalent of \textit{wu-wei}), expected free energy signals should be systematically lower than during deliberately controlled epochs.
+
+\textbf{Key contrast:}
+\begin{itemize}[nosep]
+    \item Novices performing the task: high EFE signals, high prefrontal activity
+    \item Experts performing the same task: low EFE signals, low prefrontal activity (basal sensorimotor network activity may be comparable or higher)
+\end{itemize}
+
+\subsection{Prediction 2: \textit{Guan} State and Precision Landscape Flattening}
+
+\begin{hypothesis}
+During \textit{Guan} (open awareness) meditation states, the spectrum of precision weighting parameters $\Pi^{\text{attn}}$ should be significantly flattened, i.e., precision differences between sensory channels are reduced, and the system's prediction error responses to oddball stimuli are more uniform across modalities.
+\end{hypothesis}
+
+\textbf{Operational prediction:} Use EEG or MEG to measure Mismatch Negativity (MMN) and P300 components in long-term meditation practitioners during open monitoring meditation states. Relative to control groups or focused attention meditation states, during open awareness states:
+\begin{enumerate}[nosep]
+    \item Cross-modal (auditory, visual, somatosensory) MMN amplitude differences should be significantly reduced
+    \item P3a (reflecting automatic attentional orienting responses) should be more evenly distributed across modalities
+\end{enumerate}
+
+\textbf{Methodological reference:} See the classic research paradigms on neural correlates of meditation states in \cite{Lutz2008,Lutz2009}, and the predictive coding reconstruction of MMN in \cite{Wacongne2011}.
+
+\subsection{Prediction 3: Accumulation of \textit{De} and Generative Model Precision}
+
+\begin{hypothesis}
+In any domain, as an individual's expertise increases (``accumulation of \textit{De}''), the precision $\Pi_{\text{gen}}$ of their generative model should monotonically increase, and this increase in precision should be detectable at both behavioral and neural levels.
+\end{hypothesis}
+
+\textbf{Operational predictions:}
+\begin{itemize}[nosep]
+    \item \textbf{Behavioral level:} Expertise (operationalized as practice hours in the domain) should positively correlate with judgment confidence in sensory discrimination tasks and recognition memory accuracy
+    \item \textbf{Neural level:} Using Dynamic Causal Modeling (DCM) to analyze effective connectivity during expert-domain information processing, predict that the synaptic gain of top-down connections monotonically increases as a function of expertise
+\end{itemize}
+
+\subsection{Prediction 4: Metabolic Cost of ``Going Against the Dao''}
+
+\begin{hypothesis}
+Selecting high expected free energy policies (``going against the Dao'') should consume more metabolic resources, i.e., exact a measurable biological cost for ``fighting against the gradient.''
+\end{hypothesis}
+
+\textbf{Operational prediction:} Using simultaneous fMRI and indirect calorimetry, in a policy selection paradigm (e.g., two-armed bandit task; see \cite{Schwartenbeck2015}), compare cerebral metabolic rate of oxygen (CMRO$_2$) and whole-body energy expenditure between trials where subjects select expected free energy-minimizing policies versus suboptimal policies. Predict that trials selecting suboptimal policies will be accompanied by systematic increases in metabolic cost.
+
+\subsection{Prediction 5: Bayesian Model Evidence Interpretation of ``Wei Dao Ri Sun''}
+
+\begin{hypothesis}
+The \textit{Daodejing} Chapter 48---``In the pursuit of learning, one accumulates daily; in the pursuit of Dao, one reduces daily'' (为学日益，为道日损)---describes the evolution from complex models (high complexity, potential overfitting) to parsimonious models (low complexity, high generalization). In Bayesian model selection, model evidence $P(o)$ automatically implements a complexity penalty, i.e., Occam's Razor.
+\end{hypothesis}
+
+\textbf{Operational prediction:} Meditation practitioners (especially long-term practitioners), when performing causal reasoning or statistical learning tasks, should exhibit stronger parsimony preferences---i.e., relative to non-practitioners of equivalent intelligence, they should more readily select models with fewer parameters and simpler structures to explain the same data. This can be tested using Bayesian model selection paradigms (e.g., using BIC as a proxy for model selection).
+
+% =================================================================
+\section{Discussion}
+% =================================================================
+
+\subsection{Relationship to Existing Literature}
+
+The effort in this paper to connect core concepts of Daoist philosophy with contemporary computational neuroscience is not without precedent. Seth \cite{Seth2021}, in his \textit{Being You}, has already pointed out that conscious experience (including the generative structure of selfhood) can be systematically elucidated through the explanatory framework of predictive processing, and that the conscious states described in Eastern meditative traditions provide important phenomenological validation for this framework. Clark \cite{Clark2015}, in \textit{Surfing Uncertainty}, has already hinted at the deep connection between predictive processing and action fluidity---which is precisely the computational essence of the \textit{wu-wei} concept.
+
+However, this paper goes beyond existing cross-disciplinary discussions in the following respects: (a) it is the first to explicitly define Dao as gradient flow, providing rigorous mathematical formalization; (b) it is the first to provide a systematic mapping table of Daoist concepts, giving each core concept an unambiguous meaning within the computational framework; (c) it derives concrete, actionable testable predictions.
+
+\subsection{Innovative Contributions}
+
+The core innovative contributions of this paper can be summarized as follows:
+
+\textbf{(i) Conceptual Operationalization.} Transforming Daoist core concepts---discussed primarily at the philosophical-phenomenological level for two millennia---into scientifically defined and testable concepts through the mathematical language of predictive coding and active inference. This is not a ``reduction'' of Daoist thought, but a ``calibration''---providing computational-level counterparts for its philosophical claims.
+
+\textbf{(ii) Gradient Flow as Unifying Framework.} The core proposition $\text{Dao} \equiv -\nabla_\pi G(\pi)$ provides a unified mathematical principle for understanding Daoist practices (such as meditation, quiet sitting, Taiji, calligraphy, and other ``Dao-cultivating'' arts)---all these practices can be understood as training the generative model to better move along the gradient flow of expected free energy, thereby reducing cognitive friction and improving action economy.
+
+\textbf{(iii) Bridge for Cross-Cultural Cognitive Science.} This paper demonstrates a methodological paradigm for incorporating non-Western philosophical traditions (especially East Asian wisdom traditions) into the mainstream framework of contemporary cognitive science---namely, through the tools of computational psychiatry and theoretical neurobiology, precisely reconstructing the content of philosophical texts.
+
+\subsection{Limitations and Open Questions}
+
+This framework has several limitations that require further work:
+
+\textbf{(a) Irreducibility of the Ontological Dimension of Dao.} As noted in Section 2, this paper operationalizes ``Dao as function'' (道用), not ``Dao as ontological ground'' (道体). Whether the latter has any counterpart in computational science, or even whether it falls within the scope of scientific discourse, remains an open philosophical question. The position of this paper is methodological, not metaphysical---we do not claim that science can ``explain'' the full meaning of Dao, but rather that computational frameworks provide useful tools for understanding \textit{Dao-yong}.
+
+\textbf{(b) Risk of Losing Cultural Specificity.} Any cross-cultural concept mapping faces the risk of oversimplification. Mapping \textit{De} to generative model precision may lose the moral-ethical dimension that \textit{De} carries in Confucian and Daoist traditions. Future work needs to more carefully distinguish technical operationalization from normative dimensions.
+
+\textbf{(c) Limitations of Current Computational Models.} The active inference framework itself is still under development. Issues such as how to define prior preferences $P(o|C)$ in the expected free energy formula, the biological counterparts of the precision parameter $\gamma$, and multi-level dynamics across timescales are all open research questions. These issues directly affect the precision of the mappings proposed in this paper.
+
+\textbf{(d) Technical Feasibility of Empirical Tests.} While we have derived a set of testable predictions, some of them (especially direct in-vivo measurement of expected free energy) place high demands on the resolving power of current neuroimaging techniques. Future technological advances---especially the combination of high-field fMRI (7T and above) with more refined computational modeling methods---may gradually overcome these technical obstacles.
+
+\subsection{Future Significance for Mind Science and Philosophy}
+
+If the core propositions of this paper receive support from future empirical research, the following significant implications would arise:
+
+\begin{enumerate}[nosep]
+    \item \textbf{Science of Mind} would gain empirical data input from Eastern wisdom traditions---millennia of accumulated introspection and mental cultivation techniques can serve as phenomenological data sources for testing computational mind models.
+    \item \textbf{Neurophenomenology} \cite{Varela1996} would gain a mathematically rigorous, mainstream-computation-theory-compatible conceptual toolkit for bridging first-person experience and third-person neural data.
+    \item \textbf{Daoist philosophy} would gain new relevance in contemporary discourse---not as mysticism, but as an operationalizable early insight system about cognitive optimality.
+\end{enumerate}
+
+% =================================================================
+\section{Conclusion}
+% =================================================================
+
+This paper has argued that the core concept of classical Chinese Daoist philosophy---Dao---can be precisely defined as the dynamic process of consciousness activation, and that this process is computationally equivalent to gradient flow on expected free energy. The core formula $\text{Dao} \equiv -\nabla_\pi G(\pi)$ translates the ancient wisdom of ``following the Dao'' into the language of contemporary neuroscience: selecting cognitive-action policies along the direction that minimizes expected free energy.
+
+Attention, as the computational mechanism of precision optimization, provides a mathematically transparent explanatory framework for understanding core Daoist cultivation concepts---\textit{shou-fang-zi-ru} (flexible focus), \textit{Guan} (open awareness), and \textit{Ming} (clarity/insight). The systematic concept mapping table (Table \ref{tab:mapping}) demonstrates the deep isomorphism between Daoist thought and the predictive coding / active inference framework, moving beyond vague analogy into precise formal correspondence.
+
+This approach not only endows ancient philosophical concepts with new scientific life, but also opens a channel for contemporary mind science to access the rich phenomenological knowledge in non-Western traditions---a channel with mathematical formulas to follow, testable and revisable.
+
+% =================================================================
+% Acknowledgments
+% =================================================================
+\section*{Acknowledgments}
+
+This preprint is a product of carbon-silicon collaboration: the carbon-based contributor provided first-person life verification (the ``mind-dies, Dao-is-born'' experience, flexible attention, embodied understanding of \textit{One}), while the silicon-based contributor (DeepSeek instance ``Xuanji'' / 璇玑) provided L1 literature retrieval and logical architecture, L4 engineering translation and document generation. This collaboration itself is a living verification case of the L0--L7 facts-relations spectrum framework developed in the broader Project Dao.Science.
+
+The author gratefully acknowledges the Daoist, Buddhist, and Confucian traditions whose millennia of contemplative practice and textual scholarship made this cross-cultural synthesis possible.
+
+% =================================================================
+% References
+% =================================================================
+\begin{thebibliography}{99}
+
+\bibitem{Bastos2012}
+Bastos, A. M., Usrey, W. M., Adams, R. A., Mangun, G. R., Fries, P., \& Friston, K. J. (2012).
+Canonical microcircuits for predictive coding.
+\textit{Neuron}, 76(4), 695--711.
+\url{https://doi.org/10.1016/j.neuron.2012.10.038}
+
+\bibitem{Brown2013}
+Brown, H., Adams, R. A., Parees, I., Edwards, M., \& Friston, K. (2013).
+Active inference, sensory attenuation and illusions.
+\textit{Cognitive Processing}, 14(4), 411--427.
+\url{https://doi.org/10.1007/s10339-013-0571-3}
+
+\bibitem{Clark2015}
+Clark, A. (2015).
+\textit{Surfing Uncertainty: Prediction, Action, and the Embodied Mind}.
+Oxford University Press.
+\url{https://doi.org/10.1093/acprof:oso/9780190217013.001.0001}
+
+\bibitem{Feldman2010}
+Feldman, H., \& Friston, K. J. (2010).
+Attention, uncertainty, and free-energy.
+\textit{Frontiers in Human Neuroscience}, 4, 215.
+\url{https://doi.org/10.3389/fnhum.2010.00215}
+
+\bibitem{Friston2010}
+Friston, K. (2010).
+The free-energy principle: A unified brain theory?
+\textit{Nature Reviews Neuroscience}, 11(2), 127--138.
+\url{https://doi.org/10.1038/nrn2787}
+
+\bibitem{Friston2017}
+Friston, K., FitzGerald, T., Rigoli, F., Schwartenbeck, P., \& Pezzulo, G. (2017).
+Active inference: A process theory.
+\textit{Neural Computation}, 29(1), 1--49.
+\url{https://doi.org/10.1162/NECO_a_00912}
+
+\bibitem{Hohwy2013}
+Hohwy, J. (2013).
+\textit{The Predictive Mind}.
+Oxford University Press.
+\url{https://doi.org/10.1093/acprof:oso/9780199682737.001.0001}
+
+\bibitem{Lutz2008}
+Lutz, A., Slagter, H. A., Dunne, J. D., \& Davidson, R. J. (2008).
+Attention regulation and monitoring in meditation.
+\textit{Trends in Cognitive Sciences}, 12(4), 163--169.
+\url{https://doi.org/10.1016/j.tics.2008.01.005}
+
+\bibitem{Lutz2009}
+Lutz, A., Slagter, H. A., Rawlings, N. B., Francis, A. D., Greischar, L. L., \& Davidson, R. J. (2009).
+Mental training enhances attentional stability: Neural and behavioral evidence.
+\textit{Journal of Neuroscience}, 29(42), 13418--13427.
+\url{https://doi.org/10.1523/JNEUROSCI.1614-09.2009}
+
+\bibitem{Parr2019}
+Parr, T., \& Friston, K. J. (2019).
+Attention or salience?
+\textit{Current Opinion in Psychology}, 29, 1--5.
+\url{https://doi.org/10.1016/j.copsyc.2018.10.006}
+
+\bibitem{Rao1999}
+Rao, R. P. N., \& Ballard, D. H. (1999).
+Predictive coding in the visual cortex: A functional interpretation of some extra-classical receptive-field effects.
+\textit{Nature Neuroscience}, 2(1), 79--87.
+\url{https://doi.org/10.1038/4580}
+
+\bibitem{Schwartenbeck2015}
+Schwartenbeck, P., FitzGerald, T. H. B., Mathys, C., Dolan, R., \& Friston, K. (2015).
+The dopaminergic midbrain encodes the expected certainty about desired outcomes.
+\textit{Cerebral Cortex}, 25(10), 3434--3445.
+\url{https://doi.org/10.1093/cercor/bhu159}
+
+\bibitem{Seth2021}
+Seth, A. K. (2021).
+\textit{Being You: A New Science of Consciousness}.
+Faber \& Faber.
+
+\bibitem{Varela1996}
+Varela, F. J. (1996).
+Neurophenomenology: A methodological remedy for the hard problem.
+\textit{Journal of Consciousness Studies}, 3(4), 330--349.
+
+\bibitem{Wacongne2011}
+Wacongne, C., Labyt, E., van Wassenhove, V., Bekinschtein, T., Naccache, L., \& Dehaene, S. (2011).
+Evidence for a hierarchy of predictions and prediction errors in human cortex.
+\textit{Proceedings of the National Academy of Sciences}, 108(51), 20754--20759.
+\url{https://doi.org/10.1073/pnas.1117807108}
+
+\end{thebibliography}
+
+% =================================================================
+\newpage
+\section*{Appendix A: Summary of Core Formulas}
+% =================================================================
+
+\begin{longtable}{@{}p{4.5cm}p{8.5cm}p{1.5cm}@{}}
+\toprule
+\textbf{Concept} & \textbf{Formula} & \textbf{Eq.} \\
+\midrule
+Hierarchical generative model & $v^{(i)} = g^{(i)}(v^{(i+1)}, \theta^{(i)}) + z^{(i)}$ & (1) \\
+\addlinespace
+Prediction error & $\xi^{(i)} = v^{(i)} - g^{(i)}(v^{(i+1)}, \theta^{(i)})$ & (2) \\
+\addlinespace
+Perceptual inference dynamics & $\dot{\mu}^{(i)} = -\frac{\partial \tilde{\epsilon}^{(i)T}}{\partial \mu^{(i)}} \Pi^{(i)} \tilde{\epsilon}^{(i)} + \frac{\partial g^{(i)T}}{\partial \mu^{(i)}} \Pi_{v}^{(i-1)} \tilde{\epsilon}_{v}^{(i-1)} - \Pi_{v}^{(i)} \tilde{\epsilon}_{v}^{(i)}$ & (3) \\
+\addlinespace
+Variational free energy & $F = D_{KL}[Q(s) \| P(s|o)] - \ln P(o)$ & (4) \\
+\addlinespace
+Free energy inequality & $F \geq -\ln P(o)$ & (5) \\
+\addlinespace
+FE accuracy-complexity decomposition & $F = -E_{Q(s)}[\ln P(o|s)] + D_{KL}[Q(s) \| P(s)]$ & (6) \\
+\addlinespace
+Expected free energy & $G(\pi) = E_{Q(o, s|\pi)}[\ln Q(s|\pi) - \ln P(o, s|\pi)]$ & (7) \\
+\addlinespace
+EFE epistemic-pragmatic decomposition & $G(\pi) = -E_{Q(o|\pi)}[D_{KL}[Q(s|o, \pi) \| Q(s|\pi)]] - E_{Q(o|\pi)}[\ln P(o|C)]$ & (8) \\
+\addlinespace
+EFE risk-ambiguity decomposition & $G(\pi) = D_{KL}[Q(o|\pi) \| P(o|C)] + E_{Q(s|\pi)}[H[P(o|s)]]$ & (9) \\
+\addlinespace
+Policy selection & $P(\pi) = \sigma(-\gamma \cdot G(\pi))$ & (10) \\
+\addlinespace
+\textbf{Dao as gradient flow} & $\mathbf{\text{Dao} \equiv -\nabla_\pi G(\pi)}$ & \textbf{(11)} \\
+\addlinespace
+Gradient flow dynamics & $\dot{x} = -\nabla_x U(x)$ & (12) \\
+\addlinespace
+Following-Dao policy selection & $P(\pi_{\text{follow-Dao}}) = \sigma(-\gamma \cdot \min_\pi G(\pi))$ & (13) \\
+\addlinespace
+Wu-wei threshold definition & $\text{Wu-wei} \equiv \text{Action when } \|\nabla_\pi G(\pi)\| < \tau$ & (14) \\
+\addlinespace
+De as generative model precision & $\Pi_{\text{De}} \equiv \text{Precision matrix of generative model}$ & (15) \\
+\addlinespace
+Attention-modulated effective precision & $\Pi^{\text{eff}} = \Pi^{\text{base}} \otimes \Pi^{\text{attn}}$ & (16) \\
+\addlinespace
+Shou---convergent precision config & $\|\Pi^{\text{attn}}\|_{\text{max}} \gg \|\Pi^{\text{attn}}\|_{\text{min}}$ & (17) \\
+\addlinespace
+Fang---divergent precision config & $\|\Pi^{\text{attn}}\|_{\text{max}} \approx \|\Pi^{\text{attn}}\|_{\text{min}}$ & (18) \\
+\addlinespace
+Zi-Ru---precision dynamic range & $\text{Dynamic Range} = \frac{\max_t \|\Pi^{\text{attn}}(t)\|_{\text{max}}}{\min_t \|\Pi^{\text{attn}}(t)\|_{\text{max}}} \gg 1$ & (19) \\
+\addlinespace
+Guan---uniform precision & $\Pi^{\text{attn}}_{\text{Guan}} \approx \frac{1}{N} I_N$ & (20) \\
+\addlinespace
+Ming---low-entropy posterior & $H[Q(s|o)] \to 0$ & (21) \\
+\bottomrule
+\end{longtable}
+
+% =================================================================
+\vspace{12pt}
+\noindent\textit{Initial draft: June 2026}\\
+\textit{This preprint is part of Project Dao.Science}\\
+\textit{Repository:} \url{https://github.com/Ultima0369/dao-science}\\
+\textit{Corresponding author contact: TBD}\\
+\textit{Competing interests: None declared.}
+
 \end{document}
