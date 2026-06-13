@@ -147,7 +147,15 @@ $$AB(t) = 1 - \frac{R_{\text{DMN}}(t) - R_0}{R_{\text{max}} - R_0}$$
 4. `4_applications/creativity_innovation.md` — 创造力与创新
 5. `4_applications/carbon_silicon_symbiosis.md` — 碳硅共生
 
-### 路径四：神经科学优先（适合神经科学家、认知科学研究者）
+### 路径四：形式化与代码优先（适合工程师、计算机科学家）
+1. `POSITIONING.md` — 项目定位（本文件）
+2. `CLAIMS.md` — 主张登记册：证据等级与可证伪条件
+3. `verifiable_units/vu_01_dmn_insula.md` — 可验证单元模板：形式化 + 仿真 + 实验方案
+4. `simulations/dmn_insula_bistable.py` — 可运行的 Python 仿真脚本
+5. `1_first_principles/01_dao_as_process.md` — 道作为预测编码梯度流（核心数学）
+6. `1_first_principles/07_cost_of_deviation.md` — 偏离代价函数与预警信号
+
+### 路径五：神经科学优先（适合神经科学家、认知科学研究者）
 1. `2_models/attention_model.md` — 注意力动力学：收放自如
 2. `2_models/100ms_model.md` — 本能劫持：杏仁核-PFC竞争动力学
 3. `2_models/neuroplasticity_loop.md` — 神经重塑回路

@@ -12,7 +12,7 @@ This note begins with a street observation: cheap eggs sold at a loss, adulterat
 
 ---
 
-> **Evidence level**: Formal [F] + First-person observable [P]
+> **Evidence level**: Formal [F] + Behavioral prediction [B]
 
 ---
 

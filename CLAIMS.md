@@ -232,7 +232,7 @@
 
 | 维度 | 内容 |
 |---|---|
-| 证据徽章 | **F + S + B + N + M** |
+| 证据徽章 | **F + S + B + M** |
 | 可信度 | 中-高 |
 | 可证伪条件 | 发现生命系统可以在完全随机或无优化的能量分配下长期存续；或证明某种调配虽改善了个体 A 的存在质量却必然损害个体 B 且无法重新调配；或证明注意力劫持不会影响决策质量或生存结果 |
 | 关联文件 | `1_first_principles/10_de_and_ming.md`、`1_first_principles/01_dao_as_process.md`、`2_models/attention_model.md`、`2_models/100ms_model.md`、`2_models/dmn_self_model.md`、`verifiable_units/vu_09_de_ming_energy_allocation.md` |

@@ -17,7 +17,7 @@ flowchart TB
     
     subgraph "Layer 1: 第一性原理"
         DAO["道作为过程<br/>01_dao_as_process.md<br/>道 ≡ −∇_θ G(π_θ)<br/>预测编码梯度流"]
-        ONE["一即带宽<br/>02_one_as_bandwidth.md<br/>AB(t)=Cmax−RDMN(t)"]
+        ONE["一即带宽<br/>02_one_as_bandwidth.md<br/>AB(t)=1−[R_DMN(t)−R_0]/[R_max−R_0]"]
         MAP["相非物<br/>03_map_not_territory.md<br/>心智内容=万物之相"]
         PHIL["科学哲学<br/>04_philosophy_of_science.md<br/>L0-L7 元框架"]
         FPE["第一人称认识论<br/>05_first_person_epistemology.md<br/>个体=不可还原数据源"]
@@ -49,6 +49,8 @@ flowchart TB
     
     subgraph "Layer 4: 应用"
         AI["AI 治理<br/>ai_governance.md<br/>知止不殆+主动停车"]
+        MGMT["管理：管理者作为第一人称节点<br/>management.md<br/>自我训练+决策带宽"]
+        FIELD["管理进阶：场的营造<br/>management_field_theory.md<br/>关系调谐+场效应"]
         JING["境教<br/>education_by_field.md<br/>环境设计作为教学法"]
         CLINICAL["临床心理健康<br/>clinical_mental_health.md<br/>四行↔CBT/ACT/MBCT"]
         CREATIVITY["创造力与创新<br/>creativity_innovation.md<br/>DMN-ECN 耦合+称法创造"]

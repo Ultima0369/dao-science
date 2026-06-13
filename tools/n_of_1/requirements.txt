@@ -1,0 +1,4 @@
+# N-of-1 toolkit dependencies
+# Install: pip install -r tools/n_of_1/requirements.txt
+matplotlib==3.7.2
+numpy==1.26.4

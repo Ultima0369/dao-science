@@ -221,7 +221,7 @@
 | `abstraction_dialogue.md` | 动机 | 两棵树+抽象的解释说 | `cognition_in_progress.md` | `L0_L7_spectrum.md` |
 | `L0_L7_spectrum.md` | 动机 | L0-L7八层事实频谱 | `abstraction_dialogue.md` | `01_dao_as_process.md` |
 | `01_dao_as_process.md` | 第一性原理 | 道 ≡ −∇G(π) | `L0_L7_spectrum.md` | `02_one_as_bandwidth.md` |
-| `02_one_as_bandwidth.md` | 第一性原理 | AB(t) = Cmax − RDMN(t) | `01_dao_as_process.md` | `03_map_not_territory.md` |
+| `02_one_as_bandwidth.md` | 第一性原理 | AB(t) = 1 − [R_DMN(t) − R_0]/[R_max − R_0] | `01_dao_as_process.md` | `03_map_not_territory.md` |
 | `03_map_not_territory.md` | 第一性原理 | 心智内容=万物之相 | `02_one_as_bandwidth.md` | `04_philosophy_of_science.md` |
 | `04_philosophy_of_science.md` | 第一性原理 | 科学知识=多层嵌套L0-L7产物 | `03_map_not_territory.md` | `05_first_person_epistemology.md` |
 | `05_first_person_epistemology.md` | 第一性原理 | 第一人称认识论+个体独特性+L0/L2 数据源 | `04_philosophy_of_science.md` | `06_emergence.md` |

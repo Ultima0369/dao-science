@@ -4,7 +4,7 @@
 
 ---
 
-> **Evidence class**: Formal [F] + Behavioral prediction [B] + Neural evidence [N] + Meta-ethical [M]
+> **Evidence class**: Formal [F] + Behavioral prediction [B] + Meta-ethical [M]
 
 ---
 

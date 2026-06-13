@@ -19,6 +19,19 @@ Full positioning statement: [`POSITIONING.en.md`](POSITIONING.en.md).
 
 ---
 
+## What this repository is (and isn't)
+
+- **Is**: An open-source bilingual research handbook aligning first-person Eastern contemplative practice with predictive coding, neuroscience, active inference, and complex systems so that it becomes empirically testable technical language.
+- **Is**: A set of runnable Python simulation scripts (`simulations/`), each paired with a verifiable unit in `verifiable_units/`.
+- **Is**: A claim registry (`CLAIMS.md`) that labels every proposition with its evidence level and falsification conditions.
+- **Isn't**: A `pip install`-able software library; there is no stable Python API and no backward-compatibility guarantee.
+- **Isn't**: A theory that has already passed large-scale experimental validation; it is in the "theory construction + operationalization" stage, and the VUs and simulations are being progressively subjected to independent scrutiny.
+
+If you prefer to start from code and formalization, the recommended path is:
+`POSITIONING.en.md` → `CLAIMS.en.md` → `verifiable_units/vu_01_dmn_insula.en.md` → `simulations/dmn_insula_bistable.py`.
+
+---
+
 ## Who is this manual for?
 
 | You might be | What this can help you with |
@@ -92,8 +105,8 @@ dao-science/
 ├── 2_models/                   # Models of mind
 ├── 3_methodology/              # Practice methods (li-ru + xing-ru)
 ├── 4_applications/             # Applications (AI, education, clinical, creativity, carbon-silicon symbiosis)
-├── verifiable_units/           # Verifiable units: formalization + simulation + protocol
-├── simulations/                # Runnable Python simulation scripts
+├── verifiable_units/           # Verifiable units: formalization + simulation notes + experimental protocols (document entry)
+├── simulations/                # Runnable Python simulation scripts (one-to-one with VUs)
 ├── paper/                      # 8 LaTeX academic preprints
 ├── scripts/                    # Doc sync, audit, and CI helper scripts
 ├── GLOSSARY.md                 # Glossary
@@ -125,7 +138,7 @@ CI also runs link audit, math delimiter audit, nav coverage audit, and Python si
 
 ## Evidence levels
 
-This project uses `F/S/B/N/M` badges to mark the evidential status of each claim, preventing the conflation of formalization with evidence:
+This project uses `F/S/B/N/M/P` badges to mark the evidential status of each claim, preventing the conflation of formalization with evidence:
 
 - **F**ormal: formalized definition
 - **S**imulation: runnable simulation

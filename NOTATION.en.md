@@ -69,7 +69,7 @@ This avoids confusion from using $\tau$ for both.
 
 ## 3. Evidence-Level Badges
 
-To distinguish "formalization" from "verification," this project introduces five evidence-status badges. Each core proposition should be labeled with its current evidence level at first appearance.
+To distinguish "formalization" from "verification," this project introduces six evidence-status badges. Each core proposition should be labeled with its current evidence level at first appearance.
 
 | Badge | Level | Meaning | Example |
 |-------|-------|---------|---------|
@@ -78,6 +78,7 @@ To distinguish "formalization" from "verification," this project introduces five
 | **B** | Behavioral | Derives testable behavioral predictions but experiment not yet completed | 100ms model's predicted intervention-success curve |
 | **N** | Neural | Neuroscience literature or data supports its neural correlate | DMN down-regulation during meditation (Brewer et al., 2011) |
 | **M** | Meta-ethical / Normative | Contains normative claims not purely empirically falsifiable | "Knowing when to stop" as an AI halting standard |
+| **P** | Physical / First-principles | Reasoning grounded in physical laws or first principles, independent of specific biological or social mechanisms | Earth's infrared-radiation cooling constraint on AI expansion |
 
 **Usage format**: Label at the start of a file or after key equations, e.g.:
 
@@ -96,7 +97,7 @@ Every core mapping should explicitly state its operational proxy, domain of vali
 - **Operational proxy**: How to measure X and Y
 - **Domain of validity**: Under what conditions the mapping holds
 - **Falsification condition**: What evidence would weaken the mapping
-- **Evidence level**: [F/S/B/N/M]
+- **Evidence level**: [F/S/B/N/M/P]
 ```
 
 ---
