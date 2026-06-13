@@ -242,6 +242,7 @@ ____________________________________
 - `templates/experiment_design.md`：实验设计模板；
 - `templates/daily_log.md`：每日日志模板；
 - `templates/weekly_review.md`：每周回顾模板；
+- `templates/l0_l7_snapshot.md`：L0-L7 认知-关系快照，用于在实验前定位目标现象所在的认知层级（如 L2 个体实情 vs L6 信念闭环），从而选择更合适的测量指标；
 - `scripts/log_entry.py`：命令行快速记录一条观察；
 - `scripts/analyze.py`：读取 CSV 并生成 Markdown 分析报告；
 - `examples/sample_data.csv` 与 `sample_report.md`：示例数据与报告。

@@ -28,7 +28,8 @@ tools/n_of_1/
 ├── templates/                # Markdown templates
 │   ├── experiment_design.md  # Design your N-of-1 experiment
 │   ├── daily_log.md          # Daily structured log
-│   └── weekly_review.md      # Weekly aggregation and reflection
+│   ├── weekly_review.md      # Weekly aggregation and reflection
+│   └── l0_l7_snapshot.md     # Quick cognitive-relational level assessment
 ├── scripts/                  # Python helpers
 │   ├── log_entry.py          # Create a structured log entry
 │   └── analyze.py            # Analyze CSV data and generate report
