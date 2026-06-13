@@ -29,6 +29,7 @@ TOP_FILES = [
     "NOTATION.md",
     "TRANSLATION.md",
     "CONTRIBUTING.md",
+    "CLAIMS.md",
 ]
 
 # Files/directories that should not be mirrored even if listed above.

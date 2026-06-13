@@ -64,6 +64,7 @@ Full positioning statement: [`POSITIONING.en.md`](POSITIONING.en.md).
 | Build a cognitive framework | [`0_motivation/L0_L7_spectrum.md`](0_motivation/L0_L7_spectrum.md) | 20 min |
 | See formalized definitions | [`1_first_principles/01_dao_as_process.md`](1_first_principles/01_dao_as_process.md) | 25 min |
 | Run executable simulations | [`verifiable_units/vu_01_dmn_insula.md`](verifiable_units/vu_01_dmn_insula.md) | 30 min |
+| Check the evidence status of each claim | [`CLAIMS.md`](CLAIMS.md) | 15 min |
 | Look up terms | [`GLOSSARY.md`](GLOSSARY.md) | On demand |
 
 ---
@@ -75,6 +76,7 @@ dao-science/
 ├── POSITIONING.md              # Positioning statement
 ├── FINAL_VISION.md             # Ultimate vision
 ├── README.md                   # This file
+├── CLAIMS.md                   # Claim registry: evidence status and falsification conditions
 ├── 0_motivation/               # Motivation and cognitive framework
 ├── 1_first_principles/         # First principles
 ├── 2_models/                   # Models of mind
@@ -119,7 +121,7 @@ This project uses `F/S/B/N/M` badges to mark the evidential status of each claim
 - **S**imulation: runnable simulation
 - **B**ehavioral: behavioral/phenomenological evidence
 - **N**euroscience: neuroscience evidence
-- **M**athematical: mathematical proof
+- **M**eta-ethical / Normative: meta-ethical or normative claim, not empirically falsifiable on its own
 
 See [`NOTATION.en.md`](NOTATION.en.md) for details.
 

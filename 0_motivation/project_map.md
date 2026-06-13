@@ -4,7 +4,7 @@
 
 ---
 
-本文档提供 Project Dao.Science 全部 27 个核心内容模块之间的概念依赖关系图，帮助读者找到适合自己兴趣的阅读路径。（注：27 个核心内容模块 = 4 动机内容文件 + 7 第一性原理 + 6 心智模型 + 6 实践方法 + 5 应用。仓库另有 `project_map.md` 与 `objections_and_replies.md` 两个导航/元文件，以及 `FINAL_VISION.md`、`POSITIONING.md`、`GLOSSARY.md` 等顶层声明文件。）
+本文档提供 Project Dao.Science 全部核心内容模块之间的概念依赖关系图，帮助读者找到适合自己兴趣的阅读路径。（注：仓库另有 `project_map.md` 与 `objections_and_replies.md` 两个导航/元文件，以及 `FINAL_VISION.md`、`POSITIONING.md`、`GLOSSARY.md`、`CLAIMS.md` 等顶层声明文件。）
 
 ```mermaid
 flowchart TB
@@ -191,6 +191,13 @@ flowchart TB
 
 1. `0_motivation/objections_and_replies.md` — 六项核心挑战与回应
 2. → 然后按路径 1-5 选择性深入
+
+### 路径 7：证据状态审查
+适合希望快速了解项目主张、证据等级和可证伪条件的读者。
+
+1. `CLAIMS.md` — 主张登记册与证据状态总览
+2. → 按表中链接跳到对应形式化定义、模拟或应用
+3. → 对任何主张，检查其「可证伪条件」是否符合你的标准
 
 ## 学术预印本
 

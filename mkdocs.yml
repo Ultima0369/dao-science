@@ -96,6 +96,7 @@ plugins:
             概念索引与术语表: "Glossary"
             符号与约定: "Notation"
             翻译声明: "Translation Statement"
+            主张登记册: "Claim Registry"
             贡献指南: "Contributing"
       reconfigure_material: true
       reconfigure_search: true
@@ -151,4 +152,5 @@ nav:
     - 概念索引与术语表: GLOSSARY.md
     - 符号与约定: NOTATION.md
     - 翻译声明: TRANSLATION.md
+    - 主张登记册: CLAIMS.md
     - 贡献指南: CONTRIBUTING.md
