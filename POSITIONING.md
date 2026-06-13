@@ -77,7 +77,7 @@
 
 $$\text{Dao} \equiv -\nabla_\theta G(\pi_\theta)$$
 
-其中 $\pi_\theta$ 是由连续参数 $\theta \in \mathbb{R}^d$ 参数化的认知-行动策略。对应的离散策略选择形式为 $\pi_{\text{顺道}} = \arg\min_\pi G(\pi)$。
+其中 $\pi_\theta$ 是由连续参数 $\theta \in \mathbb{R}^d$ 参数化的认知-行动策略。对应的离散策略选择形式为 $\pi_{\text{顺道}} = \arg\min_\pi G(\pi)$。关于为何不对离散策略索引写 $\nabla_\pi$，以及本文所有符号的量纲约定，见 [`NOTATION.md`](NOTATION.md)。
 
 道不是真理、不是法则、不是万物本源——道是**你正在做的事**。它是思维意识从L0（觉知本身）到L4（理性协作）再到L7（自取灭亡）的整个启用过程。你说它是真理？那就去活出那个真理。你说它是法则？那就去发现并验证那个法则。
 

@@ -34,8 +34,8 @@
 |---|---|
 | Evidence badges | **F** |
 | Confidence | Medium |
-| Falsification condition | Active inference framework shown mathematically inconsistent; or numerous counter-examples showing optimal human/AI action strategies do not correspond to local free-energy minimization |
-| Related files | `1_first_principles/01_dao_as_process.md` |
+| Falsification condition | Proof that, under reasonable parameterizations, $-\nabla_\theta G(\pi_\theta)$ or $\arg\min_\pi G(\pi)$ cannot describe strategy updating in any cognitive-action system; or systematic demonstration that optimal human/AI strategies in standard tasks deviate from local free-energy minimization |
+| Related files | `1_first_principles/01_dao_as_process.md`, `NOTATION.en.md` |
 | Open questions | How to define gradients rigorously over discrete strategy indices? What is the precise neural implementation of expected free energy? |
 
 ---
