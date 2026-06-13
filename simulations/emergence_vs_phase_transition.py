@@ -24,8 +24,9 @@ Outputs:
 
 from pathlib import Path
 
-import numpy as np
 import matplotlib
+import numpy as np
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
@@ -226,7 +227,7 @@ def plot_ising(temps: np.ndarray, mags: np.ndarray) -> None:
 def plot_boids(align_weights: np.ndarray, order_params: np.ndarray) -> None:
     fig, ax = plt.subplots(figsize=(7, 5))
     ax.plot(align_weights, order_params, "o-", color="#2e7d32", label="Polarization")
-    ax.set_xlabel("Alignment weight $w_{\mathrm{align}}$")
+    ax.set_xlabel(r"Alignment weight $w_{\mathrm{align}}$")
     ax.set_ylabel("Order parameter (polarization)")
     ax.set_title("Emergence: Boids flocking")
     ax.legend()

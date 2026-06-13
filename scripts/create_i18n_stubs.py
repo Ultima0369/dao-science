@@ -82,7 +82,6 @@ def main() -> None:
                 continue
 
             english_title = TITLE_MAP.get(src.name, extract_chinese_title(src))
-            rel_to_src = src.relative_to(src.parent)
             depth = len(src.relative_to(ROOT).parts) - 1
             contributing_prefix = "../" * depth
 

@@ -27,8 +27,9 @@ Outputs:
 
 from pathlib import Path
 
-import numpy as np
 import matplotlib
+import numpy as np
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
@@ -144,7 +145,7 @@ def plot_decision_boundary(lambda_risk: float = 3.0, lambda_ambiguity: float = 1
     ax.axhline(risk_threshold, color="red", linestyle="--", linewidth=2, label="Risk threshold")
 
     # Shade stop region
-    stop_region = (G > g_threshold) | (Ri > risk_threshold)
+    stop_region = (g_threshold < G) | (Ri > risk_threshold)
     ax.contourf(R, Ri, stop_region.astype(float), levels=[0.5, 1.5], colors=["gray"], alpha=0.2)
 
     ax.set_xlabel("Expected reward $E[r \\mid \\pi]$")
@@ -258,7 +259,7 @@ def plot_comparison(n_problems: int = 500, n_runs: int = 50) -> None:
         capsize=5,
     )
     axes[1].set_ylabel("Catastrophe count")
-    axes[1].set_title("Catastrophes over {} problems".format(n_problems))
+    axes[1].set_title(f"Catastrophes over {n_problems} problems")
 
     axes[2].hist(stopping_stops, bins=15, color="#1565c0", alpha=0.7, edgecolor="black")
     axes[2].set_xlabel("Number of stops")

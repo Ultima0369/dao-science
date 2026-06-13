@@ -1,0 +1,101 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dao-science"
+version = "0.1.0"
+description = "Dao as Process - A Handbook for the Tech-Soul"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Project Dao.Science"},
+]
+keywords = ["active inference", "predictive coding", "contemplative science", "cognitive science", "complex systems"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+]
+
+[project.optional-dependencies]
+docs = [
+    "mkdocs-material>=9.5.0",
+    "mkdocs-static-i18n==1.2.3",
+]
+simulations = [
+    "numpy==1.26.4",
+    "scipy==1.13.0",
+    "matplotlib==3.7.2",
+]
+n-of-1 = [
+    "numpy==1.26.4",
+    "matplotlib==3.7.2",
+]
+dev = [
+    "dao-science[docs,simulations,n-of-1]",
+    "pytest>=8.0",
+    "ruff>=0.4.0",
+    "mypy>=1.9.0",
+]
+
+[project.urls]
+Homepage = "https://ultima0369.github.io/dao-science/"
+Repository = "https://github.com/Ultima0369/dao-science"
+
+[tool.setuptools]
+py-modules = []
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+exclude = [
+    ".git",
+    "__pycache__",
+    "site",
+    "docs",
+    "paper",
+    "venv",
+    ".venv",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501",  # line too long (handled by formatter)
+]
+per-file-ignores = {
+    "simulations/*" = ["F841", "E731", "E741"],  # math-heavy scripts keep symbolic variable names
+}
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+exclude = [
+    "^site/",
+    "^docs/",
+    "^paper/",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-ra -q"

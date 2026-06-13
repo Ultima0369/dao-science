@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Attention as precision optimization across multiple sensory channels.
+r"""Attention as precision optimization across multiple sensory channels.
 
 This script implements a minimal predictive-coding model of attention:
 
@@ -25,8 +25,9 @@ Outputs:
 
 from pathlib import Path
 
-import numpy as np
 import matplotlib
+import numpy as np
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
@@ -90,7 +91,7 @@ def run_static_demo() -> None:
     axes[0].legend()
     axes[0].set_ylim(0, 1.0)
 
-    axes[1].bar(x, optimal_weights, color="#1565c0", alpha=0.7, label="Bayes-optimal $w_i \propto 1/\sigma_i^2$")
+    axes[1].bar(x, optimal_weights, color="#1565c0", alpha=0.7, label=r"Bayes-optimal $w_i \propto 1/\sigma_i^2$")
     axes[1].set_xticks(x)
     axes[1].set_xticklabels([f"ch{i}\nσ={s:.1f}" for i, s in enumerate(sigmas, start=1)])
     axes[1].set_ylabel("Optimal weight")

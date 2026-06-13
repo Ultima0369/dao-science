@@ -16,6 +16,7 @@ modelling the "Aha!" capture of a remote association by executive control.
 from pathlib import Path
 
 import matplotlib
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
@@ -45,7 +46,7 @@ def dynamic_coupling(
     """
     if t < incubation_end:
         return w_DE_low
-    if D > D_threshold and E < E_threshold:
+    if D_threshold < D and E_threshold > E:
         # Insight capture: DMN content recruited by ECN.
         return w_DE_high
     return w_DE_low + 0.3 * (w_DE_high - w_DE_low)

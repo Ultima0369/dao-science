@@ -31,20 +31,35 @@ on:
 jobs:
   mkdocs:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.12']
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: ${{ matrix.python-version }}
           cache: 'pip'
 
       - name: Install dependencies
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
+          pip install -r simulations/requirements.txt
+          pip install -r tools/n_of_1/requirements.txt
+
+      - name: Lint Python code
+        run: |
+          pip install ruff
+          ruff check scripts tests simulations tools
+
+      - name: Run tests
+        run: |
+          pip install pytest
+          pytest -q
 
       - name: Sync docs mirror
         run: python scripts/sync_docs.py
@@ -60,9 +75,6 @@ jobs:
 
       - name: Audit nav coverage
         run: python scripts/audit_nav_coverage.py
-
-      - name: Install simulation dependencies
-        run: pip install -r simulations/requirements.txt
 
       - name: Run all simulations
         run: |

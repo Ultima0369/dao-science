@@ -43,6 +43,16 @@ dao-science/
 
 ## 如何贡献
 
+### 首次贡献者友好任务
+
+如果你不确定从哪里开始，以下任务风险低、反馈快：
+
+- 修复一个断裂的内部链接或引用格式错误；
+- 补全一段英文翻译（优先 `verifiable_units/` 和 `1_first_principles/` 的 stub）；
+- 为某个仿真脚本补充 docstring 或参数说明；
+- 核对 `CLAIMS.md` 中某个主张的徽章与对应 VU 文件是否一致；
+- 运行本地检查清单并报告失败项。
+
 ### 新增内容模块
 1. 确定模块应属于哪个层级（动机/第一性原理/心智模型/实践方法/应用）
 2. 遵循现有模块的格式：
@@ -69,9 +79,39 @@ pdflatex main.tex
 pdflatex main.tex    # 两次以解析交叉引用
 ```
 
+### 开发环境
+
+```bash
+# 1. 安装核心、仿真与工具依赖
+pip install -r requirements.txt
+pip install -r simulations/requirements.txt
+pip install -r tools/n_of_1/requirements.txt
+
+# 2. 安装开发依赖（lint + test）
+pip install ruff pytest
+
+# 3. 可选：启用 pre-commit
+pip install pre-commit
+pre-commit install
+```
+
+### 本地检查清单
+
+在提交 PR 前，请确保以下命令全部通过：
+
+```bash
+ruff check scripts tests simulations tools
+pytest -q
+python scripts/sync_docs.py
+python scripts/audit_links.py
+python scripts/audit_nav_coverage.py
+python scripts/audit_math_delimiters.py
+mkdocs build --strict
+```
+
 ### 本地预览 MkDocs
 ```bash
-pip install -r requirements.txt
+python scripts/sync_docs.py
 mkdocs serve
 # 访问 http://127.0.0.1:8000
 ```
