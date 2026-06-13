@@ -65,6 +65,7 @@
 | 想看形式化定义 | [`1_first_principles/01_dao_as_process.md`](1_first_principles/01_dao_as_process.md) | 25 min |
 | 想记录自己的第一人称数据 | [`tools/n_of_1/`](https://github.com/Ultima0369/dao-science/tree/main/tools/n_of_1) | 20 min |
 | 想看可运行模拟 | [`verifiable_units/vu_01_dmn_insula.md`](verifiable_units/vu_01_dmn_insula.md) | 30 min |
+| 想看涌现与相变的仿真对比 | [`verifiable_units/vu_04_emergence_vs_phase_transition.md`](verifiable_units/vu_04_emergence_vs_phase_transition.md) | 25 min |
 | 想检查每个主张的证据状态 | [`CLAIMS.md`](CLAIMS.md) | 15 min |
 | 想查术语 | [`GLOSSARY.md`](GLOSSARY.md) | 按需 |
 

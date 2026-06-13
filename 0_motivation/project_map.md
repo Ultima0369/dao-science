@@ -199,6 +199,13 @@ flowchart TB
 2. → 按表中链接跳到对应形式化定义、模拟或应用
 3. → 对任何主张，检查其「可证伪条件」是否符合你的标准
 
+### 路径 8：概念模拟优先
+适合希望用可运行代码验证抽象区分的读者。
+
+1. `verifiable_units/vu_04_emergence_vs_phase_transition.md` — 涌现 ≠ 相变
+2. → 回到 `1_first_principles/06_emergence.md` 理解理论含义
+3. → 扩展到 `4_applications/management_field_theory.md` 与 `4_applications/creativity_innovation.md`
+
 ## 学术预印本
 
 - 8 篇 LaTeX 预印本覆盖 22 个模块的核心内容（另有 2 个新增模块暂无对应预印本）。参见 `paper/README.md` 获取完整索引。

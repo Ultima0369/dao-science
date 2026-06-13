@@ -165,7 +165,7 @@
 | 证据徽章 | **F + M** |
 | 可信度 | 中 |
 | 可证伪条件 | 复杂系统科学证明所有宏观性质都可还原为微观规则且无新因果效力 |
-| 关联文件 | `1_first_principles/06_emergence.md` |
+| 关联文件 | `1_first_principles/06_emergence.md`、`verifiable_units/vu_04_emergence_vs_phase_transition.md` |
 | 开放问题 | 强涌现是否真实存在？还是只是弱涌现的修辞包装？ |
 
 ---

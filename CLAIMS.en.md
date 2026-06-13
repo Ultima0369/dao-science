@@ -165,7 +165,7 @@
 | Evidence badges | **F + M** |
 | Confidence | Medium |
 | Falsification condition | Complex systems science proves all macro-level properties reducible to micro-rules with no new causal power |
-| Related files | `1_first_principles/06_emergence.md` |
+| Related files | `1_first_principles/06_emergence.md`, `verifiable_units/vu_04_emergence_vs_phase_transition.md` |
 | Open questions | Does strong emergence really exist, or is it merely rhetorical packaging for weak emergence? |
 
 ---
