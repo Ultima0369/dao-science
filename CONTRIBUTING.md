@@ -20,63 +20,25 @@
 
 ```
 dao-science/
-├── POSITIONING.md                      # 道科学是什么：定位声明（建议作为第一个阅读文件）
-├── FINAL_VISION.md                      # 最终愿景：在复杂面前保持鲜活
-├── README.md                          # 项目愿景、核心公理、快速入门
-├── CONTRIBUTING.md                    # 本文件
-├── mkdocs.yml                         # MkDocs Material 配置 + 导航树
-├── requirements.txt                   # Python 依赖（mkdocs-material）
+├── POSITIONING.md                      # 道科学是什么：定位声明
+├── FINAL_VISION.md                     # 最终愿景：在复杂面前保持鲜活
+├── README.md                           # 项目愿景、核心公理、快速入门
+├── CONTRIBUTING.md                     # 本文件
+├── GLOSSARY.md                         # 概念索引与术语表
+├── NOTATION.md                         # 符号约定与证据等级
+├── mkdocs.yml                          # MkDocs Material 配置 + 导航树
+├── requirements.txt                    # Python 依赖
 │
-├── 0_motivation/                      # 动机层——为什么这个项目重要
-│   ├── why_this_matters.md            # 三大危机 + 四方汇聚论证
-│   ├── L0_L7_spectrum.md              # L0-L7 事实与关系频谱框架
-│   ├── project_map.md                 # 概念地图与阅读路径
-│   └── objections_and_replies.md      # 反驳与回应——六项核心挑战
-│
-├── 1_first_principles/                # 第一性原理——数学/计算形式化
-│   ├── 01_dao_as_process.md           # 道 ≡ -∇G(π)，21 个方程
-│   ├── 02_one_as_bandwidth.md         # 一 = 觉知带宽 AB(t)
-│   ├── 03_map_not_territory.md        # 相非物——五传统汇聚综述
-│   └── 04_philosophy_of_science.md    # 科学知识的认知层级——L0-L7 嵌套
-│
-├── 2_models/                          # 心智模型——神经/认知机制
-│   ├── attention_model.md             # 注意力动力学，α 参数
-│   ├── 100ms_model.md                 # LeDoux 双通路 + 杏仁核劫持
-│   ├── neuroplasticity_loop.md        # Hebbian/LTP/STDP + 后训练
-│   ├── dmn_self_model.md             # DMN-自我-内感受神经三角
-│   ├── social_cognition.md            # 社会认知与镜像共鸣
-│   └── hypoxia_fifty_demons.md        # 缺氧与五十阴魔——禅修幻觉的神经生理学
-│
-├── 3_methodology/                     # 实践方法——达摩二入四行
-│   ├── li_ru.md                       # 理入——见地建立（认知重构）
-│   └── xing_ru/
-│       ├── 01_embrace_suffering.md    # 报冤行——拥抱苦难
-│       ├── 02_flow_with_causes.md     # 随缘行——与因缘流动
-│       ├── 03_seek_nothing.md         # 无所求行——停止执着
-│       └── 04_act_in_accordance.md    # 称法行——与实相协调的行动
-│
-├── 4_applications/                    # 应用层——跨领域实践
-│   ├── ai_governance.md               # AI 治理——"知止不殆"
-│   ├── education_by_field.md          # 境教——环境设计作为教学法
-│   ├── clinical_mental_health.md      # 四行在临床心理健康中的应用
-│   ├── creativity_innovation.md       # 无为的创造——创造力与顿悟
-│   └── carbon_silicon_symbiosis.md    # 碳硅共生——从"它"到"祂"
-│
-├── paper/                             # 学术预印本（LaTeX）
-│   ├── preprint_1/main.tex            # 道作为过程——预测编码框架
-│   ├── preprint_2/main.tex            # L0-L7 事实与关系频谱
-│   ├── preprint_3/main.tex            # DMN-自我-内感受三角
-│   ├── preprint_4/main.tex            # 科学知识的认知层级
-│   ├── preprint_5/main.tex            # 社会认知与镜像共鸣
-│   ├── preprint_6/main.tex            # 创造力与创新
-│   ├── preprint_7/main.tex            # 碳硅共生
-│   └── preprint_8/main.tex            # 境教
-│
-├── .github/workflows/                 # CI/CD
-│   └── deploy-pages.yml              # Push main → 构建并部署 MkDocs
-│
-├── GLOSSARY.md                        # 概念索引与术语表
-└── 对话记录.md                        # 源对话记录（碳硅协作原始数据）
+├── 0_motivation/                       # 动机层
+├── 1_first_principles/                 # 第一性原理
+├── 2_models/                           # 心智模型
+├── 3_methodology/                      # 实践方法
+├── 4_applications/                     # 应用层
+├── verifiable_units/                   # 可验证单元（形式化 + 模拟 + 协议）
+├── simulations/                        # Python 可运行模拟脚本
+├── scripts/                            # 文档同步、审计、CI 辅助脚本
+├── paper/                              # 学术预印本（LaTeX）
+└── .github/workflows/                  # CI/CD
 ```
 
 ## 如何贡献
@@ -115,6 +77,16 @@ mkdocs serve
 ```
 
 ## 内容标准
+
+### 最小作用量编辑原则
+
+项目遵循 `POSITIONING.md` 中的最小作用量原理：每个贡献都应减少理解整个项目所需的总认知作用量。
+
+- 新增概念必须有不可替代的功能；
+- 新增方程必须消除歧义，而非制造迷惑；
+- 新增模块必须能回链到核心框架（道、一、地图非疆域、L0-L7、涌现、偏离代价）；
+- 新增应用必须包含滥用风险与反制设计；
+- 如果删除某段文字后不影响理解，优先考虑删除。
 
 ### 引用格式
 - **期刊论文**：作者 (年). 标题. *期刊*, *卷*(期), 页码. doi:DOI
