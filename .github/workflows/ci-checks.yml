@@ -4,21 +4,29 @@ on:
   pull_request:
     branches:
       - main
+      - develop
     paths:
       - '**.md'
       - 'mkdocs.yml'
       - 'requirements.txt'
       - '.github/workflows/**'
       - 'docs/javascripts/**'
+      - 'scripts/**'
+      - 'simulations/**'
+      - 'paper/**'
   push:
     branches:
       - main
+      - develop
     paths:
       - '**.md'
       - 'mkdocs.yml'
       - 'requirements.txt'
       - '.github/workflows/**'
       - 'docs/javascripts/**'
+      - 'scripts/**'
+      - 'simulations/**'
+      - 'paper/**'
 
 jobs:
   mkdocs:
@@ -44,6 +52,22 @@ jobs:
       - name: Build MkDocs site (strict)
         run: mkdocs build --strict
 
+      - name: Audit internal links
+        run: python scripts/audit_links.py
+
+      - name: Audit math delimiter balance
+        run: python scripts/audit_math_delimiters.py
+
+      - name: Audit nav coverage
+        run: python scripts/audit_nav_coverage.py
+
+      - name: Run simulations
+        run: |
+          pip install -r simulations/requirements.txt
+          python simulations/dmn_insula_bistable.py
+          python simulations/amygdala_pfc_hijack.py
+          python simulations/dmn_ecn_creativity.py
+
   latex:
     runs-on: ubuntu-latest
     steps:
@@ -60,8 +84,8 @@ jobs:
           for d in paper/preprint_1 paper/preprint_2 paper/preprint_3; do
             if [ -f "$d/main.tex" ]; then
               echo "Compiling $d/main.tex with pdflatex"
-              (cd "$d" && pdflatex -interaction=nonstopmode -halt-on-error main.tex || true)
-              (cd "$d" && pdflatex -interaction=nonstopmode -halt-on-error main.tex || true)
+              (cd "$d" && pdflatex -interaction=nonstopmode -halt-on-error main.tex)
+              (cd "$d" && pdflatex -interaction=nonstopmode -halt-on-error main.tex)
             fi
           done
 
@@ -70,7 +94,15 @@ jobs:
           for d in paper/preprint_4 paper/preprint_5 paper/preprint_6 paper/preprint_7 paper/preprint_8; do
             if [ -f "$d/main.tex" ]; then
               echo "Compiling $d/main.tex with xelatex"
-              (cd "$d" && xelatex -interaction=nonstopmode -halt-on-error main.tex || true)
-              (cd "$d" && xelatex -interaction=nonstopmode -halt-on-error main.tex || true)
+              (cd "$d" && xelatex -interaction=nonstopmode -halt-on-error main.tex)
+              (cd "$d" && xelatex -interaction=nonstopmode -halt-on-error main.tex)
             fi
           done
+
+      - name: Upload PDF artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: preprint-pdfs
+          path: paper/preprint_*/main.pdf
+          if-no-files-found: ignore

@@ -39,6 +39,17 @@
 ### Preprint 8: 境教
 提出"境教"——通过环境设计塑造认知-行为模式的教学范式：言教→身教→境教→道场的范式演进，镜象神经元基础，四大道场设计原则，三类场景应用。
 
+## 下载 PDF
+
+预印本 PDF 由 GitHub Actions 自动编译并作为构建产物（artifact）上传：
+
+1. 打开 [Actions → CI Checks](https://github.com/Ultima0369/dao-science/actions/workflows/ci-checks.yml)
+2. 选择最近一次的运行记录
+3. 在页面底部的 **Artifacts** 区域下载 `preprint-pdfs`
+4. 解压后即可获得 `paper/preprint_*/main.pdf`
+
+> **注意**：仓库源码中不包含 `.pdf` 文件（见 `.gitignore`），以避免版本控制二进制文件膨胀。所有 PDF 均从 CI 构建产物获取。
+
 ## 编译指南
 
 - 英文预印本（Preprint 1–3）使用 `pdflatex`：

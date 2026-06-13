@@ -1,6 +1,12 @@
 # Project Dao.Science
 
+[![CI Checks](https://github.com/Ultima0369/dao-science/actions/workflows/ci-checks.yml/badge.svg)](https://github.com/Ultima0369/dao-science/actions/workflows/ci-checks.yml)
+[![Deploy MkDocs to GitHub Pages](https://github.com/Ultima0369/dao-science/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/Ultima0369/dao-science/actions/workflows/deploy-pages.yml)
+[![Site](https://img.shields.io/badge/site-ultima0369.github.io%2Fdao--science-blue)](https://ultima0369.github.io/dao-science/)
+
 > 道可道，非常道；名可名，非常名。 ——《道德经》
+
+**在线阅读**：https://ultima0369.github.io/dao-science/
 
 ## 定位
 
