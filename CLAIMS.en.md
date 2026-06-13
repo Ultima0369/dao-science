@@ -328,6 +328,20 @@
 
 ---
 
+### C24: AI Expansion Is Constrained by Earth's Thermodynamic Radiative Limit
+
+**Claim**: Even with unlimited energy input, global AI computational expansion is constrained by Earth's physical limit for radiating waste heat into space. Sustained heat emission beyond this limit would alter Earth's energy balance and threaten the global ecosystem.
+
+| Field | Content |
+|---|---|
+| Evidence badges | **F + M** |
+| Confidence | High |
+| Falsification condition | Proof that Earth can maintain steady-state temperature at arbitrary waste-heat power; or proof that computation can occur with zero entropy production |
+| Related files | `4_applications/ai_governance.md`, `1_first_principles/10_de_and_ming.md` |
+| Open questions | What is the practical global AI heat budget? How can an enforceable planetary thermodynamic governance protocol be established? |
+
+---
+
 ## VI. Methodology
 
 ### C19: N-of-1 Experiments Can Produce Valid Personal Knowledge
@@ -382,6 +396,7 @@
 | C16 Management is self-training | F + B + M | Medium | Manager mind irrelevant to performance |
 | C17 Environmental design shapes behavior | F + B | Medium | Environment has no causal effect |
 | C18 Carbon-silicon niche complementarity | F + M | Medium | AI has first-person experience |
+| C24 AI expansion constrained by Earth's thermodynamic limit | F + M | High | Earth radiates arbitrary heat or zero-entropy computation |
 | C19 N-of-1 produces personal knowledge | F + B + M | Medium-High | Single-subject designs invalid |
 | C20 Four Practices reshape circuits | F + B + N | Medium | RCTs show Four Practices ineffective |
 | C21 Relational attunement reduces tension | F + B + M | Medium | Attentional presence cannot regulate interpersonal tension |
