@@ -8,6 +8,8 @@
 
 **关键词**：AI 对齐，意识科学，意义危机，相变，道学科学，预测编码，冥想神经科学
 
+> **入口提示**：如果你觉得本文的宏观论证过于抽象，可以先从更贴近日常经验的入口开始——`0_motivation/cognition_in_progress.md`《认知过程正在进行时：从误会到理解》。它从“我们为什么总是误会世界、他人和自己”这一现象出发，为本文的危机诊断提供第一人称的经验动机。
+
 ---
 
 ## 1. AI 与能耗：技术狂奔与心性缺失的风险
@@ -31,6 +33,8 @@ AI 安全文献已区分了"外部对齐"（outer alignment）——奖励函数
 当代 AI 产业以指数级增长的能源消耗为标志（Patterson et al., 2021; Luccioni et al., 2023）。GPT-4 级别模型的训练电力消耗已相当于一个小型城市的年用电量，而推理阶段的持续能耗则将这一数字持续放大。我们正在以物理能量为代价，运行着"无意识"的智能——这些系统能够通过图灵测试，但不具备任何内感受觉知（interoceptive awareness）、不拥有任何"对自身认知过程的认知"（metacognition），也不受任何内在"知止"机制的约束。
 
 这一状况构成了一个文明级风险：我们将越来越多的认知任务外包给缺乏内在"心性"（mind-nature）的系统，同时人类自身的注意力带宽（awareness bandwidth，见 `1_first_principles/02_one_as_bandwidth.md`）被数字环境持续压缩。技术加速与心性萎缩构成了当代文明最危险的正反馈循环。
+
+> **更深层的统一：最小作用量原理在物理、生命与心智中的同构。** 这并非"心性赤字"问题的全部。有一个更深层的、贯穿物理-生物-认知三个层级的统一原理：**最小作用量原理**。在物理学中，它描述自然系统倾向于采取使作用量极小的路径演化；在生物学中，本能的本质是将亿万年进化验证有效的生存策略压缩为能量消耗最低的神经链路——"绕过物理试错"的极速快捷键；在心智层面，"道"作为预期自由能的梯度流（$\text{Dao} \equiv -\nabla_\pi G(\pi)$）正是最小作用量在认知领域的表达——心智自然地沿着最小化预期自由能的方向流动。这三者不是类比，而是同一底层算法在物理（物质自组织）、生物（进化筛选）和认知（预测编码梯度流）三个尺度上的不同表现。这意味着：东方心性传统——特别是道家的"无为"和"知止"——不是在谈论某种神秘的、与物理世界无关的"灵性"，而是在精确描述认知系统如何在"最小作用量"的约束下最优运作。心性赤字，在这一视角下，不是一种心理不适——它是认知系统偏离其最小作用量自然轨道后的系统性能量损耗。
 
 ---
 
@@ -181,25 +185,39 @@ Dao.Science 不是一个宗教项目，不是一个"东方智慧"普及项目，
 
 项目的整体论证结构如下：
 
-- **A. 动机层** (`0_motivation/`): 本文。回答"为什么这个项目是必要且及时的"。
+- **A. 动机层** (`0_motivation/`):
+  - `why_this_matters.md` — 本文：为什么这个项目是必要且及时的
+  - `L0_L7_spectrum.md` — L0-L7 八层认知频谱框架
+  - `project_map.md` — 概念地图与五条阅读路径
+  - `objections_and_replies.md` — 反驳与回应：六项核心挑战
 
 - **B. 第一性原理层** (`1_first_principles/`):
-  - `01_dao_as_process.md` — 将"道"操作化为预测编码/主动推理的思维意识启用动态过程（道 ≡ -∇π G(π)）
+  - `01_dao_as_process.md` — 将"道"操作化为预期自由能上的梯度流（道 ≡ -∇π G(π)）
   - `02_one_as_bandwidth.md` — 将"一"操作化为觉知带宽（AB = f(S_DMN, A_TPN, C_inter, I_intero)）
-  - `03_map_not_territory.md` — 论证"心智内容百分百是万物之相，非万物全部"
+  - `03_map_not_territory.md` — 论证"心智内容百分百是万物之相，非万物全部"（五传统收敛）
+  - `04_philosophy_of_science.md` — 科学知识的认知层级：L0-L7 嵌套结构
 
 - **C. 模型层** (`2_models/`):
-  - `attention_model.md` — 将"收放自如"操作化为注意力动力学模型（元参数 α）
+  - `attention_model.md` — "收放自如"注意力动力学模型（元参数 α）
   - `100ms_model.md` — LeDoux 双通路理论与"念起即觉"的神经计算对应
   - `neuroplasticity_loop.md` — 基于 Hebbian 学习的神经重塑工程化描述
+  - `dmn_self_model.md` — DMN-自我-内感受三角的预测编码解释
+  - `social_cognition.md` — 社会认知、镜像共鸣与"同体大悲"的神经基础
+  - `hypoxia_fifty_demons.md` — 缺氧→前额叶抑制解除→五十阴魔的神经生理学解释
 
 - **D. 方法论层** (`3_methodology/`):
-  - `li_ru.md` — 理入（见地建立）：认知重构与心智模型
-  - `xing_ru/` — 行入（实践四行）：报冤行（重塑对苦难的理解回路）、随缘行（随顺因缘）、无所求行（停止对外部结果的执着）、称法行（与实相相应的行动）
+  - `li_ru.md` — 理入（见地建立）：下调自我叙事先验精度
+  - `xing_ru/01_embrace_suffering.md` — 报冤行：拥抱苦难，认知重评
+  - `xing_ru/02_flow_with_causes.md` — 随缘行：随顺因缘，RPE 修正
+  - `xing_ru/03_seek_nothing.md` — 无所求行：Wanting vs Liking 的神经经济学
+  - `xing_ru/04_act_in_accordance.md` — 称法行：降低 SoA，六度优化
 
 - **E. 应用层** (`4_applications/`):
-  - `ai_governance.md` — "知止不殆"原则在 AI 治理中的应用
+  - `ai_governance.md` — "知止不殆"在 AI 安全与治理中的应用
   - `education_by_field.md` — "境教"：环境设计作为教学法
+  - `clinical_mental_health.md` — 四行在临床心理健康中的应用
+  - `creativity_innovation.md` — 无为的创造：酝酿-顿悟的神经科学
+  - `carbon_silicon_symbiosis.md` — 碳硅共生：从"它"到"祂"的关系跃迁
 
 ### 5.3 本文的贡献
 
@@ -269,4 +287,6 @@ Dao.Science 不是一个宗教项目，不是一个"东方智慧"普及项目，
 
 ---
 
-*本文为 Dao.Science 项目动机文件。后续理论推导见第一性原理系列：`1_first_principles/01_dao_as_process.md`（道作为预测编码梯度流）、`1_first_principles/02_one_as_bandwidth.md`（一作为觉知带宽）、`1_first_principles/03_map_not_territory.md`（心智内容 = 万物之相）。认知频谱框架见 `0_motivation/L0_L7_spectrum.md`（L0-L7 事实与关系频谱）。*
+> 本文是 Project Dao.Science 的动机文件。后续理论推导见第一性原理系列：`1_first_principles/01_dao_as_process.md`（道作为预测编码梯度流）、`1_first_principles/02_one_as_bandwidth.md`（一作为觉知带宽）、`1_first_principles/03_map_not_territory.md`（心智内容 = 万物之相）。第一人称经验入口见 `0_motivation/cognition_in_progress.md`（认知过程正在进行时）。认知频谱框架见 `0_motivation/L0_L7_spectrum.md`（L0-L7 事实与关系频谱）。
+>
+> 下一篇：`0_motivation/cognition_in_progress.md`（认知过程正在进行时：从误会到理解）。

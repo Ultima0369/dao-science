@@ -66,7 +66,7 @@ flowchart TB
 
 "无所求行"不是要消除目标导向行为（那将使人类无法完成任何复杂任务），而是要**切断对特定结果的"执着"（attachment）**——即降低心智对"结果必须是这样，不能是那样"的精度（precision）加权。在预测编码框架中，这对应于降低"结果预期"这一高层级先验的精度：
 
-$$\Pi_{\text{outcome expectation}} \rightarrow \Pi_{\text{outcome expectation}} - \Delta\Pi$$
+$$\Pi_{\text{outcome-expectation}} \rightarrow \Pi_{\text{outcome-expectation}} - \Delta\Pi$$
 
 当结果预期的精度被降低后，系统仍然可以规划和行动，但不再被"结果必须符合预期"的执着所驱动。行动变得"无为"——它仍然有效，但不再伴随着"必须成功"的紧张和"害怕失败"的焦虑。
 
