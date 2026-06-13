@@ -228,15 +228,15 @@
 
 ### C23: De Is Vital-Energy Attention Allocation; Ming Is Innate Optimization Capacity
 
-**Claim**: "De" is a living system's capacity for attentional allocation of vital energy, directing it to the right channels at the right time to produce positive-feedback decisions and action. "Ming" is the system's innate capacity to hit an effective range under incomplete information and to iteratively optimize. Attentional hijacking obscures Ming, causing the system to deviate from the path of least action.
+**Claim**: "De" is a living system's capacity for attentional allocation of vital energy. Its sole test is whether, from thought through action to effect feedback, it maintains and improves the existence quality of individuals and groups. "Ming" is the system's innate capacity to hit an effective range under incomplete information and to iteratively optimize. Attentional hijacking obscures Ming, causing the system to deviate from the path of least action.
 
 | Field | Content |
 |---|---|
 | Evidence badges | **F + B + N + M** |
 | Confidence | Medium-High |
-| Falsification condition | Discovery that living systems can persist long-term with completely random or non-optimized energy allocation; or proof that attentional hijacking does not degrade decision quality or survival outcomes |
+| Falsification condition | Discovery that living systems can persist long-term with completely random or non-optimized energy allocation; or proof that some allocation improves individual A's existence quality while necessarily harming individual B and cannot be reallocated; or proof that attentional hijacking does not degrade decision quality or survival outcomes |
 | Related files | `1_first_principles/10_de_and_ming.md`, `1_first_principles/01_dao_as_process.md`, `2_models/attention_model.md`, `2_models/100ms_model.md`, `2_models/dmn_self_model.md` |
-| Open questions | What is the neural correlate of De? How can Ming's "effective-range hit rate" be quantified? |
+| Open questions | How can De be quantified around improvement in existence quality? How can Ming's "effective-range hit rate" be quantified? |
 
 ---
 
