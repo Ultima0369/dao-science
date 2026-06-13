@@ -27,9 +27,9 @@ content_dirs = [
 def rel(path: Path) -> str:
     return str(path.relative_to(ROOT)).replace("\\", "/")
 
-all_files = [rel(p) for p in ROOT.glob("*.md")]
+all_files = [rel(p) for p in ROOT.glob("*.md") if not p.name.endswith(".en.md")]
 for d in content_dirs:
-    all_files.extend(rel(p) for p in (ROOT / d).rglob("*.md"))
+    all_files.extend(rel(p) for p in (ROOT / d).rglob("*.md") if not p.name.endswith(".en.md"))
 
 ALLOWLIST = {
     "AUDIT_REPORT_2026-06-13.md",

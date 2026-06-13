@@ -71,6 +71,20 @@ def main() -> None:
             pass
         shutil.copy2(src, dst)
 
+    # Mirror top-level English translations if present.
+    for name in TOP_FILES:
+        en_name = name.replace(".md", ".en.md")
+        src = ROOT / en_name
+        dst = DOCS / en_name
+        if not src.exists():
+            continue
+        try:
+            if src.samefile(dst):
+                continue
+        except OSError:
+            pass
+        shutil.copy2(src, dst)
+
     print("docs/ mirror synced from repository root.")
 
 

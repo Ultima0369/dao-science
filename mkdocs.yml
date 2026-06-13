@@ -31,6 +31,72 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      languages:
+        - locale: zh
+          name: 中文
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            首页: "Home"
+            定位声明: "Positioning"
+            最终愿景: "Ultimate Vision"
+            项目图谱: "Project Map"
+            动机: "Motivation"
+            为什么重要: "Why This Matters"
+            认知过程正在进行时: "Cognition in Progress"
+            两棵树：抽象的解释说: "Two Trees: Abstraction Dialogue"
+            L0-L7 事实频谱: "L0-L7 Spectrum"
+            L0-L7 操作化判准: "L0-L7 Operationalization"
+            反驳与回应: "Objections and Replies"
+            第一性原理: "First Principles"
+            道作为过程: "Dao as Process"
+            一即带宽: "One as Bandwidth"
+            相非物: "Map Not Territory"
+            科学哲学与认知层级: "Philosophy of Science"
+            第一人称认识论: "First-Person Epistemology"
+            涌现性: "Emergence"
+            偏离代价: "Cost of Deviation"
+            心智模型: "Models of Mind"
+            注意力动力学: "Attention Dynamics"
+            本能劫持: "Instinct Hijacking"
+            神经重塑回路: "Neuroplasticity Loop"
+            DMN与自我模型: "DMN and Self Model"
+            社会认知与镜像共鸣: "Social Cognition"
+            缺氧与五十阴魔: "Hypoxia and Fifty Demons"
+            实践方法: "Methodology"
+            理入: "Li Ru"
+            N-of-1 实践协议: "N-of-1 Protocol"
+            行入四行: "Four Practices"
+            报冤行: "Embracing Suffering"
+            随缘行: "Flowing with Causes"
+            无所求行: "Seeking Nothing"
+            称法行: "Acting in Accordance"
+            应用: "Applications"
+            AI 治理: "AI Governance"
+            管理：管理者作为第一人称节点: "Management"
+            管理进阶：场的营造: "Field Construction"
+            境教: "Education by Field"
+            临床心理健康: "Clinical Mental Health"
+            创造力与创新: "Creativity and Innovation"
+            碳硅共生: "Carbon-Silicon Symbiosis"
+            可验证单元: "Verifiable Units"
+            VU-01 DMN-岛叶双稳态: "VU-01 DMN-Insula Bistability"
+            VU-02 杏仁核-PFC 竞争窗口: "VU-02 Amygdala-PFC Window"
+            VU-03 DMN-ECN 顿悟耦合: "VU-03 DMN-ECN Insight Coupling"
+            附录: "Appendices"
+            概念索引与术语表: "Glossary"
+            符号与约定: "Notation"
+            贡献指南: "Contributing"
+      reconfigure_material: true
+      reconfigure_search: true
 nav:
   - 首页: README.md
   - 定位声明: POSITIONING.md
