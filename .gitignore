@@ -36,5 +36,9 @@ site/
 *.xdv
 *.pdf
 
+# Simulation outputs
+simulations/*.png
+simulations/*.csv
+
 # Local preview / mirror
 *.local

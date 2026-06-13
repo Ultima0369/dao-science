@@ -71,6 +71,8 @@ nav:
     - 临床心理健康: 4_applications/clinical_mental_health.md
     - 创造力与创新: 4_applications/creativity_innovation.md
     - 碳硅共生: 4_applications/carbon_silicon_symbiosis.md
+  - 可验证单元:
+    - VU-01 DMN-岛叶双稳态: verifiable_units/vu_01_dmn_insula.md
   - 附录:
     - 概念索引与术语表: GLOSSARY.md
     - 符号与约定: NOTATION.md

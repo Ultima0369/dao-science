@@ -19,6 +19,7 @@ CONTENT_DIRS = [
     "2_models",
     "3_methodology",
     "4_applications",
+    "verifiable_units",
 ]
 TOP_FILES = [
     "README.md",
@@ -28,6 +29,9 @@ TOP_FILES = [
     "NOTATION.md",
     "CONTRIBUTING.md",
 ]
+
+# Files/directories that should not be mirrored even if listed above.
+EXCLUDE_DIRS = {".git", "site", "docs", "scripts", "paper"}
 
 
 def _remove(path: Path) -> None:
