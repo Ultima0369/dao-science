@@ -74,6 +74,8 @@ nav:
     - 碳硅共生: 4_applications/carbon_silicon_symbiosis.md
   - 可验证单元:
     - VU-01 DMN-岛叶双稳态: verifiable_units/vu_01_dmn_insula.md
+    - VU-02 杏仁核-PFC 竞争窗口: verifiable_units/vu_02_amygdala_pfc.md
+    - VU-03 DMN-ECN 顿悟耦合: verifiable_units/vu_03_dmn_ecn.md
   - 附录:
     - 概念索引与术语表: GLOSSARY.md
     - 符号与约定: NOTATION.md
