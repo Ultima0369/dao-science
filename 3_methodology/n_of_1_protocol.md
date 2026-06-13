@@ -234,7 +234,23 @@ ____________________________________
 
 ---
 
-## 8. 下一步
+## 8. 可运行工具包
+
+本文档描述的是协议原则。项目还提供了一个可直接使用的 N-of-1 工具包，见 `tools/n_of_1/`：
+
+- `schema.yaml`：标准化数据字段与量表定义；
+- `templates/experiment_design.md`：实验设计模板；
+- `templates/daily_log.md`：每日日志模板；
+- `templates/weekly_review.md`：每周回顾模板；
+- `scripts/log_entry.py`：命令行快速记录一条观察；
+- `scripts/analyze.py`：读取 CSV 并生成 Markdown 分析报告；
+- `examples/sample_data.csv` 与 `sample_report.md`：示例数据与报告。
+
+该工具包遵循本地优先、隐私默认、最小作用量原则：所有数据留在用户自己的机器上，不联网，不收集身份信息。
+
+---
+
+## 9. 下一步
 
 完成第一个 N-of-1 实验后，建议：
 

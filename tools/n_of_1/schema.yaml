@@ -1,0 +1,107 @@
+# N-of-1 Data Schema
+# Project Dao.Science — tools/n_of_1/schema.yaml
+#
+# This schema defines the minimum fields recommended for a structured
+# first-person observation. Users can extend it with custom variables.
+
+required_fields:
+  - timestamp
+  - phase
+
+optional_fields:
+  - date
+  - time
+  - context
+  - intervention
+  - notes
+
+# Standardized dimension scales
+# All scales are 0-10 unless otherwise noted.
+dimensions:
+  anxiety:
+    label: 焦虑 / Anxiety
+    type: integer
+    min: 0
+    max: 10
+    description: Subjective anxiety level right now
+
+  stress:
+    label: 压力 / Stress
+    type: integer
+    min: 0
+    max: 10
+    description: Perceived stress level
+
+  energy:
+    label: 精力 / Energy
+    type: integer
+    min: 0
+    max: 10
+    description: Physical and mental energy level
+
+  focus:
+    label: 专注 / Focus
+    type: integer
+    min: 0
+    max: 10
+    description: Ability to sustain attention on chosen object
+
+  clarity:
+    label: 清明 / Clarity
+    type: integer
+    min: 0
+    max: 10
+    description: Mental clarity / pre-reflective awareness brightness
+
+  rumination:
+    label: 反刍 / Rumination
+    type: integer
+    min: 0
+    max: 10
+    description: Degree of repetitive self-referential thinking
+
+  sleep_quality:
+    label: 睡眠质量 / Sleep Quality
+    type: integer
+    min: 0
+    max: 10
+    description: Quality of last night's sleep
+
+  sleep_duration:
+    label: 睡眠时长 / Sleep Duration
+    type: float
+    unit: hours
+    description: Hours of sleep last night
+
+  body_tension:
+    label: 身体紧绷 / Body Tension
+    type: integer
+    min: 0
+    max: 10
+    description: Overall bodily tension or relaxation
+
+  compassion:
+    label: 慈悲 / Compassion
+    type: integer
+    min: 0
+    max: 10
+    description: Warmth or openness toward self and others
+
+# Experimental phases
+phases:
+  - baseline
+  - intervention
+  - withdrawal
+  - follow_up
+
+# Design types
+designs:
+  - A-B
+  - A-B-A-B
+  - multiple_baseline
+
+# Confidence scale for phenomenological reports
+confidence_scale:
+  min: 1
+  max: 5
+  description: How confident you are in this particular rating

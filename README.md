@@ -63,6 +63,7 @@
 | 想从第一人称经验进入 | [`0_motivation/cognition_in_progress.md`](0_motivation/cognition_in_progress.md) | 10 min |
 | 想建立认知框架 | [`0_motivation/L0_L7_spectrum.md`](0_motivation/L0_L7_spectrum.md) | 20 min |
 | 想看形式化定义 | [`1_first_principles/01_dao_as_process.md`](1_first_principles/01_dao_as_process.md) | 25 min |
+| 想记录自己的第一人称数据 | [`tools/n_of_1/`](https://github.com/Ultima0369/dao-science/tree/main/tools/n_of_1) | 20 min |
 | 想看可运行模拟 | [`verifiable_units/vu_01_dmn_insula.md`](verifiable_units/vu_01_dmn_insula.md) | 30 min |
 | 想查术语 | [`GLOSSARY.md`](GLOSSARY.md) | 按需 |
 
@@ -82,6 +83,7 @@ dao-science/
 ├── 4_applications/             # 应用（AI、教育、临床、创造、碳硅共生）
 ├── verifiable_units/           # 可验证单元：形式化 + 模拟 + 协议
 ├── simulations/                # Python 可运行模拟脚本
+├── tools/                      # 用户可运行工具（N-of-1 等）
 ├── paper/                      # 8 篇 LaTeX 学术预印本
 ├── scripts/                    # 文档同步、审计、CI 辅助脚本
 ├── GLOSSARY.md                 # 术语表
