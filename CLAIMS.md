@@ -232,10 +232,10 @@
 
 | 维度 | 内容 |
 |---|---|
-| 证据徽章 | **F + B + N + M** |
+| 证据徽章 | **F + S + B + N + M** |
 | 可信度 | 中-高 |
 | 可证伪条件 | 发现生命系统可以在完全随机或无优化的能量分配下长期存续；或证明某种调配虽改善了个体 A 的存在质量却必然损害个体 B 且无法重新调配；或证明注意力劫持不会影响决策质量或生存结果 |
-| 关联文件 | `1_first_principles/10_de_and_ming.md`、`1_first_principles/01_dao_as_process.md`、`2_models/attention_model.md`、`2_models/100ms_model.md`、`2_models/dmn_self_model.md` |
+| 关联文件 | `1_first_principles/10_de_and_ming.md`、`1_first_principles/01_dao_as_process.md`、`2_models/attention_model.md`、`2_models/100ms_model.md`、`2_models/dmn_self_model.md`、`verifiable_units/vu_09_de_ming_energy_allocation.md` |
 | 开放问题 | 如何以存在质量改善为核心建立德的量化范式？如何量化明的「有效范围命中率」？ |
 
 ---
@@ -389,7 +389,7 @@
 | C11 时空是心智建构 | F + M | 中-高 | 时空属性完全独立于心智 |
 | C12 参考系防止意识超载 | F + B + M | 中 | 无参考系也能处理全尺度 |
 | C22 节点是无为的转译层 | F + M | 中 | 无节点也能高效连通异质子系统 |
-| C23 德是精力调配，明是本具优化 | F + B + N + M | 中-高 | 随机能量分配也能长期存续 |
+| C23 德是精力调配，明是本具优化 | F + S + B + N + M | 中-高 | 随机能量分配也能长期存续 |
 | C13 偏离代价可形式化 | F | 中 | 代价函数无法预测后果 |
 | C14 第一人称不可还原 | F + B + M | 高 | 直接读取主观体验 |
 | C15 AI 需要知止协议 | F + M | 中 | 静态规则可解决所有 AI 安全问题 |

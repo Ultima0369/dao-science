@@ -69,6 +69,7 @@ Full positioning statement: [`POSITIONING.en.md`](POSITIONING.en.md).
 | See AI stopping protocol simulation | [`verifiable_units/vu_06_ai_stopping_protocol.md`](verifiable_units/vu_06_ai_stopping_protocol.md) | 20 min |
 | See carbon-silicon task allocation simulation | [`verifiable_units/vu_07_carbon_silicon_symbiosis.md`](verifiable_units/vu_07_carbon_silicon_symbiosis.md) | 20 min |
 | See relational attunement oscillator | [`verifiable_units/vu_08_relational_attunement_oscillator.md`](verifiable_units/vu_08_relational_attunement_oscillator.md) | 20 min |
+| See De-Ming energy allocation model | [`verifiable_units/vu_09_de_ming_energy_allocation.md`](verifiable_units/vu_09_de_ming_energy_allocation.md) | 20 min |
 | See planetary thermodynamic boundary for AI | [`verifiable_units/vu_10_planetary_ai_thermodynamics.md`](verifiable_units/vu_10_planetary_ai_thermodynamics.md) | 20 min |
 | Learn about relational attunement | [`2_models/relational_attunement.md`](2_models/relational_attunement.md) | 20 min |
 | Learn about nodes and non-doing translation | [`1_first_principles/09_node_and_translation.md`](1_first_principles/09_node_and_translation.md) | 20 min |
@@ -139,7 +140,7 @@ See [`NOTATION.en.md`](NOTATION.en.md) for details.
 ## Key numbers
 
 - **26** core content modules
-- **8** verifiable units (5 with Python simulations)
+- **10** verifiable units (7 with Python simulations)
 - **8** LaTeX academic preprints
 - **~8,500** lines of scholarly content
 - **100+** academic references

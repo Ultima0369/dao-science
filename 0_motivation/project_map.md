@@ -228,7 +228,8 @@ flowchart TB
 3. `verifiable_units/vu_06_ai_stopping_protocol.md` — AI 知止协议
 4. `verifiable_units/vu_07_carbon_silicon_symbiosis.md` — 碳硅共生生态位分工
 5. `verifiable_units/vu_08_relational_attunement_oscillator.md` — 关系调谐耦合振荡器
-6. `verifiable_units/vu_10_planetary_ai_thermodynamics.md` — AI 扩张的行星热力学边界
+6. `verifiable_units/vu_09_de_ming_energy_allocation.md` — 德-明能量调配模型
+7. `verifiable_units/vu_10_planetary_ai_thermodynamics.md` — AI 扩张的行星热力学边界
 6. → 回到 `1_first_principles/06_emergence.md`、`2_models/attention_model.md`、`4_applications/ai_governance.md` 与 `4_applications/carbon_silicon_symbiosis.md` 理解理论含义
 6. → 扩展到 `4_applications/management_field_theory.md` 与 `4_applications/creativity_innovation.md`
 

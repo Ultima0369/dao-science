@@ -232,10 +232,10 @@
 
 | Field | Content |
 |---|---|
-| Evidence badges | **F + B + N + M** |
+| Evidence badges | **F + S + B + N + M** |
 | Confidence | Medium-High |
 | Falsification condition | Discovery that living systems can persist long-term with completely random or non-optimized energy allocation; or proof that some allocation improves individual A's existence quality while necessarily harming individual B and cannot be reallocated; or proof that attentional hijacking does not degrade decision quality or survival outcomes |
-| Related files | `1_first_principles/10_de_and_ming.md`, `1_first_principles/01_dao_as_process.md`, `2_models/attention_model.md`, `2_models/100ms_model.md`, `2_models/dmn_self_model.md` |
+| Related files | `1_first_principles/10_de_and_ming.md`, `1_first_principles/01_dao_as_process.md`, `2_models/attention_model.md`, `2_models/100ms_model.md`, `2_models/dmn_self_model.md`, `verifiable_units/vu_09_de_ming_energy_allocation.md` |
 | Open questions | How can De be quantified around improvement in existence quality? How can Ming's "effective-range hit rate" be quantified? |
 
 ---
@@ -389,7 +389,7 @@
 | C11 Space/time are mind-constructed | F + M | Medium-High | Space/time independent of mind |
 | C12 Reference frames prevent overload | F + B + M | Medium | No-reference-frame processing possible |
 | C22 Nodes are non-doing translation layers | F + M | Medium | Subsystems connect efficiently without nodes |
-| C23 De is energy allocation, Ming is innate optimization | F + B + N + M | Medium-High | Random energy allocation sustains life |
+| C23 De is energy allocation, Ming is innate optimization | F + S + B + N + M | Medium-High | Random energy allocation sustains life |
 | C13 Cost of deviation formalizable | F | Medium | Cost function predicts nothing |
 | C14 First-person irreducible | F + B + M | High | Direct subjective-experience reader |
 | C15 AI needs stopping protocols | F + M | Medium | Static rules solve all AI safety |
