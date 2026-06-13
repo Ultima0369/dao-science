@@ -60,6 +60,7 @@ $$\text{assign to } \arg\min \{ C_C(x, y), C_S(x, y) \}$$
   - 随机分配
   - 生态位互补分配
 - 展示 L3 创造性解释任务中协作优于单一智能体
+- 扩展热力学代价项，展示行星热预算约束如何改变最优碳硅分工
 
 ### 2.3 运行方式
 
@@ -73,6 +74,7 @@ python simulations/carbon_silicon_symbiosis.py
 - `simulations/carbon_silicon_task_allocation.png`
 - `simulations/carbon_silicon_strategy_comparison.png`
 - `simulations/carbon_silicon_l3_interpretation.png`
+- `simulations/carbon_silicon_heat_tradeoff.png`
 
 ### 2.4 关键参数
 
@@ -83,6 +85,9 @@ python simulations/carbon_silicon_symbiosis.py
 | 碳基成本系数 | $a_C=0.3, b_C=1.8, c_C=0.2$ | 碳基擅长第一人称/具身，不擅长符号/规模化 |
 | 硅基成本系数 | $a_S=1.7, b_S=0.3, c_S=0.2$ | 硅基擅长符号/规模化，不擅长第一人称/具身 |
 | L3 任务范围 | $x, y \in [0.6, 0.9]$ | 需要两种能力同时高 |
+| 碳基热代价系数 | $h_{Cx}=0.2, h_{Cy}=0.6$ | 碳基在具身任务上热耗较低 |
+| 硅基热代价系数 | $h_{Sx}=0.8, h_{Sy}=0.3$ | 硅基在符号任务上热耗较低 |
+| 热代价权重 $\lambda_H$ | $0 \to 3$ | 扫描热预算约束强度 |
 
 ---
 
@@ -119,6 +124,19 @@ python simulations/carbon_silicon_symbiosis.py
 
 **关键特征**：当任务同时需要两种能力时，协作的成本远低于任何一方单独完成。
 
+### 3.5 行星热预算约束下的分工
+
+引入热力学代价后，总成本变为：
+
+$$\text{Total Cost} = C(x,y) + \lambda_H \cdot H(x,y)$$
+
+典型结果：
+- 当 $\lambda_H=0$（无热约束）时，最优碳基任务份额 ≈ 0.47
+- 当 $\lambda_H=3$（强热约束）时，最优碳基任务份额 ≈ 0.63
+- 生态位互补分配在所有热约束下都优于单一智能体
+
+**关键特征**：热预算约束把部分任务从硅基推回碳基，但互补分工仍然优于单边替代。
+
 ---
 
 ## 4. 与项目理论的对应
@@ -131,6 +149,8 @@ python simulations/carbon_silicon_symbiosis.py
 | L3 创造性解释 | 同时高 $x$、高 $y$ 任务需要协作 |
 | 碳硅共生 | 整体系统效率高于任一单独系统 |
 | 反依赖 | 分配基于能力，而非人为保留任务 |
+| 行星热预算 | 热代价权重改变最优分配边界 |
+| 最小作用量 | 用刚好足够的算力完成不可替代功能 |
 
 ---
 
@@ -148,6 +168,7 @@ python simulations/carbon_silicon_symbiosis.py
 2. 在需要大规模符号处理的任务上，AI 表现优于人类。
 3. 人机协作在同时需要两种能力的任务上表现优于单独人类或单独 AI。
 4. 错误分配（让 AI 做高 $x$ 任务或人类做高 $y$ 任务）会降低整体效率。
+5. 在强热预算约束下，更多符号任务应回流到碳基以降低总热排放。
 
 ---
 
@@ -168,6 +189,7 @@ python simulations/carbon_silicon_symbiosis.py
 - 未建模协作本身的沟通与协调成本
 - 未涉及 AI 可能产生的第一人称体验问题
 - 任务分解假设过于简单，真实任务往往是多维耦合的
+- 热代价系数为示意性设定，未经验数据校准
 
 ---
 

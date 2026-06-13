@@ -30,6 +30,7 @@ Outputs:
     simulations/carbon_silicon_task_allocation.png
     simulations/carbon_silicon_strategy_comparison.png
     simulations/carbon_silicon_l3_interpretation.png
+    simulations/carbon_silicon_heat_tradeoff.png
 """
 
 from pathlib import Path
@@ -55,6 +56,38 @@ def carbon_cost(x: float, y: float) -> float:
 def silicon_cost(x: float, y: float) -> float:
     """Silicon cost: low for symbolic/scale tasks, high for embodied/social tasks."""
     return 1.7 * x + 0.3 * y + 0.2
+
+
+def carbon_heat(x: float, y: float) -> float:
+    """Carbon heat cost: low for embodied, moderate for symbolic."""
+    return 0.2 * x + 0.6 * y
+
+
+def silicon_heat(x: float, y: float) -> float:
+    """Silicon heat cost: high for embodied, low for symbolic."""
+    return 0.8 * x + 0.3 * y
+
+
+def total_cost_with_heat(
+    x: np.ndarray,
+    y: np.ndarray,
+    assignment: np.ndarray,
+    lambda_heat: float = 0.0,
+) -> float:
+    """Total cost including cognitive and thermodynamic (heat) costs."""
+    c_total = carbon_cost(x, y) + lambda_heat * carbon_heat(x, y)
+    s_total = silicon_cost(x, y) + lambda_heat * silicon_heat(x, y)
+    cost = np.where(assignment == 0, c_total, s_total)
+    return float(cost.sum())
+
+
+def allocate_niche_complementary_with_heat(
+    x: np.ndarray, y: np.ndarray, lambda_heat: float = 0.0
+) -> np.ndarray:
+    """Assign each task to the agent with lower total (cognitive + heat) cost."""
+    c_total = carbon_cost(x, y) + lambda_heat * carbon_heat(x, y)
+    s_total = silicon_cost(x, y) + lambda_heat * silicon_heat(x, y)
+    return (s_total < c_total).astype(int)
 
 
 # ---------------------------------------------------------------------------
@@ -230,6 +263,57 @@ def plot_strategy_comparison(n_tasks: int = 500, n_runs: int = 50) -> None:
         print(f"{name}: cost = {np.mean(costs[name]):.1f} ± {np.std(costs[name]):.1f}")
 
 
+def plot_heat_tradeoff(n_tasks: int = 500, n_runs: int = 50) -> None:
+    """Show how thermodynamic cost changes optimal carbon-silicon allocation."""
+    lambda_values = np.linspace(0, 3, 30)
+    carbon_shares = []
+    cost_carbon_only = []
+    cost_silicon_only = []
+    cost_complementary = []
+
+    for lam in lambda_values:
+        shares = []
+        c_only = []
+        s_only = []
+        comp = []
+        for _ in range(n_runs):
+            x, y = generate_tasks(n_tasks)
+            assignment = allocate_niche_complementary_with_heat(x, y, lam)
+            shares.append(1 - assignment.mean())
+            c_only.append(total_cost_with_heat(x, y, allocate_carbon_only(n_tasks), lam))
+            s_only.append(total_cost_with_heat(x, y, allocate_silicon_only(n_tasks), lam))
+            comp.append(total_cost_with_heat(x, y, assignment, lam))
+        carbon_shares.append(np.mean(shares))
+        cost_carbon_only.append(np.mean(c_only))
+        cost_silicon_only.append(np.mean(s_only))
+        cost_complementary.append(np.mean(comp))
+
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+
+    axes[0].plot(lambda_values, carbon_shares, color="#2e7d32", linewidth=2)
+    axes[0].set_xlabel(r"Heat cost weight $\lambda_H$")
+    axes[0].set_ylabel("Optimal carbon task share")
+    axes[0].set_title("Thermodynamic pressure shifts tasks toward carbon")
+    axes[0].set_ylim(0, 1)
+    axes[0].grid(True, alpha=0.3)
+
+    axes[1].plot(lambda_values, cost_carbon_only, color="#c62828", label="Carbon only")
+    axes[1].plot(lambda_values, cost_silicon_only, color="#1565c0", label="Silicon only")
+    axes[1].plot(lambda_values, cost_complementary, color="#2e7d32", label="Niche complementarity")
+    axes[1].set_xlabel(r"Heat cost weight $\lambda_H$")
+    axes[1].set_ylabel("Total cost")
+    axes[1].set_title("Complementary allocation stays optimal under heat constraints")
+    axes[1].legend()
+    axes[1].grid(True, alpha=0.3)
+
+    fig.tight_layout()
+    fig.savefig(OUT_DIR / "carbon_silicon_heat_tradeoff.png", dpi=150)
+    plt.close(fig)
+
+    print(f"At lambda_H=0, carbon share = {carbon_shares[0]:.2f}")
+    print(f"At lambda_H=3, carbon share = {carbon_shares[-1]:.2f}")
+
+
 def plot_l3_interpretation() -> None:
     """Demonstrate L3 creative interpretation as collaborative task."""
     # L3 tasks require both dimensions simultaneously
@@ -281,6 +365,9 @@ def main() -> None:
 
     print("Plotting L3 interpretation...")
     plot_l3_interpretation()
+
+    print("Plotting heat tradeoff...")
+    plot_heat_tradeoff(n_tasks=500, n_runs=50)
 
     print(f"Figures saved to {OUT_DIR}")
 
