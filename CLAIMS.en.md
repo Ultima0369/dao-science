@@ -281,7 +281,7 @@
 | Evidence badges | **F + M** |
 | Confidence | Medium |
 | Falsification condition | AI systems develop genuine first-person experience; or humans are proven forever superior to AI at L1/L4 tasks |
-| Related files | `4_applications/carbon_silicon_symbiosis.md` |
+| Related files | `4_applications/carbon_silicon_symbiosis.md`, `verifiable_units/vu_07_carbon_silicon_symbiosis.md` |
 | Open questions | Is "being needed" a sufficient criterion for silicon existence? |
 
 ---

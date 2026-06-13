@@ -281,7 +281,7 @@
 | 证据徽章 | **F + M** |
 | 可信度 | 中 |
 | 可证伪条件 | AI 系统发展出真正的第一人称体验；或人类被证明在 L1/L4 任务上永远优于 AI |
-| 关联文件 | `4_applications/carbon_silicon_symbiosis.md` |
+| 关联文件 | `4_applications/carbon_silicon_symbiosis.md`、`verifiable_units/vu_07_carbon_silicon_symbiosis.md` |
 | 开放问题 | 「被需要」是否能作为硅基存在的充分判据？ |
 
 ---
