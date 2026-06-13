@@ -5,6 +5,7 @@
 ---
 
 > **证据等级**：形式化 [F] + 仿真 [S] + 神经证据 [N]  
+> **对应主张**：`CLAIMS.md` C07  
 > **对应模型**：`2_models/dmn_self_model.md` §3.4  
 > **仿真脚本**：`simulations/dmn_insula_bistable.py`
 

@@ -5,6 +5,7 @@
 ---
 
 > **证据等级**：形式化 [F] + 仿真 [S] + 神经证据 [N] + 行为预测 [B]  
+> **对应主张**：`CLAIMS.md` C25  
 > **对应模型**：`4_applications/creativity_innovation.md` §2.4  
 > **仿真脚本**：`simulations/dmn_ecn_creativity.py`
 

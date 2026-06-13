@@ -90,7 +90,7 @@
 
 | Field | Content |
 |---|---|
-| Evidence badges | **F + N + B** |
+| Evidence badges | **F + S + N + B** |
 | Confidence | High |
 | Falsification condition | Predictive coding framework refuted; or large-scale experiments show attention allocation is unrelated to precision weighting |
 | Related files | `2_models/attention_model.md`, `verifiable_units/vu_05_attention_precision_optimization.md` |
@@ -118,7 +118,7 @@
 
 | Field | Content |
 |---|---|
-| Evidence badges | **F + N + B** |
+| Evidence badges | **F + S + N + B** |
 | Confidence | High |
 | Falsification condition | Long-term meditators show no DMN down-regulation; or DMN down-regulation is unrelated to subjective reports and improved task performance |
 | Related files | `2_models/dmn_self_model.md`, `verifiable_units/vu_01_dmn_insula.md` |
@@ -176,7 +176,7 @@
 
 | Field | Content |
 |---|---|
-| Evidence badges | **F + M** |
+| Evidence badges | **F + S + M** |
 | Confidence | Medium |
 | Falsification condition | Complex systems science proves all macro-level properties reducible to micro-rules with no new causal power |
 | Related files | `1_first_principles/06_emergence.md`, `verifiable_units/vu_04_emergence_vs_phase_transition.md` |
@@ -278,7 +278,7 @@
 
 | Field | Content |
 |---|---|
-| Evidence badges | **F + M** |
+| Evidence badges | **F + S + M** |
 | Confidence | Medium |
 | Falsification condition | Proof that all AI safety problems can be solved by static rules without dynamic stopping mechanisms |
 | Related files | `4_applications/ai_governance.md`, `verifiable_units/vu_06_ai_stopping_protocol.md` |
@@ -320,7 +320,7 @@
 
 | Field | Content |
 |---|---|
-| Evidence badges | **F + M** |
+| Evidence badges | **F + S + M** |
 | Confidence | Medium |
 | Falsification condition | AI systems develop genuine first-person experience; or humans are proven forever superior to AI at L1/L4 tasks |
 | Related files | `4_applications/carbon_silicon_symbiosis.md`, `verifiable_units/vu_07_carbon_silicon_symbiosis.md` |
@@ -339,6 +339,20 @@
 | Falsification condition | Proof that Earth can maintain steady-state temperature at arbitrary waste-heat power; or proof that computation can occur with zero entropy production |
 | Related files | `4_applications/ai_governance.md`, `1_first_principles/10_de_and_ming.md`, `verifiable_units/vu_10_planetary_ai_thermodynamics.md` |
 | Open questions | What is the practical global AI heat budget? How can an enforceable planetary thermodynamic governance protocol be established? |
+
+---
+
+### C25: Creativity Arises from Dynamic DMN-ECN Coupling
+
+**Claim**: Creativity is not the product of either the Default Mode Network (DMN) or the Executive Control Network (ECN) operating alone, but of their dynamic coupling as the system switches between incubation and insight. Highly creative individuals are characterized by DMN→ECN coupling weights that can be rapidly reconfigured between low values (free association) and high values (precise capture).
+
+| Field | Content |
+|---|---|
+| Evidence badges | **F + S + N + B** |
+| Confidence | Medium-High |
+| Falsification condition | Longitudinal studies show no relationship between DMN-ECN coupling flexibility and creative output; or highly creative individuals show the same coupling patterns as less creative individuals during idea generation and evaluation |
+| Related files | `4_applications/creativity_innovation.md`, `verifiable_units/vu_03_dmn_ecn.md` |
+| Open questions | Does this coupling pattern generalize across creative domains (verbal, visual, musical)? Can coupling flexibility be improved through training?
 
 ---
 
@@ -380,23 +394,24 @@
 | C02 One = AB(t) | F + N | Medium-High | DMN down-regulation unrelated to awareness |
 | C03 Mental content = representation | F + N + B + M | High | Perception without generative models |
 | C04 L0-L7 spectrum | F + B + M | Medium | Key phenomena unclassifiable |
-| C05 Attention = precision optimization | F + N + B | High | Predictive coding refuted |
+| C05 Attention = precision optimization | F + S + N + B | High | Predictive coding refuted |
 | C06 100ms window | F + S + N + B | Medium-High | 100ms interventions ineffective |
-| C07 DMN down-regulation releases bandwidth | F + N + B | High | Meditators show no DMN change |
+| C07 DMN down-regulation releases bandwidth | F + S + N + B | High | Meditators show no DMN change |
 | C08 3–5 year neuroplasticity | F + N + B | Medium | No structural change after 5 years |
 | C09 Knowledge can form mental veils | F + B + M | Medium | Ideologies do not alter biases |
-| C10 Emergence ≠ phase transition | F + M | Medium | All macro properties reducible |
+| C10 Emergence ≠ phase transition | F + S + M | Medium | All macro properties reducible |
 | C11 Space/time are mind-constructed | F + M | Medium-High | Space/time independent of mind |
 | C12 Reference frames prevent overload | F + B + M | Medium | No-reference-frame processing possible |
 | C22 Nodes are non-doing translation layers | F + M | Medium | Subsystems connect efficiently without nodes |
 | C23 De is energy allocation, Ming is innate optimization | F + S + B + N + M | Medium-High | Random energy allocation sustains life |
 | C13 Cost of deviation formalizable | F | Medium | Cost function predicts nothing |
 | C14 First-person irreducible | F + B + M | High | Direct subjective-experience reader |
-| C15 AI needs stopping protocols | F + M | Medium | Static rules solve all AI safety |
+| C15 AI needs stopping protocols | F + S + M | Medium | Static rules solve all AI safety |
 | C16 Management is self-training | F + B + M | Medium | Manager mind irrelevant to performance |
 | C17 Environmental design shapes behavior | F + B | Medium | Environment has no causal effect |
-| C18 Carbon-silicon niche complementarity | F + M | Medium | AI has first-person experience |
+| C18 Carbon-silicon niche complementarity | F + S + M | Medium | AI has first-person experience |
 | C24 AI expansion constrained by Earth's thermodynamic limit | F + S + M | High | Earth radiates arbitrary heat or zero-entropy computation |
+| C25 Creativity arises from DMN-ECN coupling | F + S + N + B | Medium-High | DMN-ECN coupling flexibility unrelated to creative output |
 | C19 N-of-1 produces personal knowledge | F + B + M | Medium-High | Single-subject designs invalid |
 | C20 Four Practices reshape circuits | F + B + N | Medium | RCTs show Four Practices ineffective |
 | C21 Relational attunement reduces tension | F + S + B + M | Medium | Attentional presence cannot regulate interpersonal tension |

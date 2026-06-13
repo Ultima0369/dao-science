@@ -5,6 +5,7 @@
 ---
 
 > **证据等级**：形式化 [F] + 仿真 [S] + 神经证据 [N] + 行为预测 [B]  
+> **对应主张**：`CLAIMS.md` C06  
 > **对应模型**：`2_models/100ms_model.md` §4.4、§7  
 > **仿真脚本**：`simulations/amygdala_pfc_hijack.py`
 
