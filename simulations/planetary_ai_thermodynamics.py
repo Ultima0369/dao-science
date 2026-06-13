@@ -21,6 +21,7 @@ Outputs:
     simulations/ai_heat_equilibrium.png
     simulations/ai_heat_trajectory.png
     simulations/ai_heat_policy_comparison.png
+    simulations/ai_heat_governance_dashboard.png
 """
 
 from pathlib import Path
@@ -244,6 +245,38 @@ def plot_policy_comparison() -> None:
     plt.close(fig)
 
 
+def plot_governance_dashboard() -> None:
+    """Planetary heat-budget occupancy dashboard with traffic-light zones."""
+    years = np.linspace(0, 120, 600)
+    p0 = 0.05e12
+    rate = 0.30
+    eta = 0.10  # 10% solar budget as threshold
+
+    p_ai = exponential_growth(p0, rate, years)
+    occupancy = p_ai / (eta * P_SOLAR)
+
+    fig, ax = plt.subplots(figsize=(10, 5))
+
+    # Traffic-light background zones
+    ax.axhspan(0, 0.5, color="green", alpha=0.1, label="Safe (<50%)")
+    ax.axhspan(0.5, 0.9, color="yellow", alpha=0.1, label="Caution (50-90%)")
+    ax.axhspan(0.9, 10, color="red", alpha=0.1, label="Critical (>90%)")
+
+    ax.plot(years, occupancy, color="#1565c0", linewidth=2.5, label=r"$\rho_H(t)$")
+    ax.axhline(1.0, color="red", linestyle="--", linewidth=2, label="Stop threshold")
+
+    ax.set_xlabel("Years from now")
+    ax.set_ylabel(r"Planetary heat-budget occupancy $\rho_H$")
+    ax.set_title("Planetary De dashboard: AI heat-budget occupancy (30% growth, η=10%)")
+    ax.set_ylim(0, 5)
+    ax.legend(loc="upper left")
+    ax.grid(True, alpha=0.3)
+
+    fig.tight_layout()
+    fig.savefig(OUT_DIR / "ai_heat_governance_dashboard.png", dpi=150)
+    plt.close(fig)
+
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -257,6 +290,9 @@ def main() -> None:
 
     print("Plotting policy comparison...")
     plot_policy_comparison()
+
+    print("Plotting governance dashboard...")
+    plot_governance_dashboard()
 
     print(f"Figures saved to {OUT_DIR}")
     print(f"Solar absorbed: {P_SOLAR/1e12:.1f} TW")

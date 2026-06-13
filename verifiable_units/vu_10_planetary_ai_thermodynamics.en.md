@@ -29,6 +29,12 @@ Thermodynamic stopping protocol:
 
 $$\text{stop} \iff P_\text{AI waste heat} > \eta \cdot P_\text{Earth radiative cooling}$$
 
+Planetary Heat-Budget Occupancy (PHBO):
+
+$$\rho_H(t) = \frac{P_\text{AI waste heat}(t)}{\eta \cdot P_\text{Earth radiative cooling}}$$
+
+Traffic-light interpretation: safe $\rho_H < 0.5$, caution $0.5$–$0.9$, critical $0.9$–$1.0$, stop $\geq 1.0$.
+
 ## 3. Simulation
 
 Run:
@@ -41,6 +47,7 @@ Outputs:
 - `simulations/ai_heat_equilibrium.png`
 - `simulations/ai_heat_trajectory.png`
 - `simulations/ai_heat_policy_comparison.png`
+- `simulations/ai_heat_governance_dashboard.png`
 
 ## 4. Key Findings
 
@@ -48,6 +55,7 @@ Outputs:
 - At 30% annual growth, AI waste heat reaches 10% of the solar budget in roughly 40 years.
 - Unconstrained exponential growth drives surface temperature out of the habitable range within decades to centuries.
 - A thermodynamic stop/cap protocol keeps temperature near the pre-AI baseline.
+- The PHBO dashboard turns abstract thermodynamic constraints into an actionable governance signal.
 
 ## 5. Falsification Conditions
 

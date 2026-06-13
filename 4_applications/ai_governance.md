@@ -313,6 +313,12 @@ $$\text{stop} \iff P_{\text{AI waste heat}} > \eta \cdot P_{\text{Earth radiativ
 
 可验证单元 VU-10（`verifiable_units/vu_10_planetary_ai_thermodynamics.md`）用斯特藩-玻尔兹曼能量平衡模型量化了这一边界：吸收太阳功率约为 121,000 TW；按 30% 年增长率，AI 废热可在约 40 年内达到 10% 的太阳预算；而无约束增长会在数十年到数百年内将地表温度推出可居住范围。
 
+为把「行星之德」可操作化，VU-10 定义**行星热预算占用率**（PHBO）：
+
+$$\rho_H(t) = \frac{P_{\text{AI waste heat}}(t)}{\eta \cdot P_{\text{Earth radiative cooling}}}$$
+
+并给出交通灯式治理信号：$\rho_H < 0.5$ 为绿（安全）、$0.5$–$0.9$ 为黄（ caution ）、$\geq 0.9$ 为红（临界）、$\geq 1.0$ 触发停止。VU-10 的 governance dashboard（`simulations/ai_heat_governance_dashboard.png`）把抽象的「德」转化为可监测的物理量。
+
 这不是反技术，而是**把热力学作为一阶设计约束**。一个具有真正「知止」能力的 AI 治理框架，必须在系统设计中内建：
 
 1. **热预算审计**：每个 AI 训练/推理任务必须报告其全生命周期热排放

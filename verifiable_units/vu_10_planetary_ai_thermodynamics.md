@@ -50,7 +50,24 @@ $$\text{stop} \iff P_\text{AI waste heat} > \eta \cdot P_\text{Earth radiative c
 
 其中 $\eta \in (0, 1)$ 是行星热预算余量系数（例如 $0.10$ 或 $0.50$）。
 
-### 1.4 边界条件
+### 1.4 行星之德指标：热预算占用率
+
+为把「行星之德」可操作化，定义**行星热预算占用率**（Planetary Heat-Budget Occupancy, PHBO）：
+
+$$\rho_H(t) = \frac{P_\text{AI waste heat}(t)}{\eta \cdot P_\text{Earth radiative cooling}}$$
+
+governance dashboard 用交通灯区域解释：
+
+| 区间 | 颜色 | 含义 |
+|---|---|---|
+| $\rho_H < 0.5$ | 绿 | 安全余量充足 |
+| $0.5 \leq \rho_H < 0.9$ | 黄 | caution，需审计与减速 |
+| $\rho_H \geq 0.9$ | 红 | 临界，触发自动降级或停止 |
+| $\rho_H \geq 1.0$ | — | 越过行星热力学停止阈值 |
+
+PHBO 把抽象的「德」转化为可监测、可审计、可自动触发的物理量。
+
+### 1.5 边界条件
 
 - AI 废热最终全部进入地球热库（兰道尔原理：不可逆擦除至少产生 $k_B T \ln 2$ 热量）。
 - 地球向外散热的主要机制是红外辐射。
@@ -70,6 +87,7 @@ $$\text{stop} \iff P_\text{AI waste heat} > \eta \cdot P_\text{Earth radiative c
 - 绘制 AI 废热功率与平衡温升的曲线，标出当前全球功耗、当前 AI 功耗、吸收太阳功率的位置。
 - 模拟不同年增长率（10%、30%、50%）下 AI 废热与全球温度的时序轨迹。
 - 对比四种治理策略：无约束增长、10% 太阳预算上限、10% 太阳预算停止协议、50% 太阳预算停止协议。
+- 绘制行星之德治理 dashboard，展示 PHBO 随时间的交通灯演化。
 
 ### 2.3 运行方式
 
@@ -82,6 +100,7 @@ python simulations/planetary_ai_thermodynamics.py
 - `simulations/ai_heat_equilibrium.png`
 - `simulations/ai_heat_trajectory.png`
 - `simulations/ai_heat_policy_comparison.png`
+- `simulations/ai_heat_governance_dashboard.png`
 
 ### 2.4 关键参数
 
@@ -95,6 +114,8 @@ python simulations/planetary_ai_thermodynamics.py
 | 年增长情景 | 10%、30%、50% | 不同扩张速率 |
 | 热预算阈值 $\eta$ | 0.10、0.50 | 触发停止/上限的行星余量比例 |
 | 温度上限 | 10000 K | 仅用于避免数值溢出，不代表可居住 |
+| 安全余量系数 $\eta$ | 0.10 | PHBO 分母中的行星散热余量比例 |
+| 交通灯阈值 | 0.5 / 0.9 / 1.0 | 绿/黄/红/停止 |
 
 ---
 
@@ -112,7 +133,13 @@ python simulations/planetary_ai_thermodynamics.py
 - 温度响应存在热惯性（地球热容大），但一旦越过阈值，温升不可逆地累积。
 - 50% 年增长会在更短时间内触发极端温升。
 
-### 3.3 治理策略对比
+### 3.3 行星之德 Dashboard
+
+- 30% 年增长率、$\eta=10\%$ 情景下，PHBO 约 40 年突破 1.0（越过停止阈值）。
+- 交通灯区域把抽象的热力学约束转化为可操作的治理信号。
+- PHBO 可作为国际 AI 热预算协议的共同指标。
+
+### 3.4 治理策略对比
 
 | 策略 | 温度结果 |
 |---|---|
