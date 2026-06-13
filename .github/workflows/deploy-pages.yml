@@ -44,6 +44,15 @@ jobs:
       - name: Sync docs mirror
         run: python scripts/sync_docs.py
 
+      - name: Audit internal links
+        run: python scripts/audit_links.py
+
+      - name: Audit math delimiter balance
+        run: python scripts/audit_math_delimiters.py
+
+      - name: Audit nav coverage
+        run: python scripts/audit_nav_coverage.py
+
       - name: Build MkDocs site
         run: mkdocs build --strict
 

@@ -39,14 +39,52 @@ Outputs:
 - `simulations/de_ming_cumulative_regret.png`
 - `simulations/de_ming_change_detection.png`
 
-## 4. Key Findings
+## 4. Experimental Protocol (Draft)
+
+### 4.1 Research Question
+
+In a non-stationary multi-arm bandit decision task, does a surprise-driven belief-updating strategy (De-Ming) show lower cumulative regret and faster detection of environmental change than a fixed optimal strategy, a stubborn single-task strategy, and a random strategy?
+
+### 4.2 Participants
+
+- 80 healthy adults, randomly assigned to four groups: De-Ming adaptive, Dogmatic fixed, Stubborn single-task, or Random.
+- Exclusion: prior experience with multi-arm bandit tasks or familiarity with the optimal solution.
+
+### 4.3 Task and Conditions
+
+**Task**: A web-based 4-option decision task with 200 trials. On each trial the participant chooses one option and receives a noisy reward feedback.
+
+**Non-stationary design**:
+- Trials 1–100: options A/B have higher expected rewards (e.g., 0.7/0.6), C/D lower (0.3/0.2).
+- After trial 100: reward distributions flip; C/D become high (0.7/0.6) and A/B become low (0.3/0.2).
+
+**Four groups** (mirroring the simulation):
+1. **De-Ming group**: No preset strategy; participants learn freely. Record choices, reaction times, pupil dilation or heart-rate change as surprise proxy.
+2. **Dogmatic group**: Instructed to "find the best option in the first half and then stick to it."
+3. **Stubborn group**: Instructed to "always choose the option you first thought was best."
+4. **Random group**: Instructed to "choose as randomly as possible."
+
+### 4.4 Primary Measures
+
+1. **Cumulative regret**: Accumulated difference between the expected reward of the current best option and the obtained reward.
+2. **Switch latency**: Number of trials after the flip before the participant switches to the new best option.
+3. **Physiological surprise markers**: Peak pupil dilation, heart-rate acceleration (peripheral proxy for Ming).
+4. **Strategy self-report**: Post-task questionnaire asking "When did you notice the rule changed?"
+
+### 4.5 Statistical Hypotheses
+
+- $H_0$: No significant differences among groups in cumulative regret or switch latency.
+- $H_1$: De-Ming group shows significantly lower cumulative regret and shorter switch latency than Dogmatic and Stubborn groups.
+- Expected effect size: Cohen's $d \approx 0.7$–$0.9$ (large).
+
+## 5. Key Findings
 
 - De-Ming agent reallocates energy when the environment changes at t=100.
 - Dogmatic (fixed phase-1-optimal) and Stubborn (single-task fixation) accumulate high regret after the change.
 - Random allocation performs worst overall.
 - Surprise-driven change detection is the Ming signature that enables adaptation.
 
-## 5. Falsification Conditions
+## 6. Falsification Conditions
 
 Evidence that would weaken or refute this claim:
 1. A fixed allocation outperforms the De-Ming loop across environments.

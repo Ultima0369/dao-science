@@ -119,7 +119,41 @@ python simulations/planetary_ai_thermodynamics.py
 
 ---
 
-## 3. 预期结果与解读
+## 3. 实验/数据方案（草案）
+
+### 3.1 研究问题
+
+基于已发表的全球能源、数据中心功耗与气候数据，AI 算力功耗若保持高年增长率（≥30%），其废热是否会在未来数十年内达到地球红外辐射散热能力的显著比例，并导致行星热预算占用率（PHBO）突破治理阈值？
+
+### 3.2 数据来源
+
+- **全球 AI 功耗**：国际能源署（IEA）电力报告、主要云厂商可持续发展报告、学术估算（如 Masanet et al., 2020; Wu, 2022）。
+- **全球总功耗**：世界银行能源统计、BP 能源统计年鉴。
+- **气候与辐射数据**：IPCC AR6 全球平均地表温度序列、NASA GISS 温度异常、CERES 卫星辐射通量。
+
+### 3.3 分析方法
+
+1. **历史校准**：用 2010–2025 年 AI 功耗数据校准仿真中的初始值与增长率。
+2. **情景推演**：在年增长率 10%、30%、50% 三种情景下，计算 2025–2100 年的 $P_\text{AI waste heat}$ 与 PHBO。
+3. **温度影响估算**：将 $P_\text{AI}$ 作为额外热输入，结合简化能量平衡模型（EBM）估算地表温度增量，并与复杂 GCM 结果对比敏感性。
+4. **政策敏感性**：测试不同热预算阈值 $\eta$（1%、10%、50%）对“红灯”触发时间的影响。
+
+### 3.4 主要输出指标
+
+- AI 废热占全球废热比例（%）
+- PHBO = $P_\text{AI waste heat} / (\eta \cdot P_\text{Earth radiative cooling})$
+- 由 $P_\text{AI}$ 导致的平衡温升 $\Delta T$
+- 不同治理策略下的“红灯”触发年份
+
+### 3.5 统计/模型假设
+
+- $H_0$：在高增长情景下，PHBO 在 21 世纪内始终低于 0.5（安全区）。
+- $H_1$：在 30% 年增长率情景下，PHBO 将在 2060–2070 年间突破 1.0（停止阈值）。
+- 置信区间：使用蒙特卡洛方法对 AI 功耗、气候反馈参数进行不确定性传播。
+
+---
+
+## 4. 预期结果与解读
 
 ### 3.1 平衡边界曲线
 
@@ -151,7 +185,7 @@ python simulations/planetary_ai_thermodynamics.py
 
 ---
 
-## 4. 与项目理论的对应
+## 5. 与项目理论的对应
 
 | 项目概念 | 仿真对应 |
 |---|---|
@@ -163,7 +197,7 @@ python simulations/planetary_ai_thermodynamics.py
 
 ---
 
-## 5. 实验/经验对应（草案）
+## 6. 实验/经验对应（草案）
 
 ### 5.1 数据中心热排放
 
@@ -183,7 +217,7 @@ python simulations/planetary_ai_thermodynamics.py
 
 ---
 
-## 6. 反事实条件
+## 7. 反事实条件
 
 以下证据会削弱或推翻本命题：
 
@@ -194,7 +228,7 @@ python simulations/planetary_ai_thermodynamics.py
 
 ---
 
-## 7. 当前局限
+## 8. 当前局限
 
 - 模型高度简化：未考虑大气环流、海洋热惯性细节、反照率反馈、温室气体变化。
 - 当前 AI 功耗估算存在数量级不确定性。
@@ -203,7 +237,7 @@ python simulations/planetary_ai_thermodynamics.py
 
 ---
 
-## 8. 如何引用
+## 9. 如何引用
 
 > Project Dao.Science (2026). Verifiable Unit 10: Planetary Thermodynamic Boundary for AI Expansion. `verifiable_units/vu_10_planetary_ai_thermodynamics.md`.
 

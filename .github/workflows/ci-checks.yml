@@ -61,12 +61,16 @@ jobs:
       - name: Audit nav coverage
         run: python scripts/audit_nav_coverage.py
 
-      - name: Run simulations
+      - name: Install simulation dependencies
+        run: pip install -r simulations/requirements.txt
+
+      - name: Run all simulations
         run: |
-          pip install -r simulations/requirements.txt
-          python simulations/dmn_insula_bistable.py
-          python simulations/amygdala_pfc_hijack.py
-          python simulations/dmn_ecn_creativity.py
+          set -e
+          for script in simulations/*.py; do
+            echo "Running $script"
+            python "$script"
+          done
 
   latex:
     runs-on: ubuntu-latest

@@ -49,7 +49,39 @@ Outputs:
 - `simulations/ai_heat_policy_comparison.png`
 - `simulations/ai_heat_governance_dashboard.png`
 
-## 4. Key Findings
+## 4. Experimental / Data Protocol (Draft)
+
+### 4.1 Research Question
+
+Based on published global energy, datacenter power, and climate data, if AI compute power maintains a high annual growth rate (≥30%), will its waste heat reach a significant fraction of Earth's infrared radiative cooling capacity within the next several decades, causing the Planetary Heat-Budget Occupancy (PHBO) to exceed governance thresholds?
+
+### 4.2 Data Sources
+
+- **Global AI power**: IEA electricity reports, major cloud-provider sustainability reports, academic estimates (e.g., Masanet et al., 2020; Wu, 2022).
+- **Global total power**: World Bank energy statistics, BP Statistical Review of World Energy.
+- **Climate and radiation data**: IPCC AR6 global mean surface temperature series, NASA GISS temperature anomalies, CERES satellite radiative fluxes.
+
+### 4.3 Analysis Plan
+
+1. **Historical calibration**: Calibrate initial values and growth rates in the simulation using 2010–2025 AI power data.
+2. **Scenario projection**: Under 10%, 30%, and 50% annual growth rates, compute $P_\text{AI waste heat}$ and PHBO from 2025 to 2100.
+3. **Temperature impact estimate**: Feed $P_\text{AI}$ as an additional heat source into a simplified energy-balance model (EBM) to estimate surface temperature rise, and compare sensitivity with complex GCM outputs.
+4. **Policy sensitivity**: Test how different heat-budget thresholds $\eta$ (1%, 10%, 50%) affect the year at which the "red light" is triggered.
+
+### 4.4 Primary Output Metrics
+
+- AI waste heat as a percentage of global waste heat.
+- PHBO = $P_\text{AI waste heat} / (\eta \cdot P_\text{Earth radiative cooling})$.
+- Equilibrium temperature increase $\Delta T$ attributable to $P_\text{AI}$.
+- "Red light" trigger year under each governance strategy.
+
+### 4.5 Statistical / Model Hypotheses
+
+- $H_0$: Under high-growth scenarios, PHBO remains below 0.5 (safe zone) throughout the 21st century.
+- $H_1$: Under a 30% annual growth scenario, PHBO crosses 1.0 (stop threshold) around 2060–2070.
+- Uncertainty propagation: Monte Carlo sampling over AI power trajectories and climate feedback parameters.
+
+## 5. Key Findings
 
 - Absorbed solar power sets the order-of-magnitude planetary boundary (~121,000 TW).
 - At 30% annual growth, AI waste heat reaches 10% of the solar budget in roughly 40 years.
@@ -57,7 +89,7 @@ Outputs:
 - A thermodynamic stop/cap protocol keeps temperature near the pre-AI baseline.
 - The PHBO dashboard turns abstract thermodynamic constraints into an actionable governance signal.
 
-## 5. Falsification Conditions
+## 6. Falsification Conditions
 
 Evidence that would weaken or refute this claim:
 1. Demonstration that Earth can maintain steady-state temperature at arbitrary waste-heat power without radiating the excess to space.

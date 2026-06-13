@@ -90,7 +90,42 @@ python simulations/relational_attunement_oscillator.py
 
 ---
 
-## 3. 预期结果与解读
+## 3. 实验方案（草案）
+
+### 3.1 研究问题
+
+在受控双人互动任务中，当一方在另一方的张力峰值-衰退拐点（$t^*$）精准承接主导权时，是否能同时实现：(a) 更高的生理/行为同步性；(b) 更低的主观负荷；(c) 比恒定高支持或完全孤立更协调的互动模式？
+
+### 3.2 参与者
+
+- 60 对成人被试（共 120 人），随机配对，排除严重精神神经疾病或心血管药物使用者。
+- 签署知情同意，实验前不了解“调谐”假设。
+
+### 3.3 任务与条件
+
+**任务**：合作节律任务。每对坐在隔音舱内，双手握住可测力的握力环或跟随节拍器踏步；周期性受到外部扰动（如耳机突发噪声、踏板阻力脉冲）。
+
+**三种条件**（组内或组间平衡）：
+1. **孤立**：被试背对背，无信息交流。
+2. **刚性支持**：被试面对面/通过触觉带保持恒定高力度连接。
+3. **调谐承接**：实时估计每位被试的张力 $T(t)$ 与变化率 $\dot{T}(t)$，当一方满足 $h(T,\dot{T})$ 峰值且自身不过载时，系统自动提示其“承接”。
+
+### 3.4 主要测量
+
+1. **生理同步**：心率变异性（HRV）相干度、皮肤电导（EDA）交叉相关。
+2. **行为协调**：动作起止时间差、相位锁定值（PLV）。
+3. **主观量表**：互动负荷（NASA-TLX 简版）、联结感（IRI 或自编 5 题）、安全感。
+4. **模型参数映射**：$\kappa$ 对应支持增益；$\theta$ 对应 $t^*$ 检测阈值；$T_{\max}$ 对应主观过载点。
+
+### 3.5 统计假设
+
+- $H_0$：三种条件在同步性、负荷、联结感上无显著差异。
+- $H_1$：调谐承接条件在同步性和联结感上显著优于孤立与刚性支持，且在负荷上显著低于刚性支持。
+- 预期效应量：Cohen's $d \approx 0.5$–$0.7$（中等到大）。
+
+---
+
+## 4. 预期结果与解读
 
 ### 3.1 张力时序
 
@@ -118,7 +153,7 @@ python simulations/relational_attunement_oscillator.py
 
 ---
 
-## 4. 与项目理论的对应
+## 5. 与项目理论的对应
 
 | 项目概念 | 仿真对应 |
 |---|---|
@@ -131,7 +166,7 @@ python simulations/relational_attunement_oscillator.py
 
 ---
 
-## 5. 实验/经验对应（草案）
+## 6. 实验/经验对应（草案）
 
 ### 5.1 人际互动
 
@@ -147,7 +182,7 @@ python simulations/relational_attunement_oscillator.py
 
 ---
 
-## 6. 反事实条件
+## 7. 反事实条件
 
 以下证据会削弱或推翻本命题：
 
@@ -158,7 +193,7 @@ python simulations/relational_attunement_oscillator.py
 
 ---
 
-## 7. 当前局限
+## 8. 当前局限
 
 - 张力 $T(t)$ 是抽象变量，未直接对应具体生理指标
 - 承接函数为启发式，未用真实人际数据校准
@@ -167,7 +202,7 @@ python simulations/relational_attunement_oscillator.py
 
 ---
 
-## 8. 如何引用
+## 9. 如何引用
 
 > Project Dao.Science (2026). Verifiable Unit 08: Relational Attunement as Coupled Oscillators. `verifiable_units/vu_08_relational_attunement_oscillator.md`.
 

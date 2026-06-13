@@ -1,4 +1,5 @@
 # Simulation dependencies for Project Dao.Science
-numpy>=1.23.0
-scipy>=1.10.0
-matplotlib>=3.7.0
+# Pinned for reproducibility; update intentionally and re-run CI.
+numpy==1.26.4
+scipy==1.13.0
+matplotlib==3.7.2
