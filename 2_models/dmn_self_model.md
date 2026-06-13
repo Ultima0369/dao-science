@@ -38,40 +38,19 @@ graph TD
 
 ## 1. 默认模式网络（DMN）
 
-### 1.1 DMN 的解剖与功能
+### 1.1 DMN 概述
 
-默认模式网络（Default Mode Network, DMN）是一组在静息状态下高度活跃、在执行外部任务时活动降低的脑区。Raichle 等人（2001, doi:10.1073/pnas.98.2.676）首次命名了该网络，其核心节点包括：
+默认模式网络（Default Mode Network, DMN）是一组在静息状态下高度活跃、在执行外部任务时活动降低的脑区，由 Raichle 等人（2001, doi:10.1073/pnas.98.2.676）首次命名。其核心节点包括内侧前额叶皮层（mPFC）、后扣带回皮层（PCC）/楔前叶、角回和内侧颞叶。DMN 的核心功能可概括为**自我**（self）、**记忆**（memory）、**模拟**（simulation）——它在我们不做外部任务时构建关于"我是谁"的叙事、回顾过去经历、并模拟未来场景（Buckner et al., 2008, doi:10.1196/annals.1440.011）。
 
-- **内侧前额叶皮层（mPFC）**：自我指涉加工（self-referential processing）、社会认知、价值判断
-- **后扣带回皮层（PCC）/楔前叶（precuneus）**：自传体记忆（autobiographical memory）的检索与整合、自我意识
-- **角回（angular gyrus）**：语义整合、视角转换
-- **内侧颞叶（medial temporal lobe）**：情节记忆（episodic memory）
+DMN 与任务正性网络（TPN）在功能上呈抗相关关系（Fox et al., 2005, doi:10.1073/pnas.0504136102）。DMN 占优时进行内在导向思维（自传体记忆、未来规划、反刍），TPN 占优时进行外在导向注意（任务聚焦、知觉加工）。两者的灵活切换由突显网络（前岛叶 + dACC）介导（Menon & Uddin, 2010, doi:10.1007/s00429-010-0262-0）。
 
-DMN 的核心功能——基于 Buckner 等人（2008, doi:10.1196/annals.1440.011）的综述——可以概括为三个词：**自我**（self）、**记忆**（memory）、**模拟**（simulation）。它在我们不做任何具体外部任务时构建关于"我是谁"的叙事、回顾过去的经历、并模拟未来的可能场景。
+> **详细论述**：DMN 的发现历史、解剖结构、与 TPN 的反相关机制、过度活跃与精神病理的关联，以及冥想对 DMN 的系统性影响，详见 `1_first_principles/02_one_as_bandwidth.md` §2-§3。本节仅保留与自我模型和内感受直接相关的核心要点。
 
-### 1.2 DMN 与 TPN 的抗相关
+DMN 过度活跃与多种精神病理状态相关：抑郁症（mPFC-PCC 连接增强，Hamilton et al., 2011）、焦虑症（DMN-突显网络异常耦合，Xu et al., 2019）、ADHD（任务中 DMN 不被抑制，Sonuga-Barke & Castellanos, 2007）。这些发现与项目框架中"一即带宽"的公式一致：
 
-一个关键的发现是：DMN 与任务正性网络（Task-Positive Network, TPN）——包括背侧注意网络（dorsal attention network）和突显网络（salience network）——在功能上呈抗相关（anti-correlation）关系（Fox et al., 2005, doi:10.1073/pnas.0504136102）。当 DMN 活跃时，TPN 被抑制；反之亦然。
+$$AB(t) = 1 - \frac{R_{\text{DMN}}(t) - R_0}{R_{\text{max}} - R_0}$$
 
-这种抗相关具有深刻的认知意义：
-- **DMN 占优**：内在导向思维（自传体记忆、未来规划、社会认知、反刍）
-- **TPN 占优**：外在导向注意（任务聚焦、知觉加工、反应执行）
-
-在健康的大脑中，DMN 和 TPN 之间的切换是灵活的，由突显网络（salience network）——特别是前岛叶（anterior insula）和背侧前扣带回（dACC）——介导（Menon & Uddin, 2010, doi:10.1007/s00429-010-0262-0）。
-
-### 1.3 DMN 过度活跃与精神病理
-
-DMN 的过度活跃和/或与 TPN 切换的失灵，已被证明与多种精神病理状态相关：
-
-- **抑郁症**：DMN 内部连接（特别是 mPFC-PCC）增强，反刍与 PCC 的过度活动相关（Hamilton et al., 2011, doi:10.1016/j.biopsych.2011.02.003）
-- **焦虑症**：DMN 与突显网络的异常耦合导致威胁性自动思维难以被抑制（Xu et al., 2019, doi:10.1016/j.nicl.2019.101904）
-- **ADHD**：DMN 在任务中不被抑制（"DMN 侵入"），导致注意力波动（Sonuga-Barke & Castellanos, 2007, doi:10.1016/j.biopsych.2007.03.009）
-
-这些发现与项目框架中"一即带宽"（`1_first_principles/02_one_as_bandwidth.md`）的公式一致：
-
-$$AB(t) = C_{\text{max}} - R_{\text{DMN}}(t)$$
-
-其中 $R_{\text{DMN}}(t)$ 是 DMN 在时刻 $t$ 占用的认知资源——当 DMN 过度活跃时，觉知带宽 $AB(t)$ 被压缩，注意力被锁定在自我指涉叙事中无法移开。
+其中 $R_{\text{DMN}}(t)$ 是 DMN（PCC/mPFC）BOLD 信号相对于静息态基线的标准化变化，$R_0$ 为基线，$R_{\text{max}}$ 为最大观测变化量；$AB(t) \in [0,1]$ 是觉知带宽的相对可用比例。当 DMN 过度活跃时，$AB(t)$ 被压缩，注意力被锁定在自我指涉叙事中无法移开。
 
 ---
 
@@ -104,7 +83,7 @@ Thomas Metzinger（2003, *Being No One*）提出的"自我模型理论"（Self-M
 **叙事自我（narrative self，对应于"我"/wo）的暂时性精度下调，使得最小自我（minimal self，对应于"吾"/wu——作为纯粹的觉知在场）在现象空间中成为主导体验。**
 
 计算上：
-$$\Pi_{\text{narrative self}} \rightarrow 0 \quad \text{while} \quad \Pi_{\text{minimal self}} \text{ maintained}$$
+$$\Pi_{\text{narrative-self}} \rightarrow 0 \quad \text{while} \quad \Pi_{\text{minimal-self}} \text{ maintained}$$
 
 这并非"自我"的消失（那将导致去人格化障碍/depersonalization disorder），而是自我模型的重心从叙事层向身体层转移。这与 Seth（2021）的"存在你自己"（Being You）论述一致：身体性的"存在感"是最底层的自我体验，它可以在叙事自我关闭时仍然存在。
 
@@ -175,11 +154,22 @@ $$\tau_I \frac{dI}{dt} = -I + w_{II} \cdot \sigma(I) - w_{DI} \cdot \sigma(D) + 
 
 2. **岛叶占优稳态**（冥想/觉知状态）：$I \gg D$。当 $B(t)$（呼吸锚定）通过 $\alpha$ 被放大到足以克服 DMN 的自维持时，系统切换到岛叶高活动、DMN 低活动的固定点。这是一个"当下锚定"状态。
 
-**切换条件**：从 DMN 占优切换到岛叶占优的临界条件为：
+**切换条件**：从 DMN 占优切换到岛叶占优的临界条件，可以从岛叶网络的净输入中导出。在岛叶活动较低时（$I \approx 0$），岛叶 ODE 的净驱动近似为：
 
-$$\alpha \cdot B(t) > w_{DD} \cdot \sigma(D^*) + S_D(t) - \theta_I$$
+$$\tau_I \frac{dI}{dt} \approx -I - w_{DI} \cdot \sigma(D^*) + S_I(t) + \alpha \cdot B(t)$$
 
-其中 $D^*$ 是 DMN 稳态活动水平，$\theta_I$ 是岛叶的激活阈值。这解释了为什么"放下"（停止思维）需要努力——$\alpha \cdot B(t)$ 必须克服 DMN 自维持的引力。
+为使岛叶活动从低水平开始增长，净输入必须超过其衰减与 DMN 抑制之和。引入岛叶激活阈值 $\theta_I$（具有与 $I$ 相同的激活单位），并定义无量纲参数：
+
+- $\tilde{B}(t) = B(t) / B_{\text{max}} \in [0, 1]$：归一化的呼吸锚定强度
+- $\tilde{S}_I(t) = S_I(t) / \theta_I$：归一化的外部岛叶刺激
+- $\tilde{w}_{DI} = w_{DI} / \theta_I$：归一化的 DMN→岛叶抑制权重
+- $\tilde{\alpha} = \alpha \cdot B_{\text{max}} / \theta_I$：归一化的锚定放大系数
+
+临界条件为：
+
+$$\tilde{\alpha} \cdot \tilde{B}(t) + \tilde{S}_I(t) > \tilde{w}_{DI} \cdot \sigma(D^*) + 1$$
+
+其中 $D^*$ 是 DMN 占优稳态下的活动水平，$\sigma(D^*)$ 为 sigmoid 输出（无量纲）。不等式两边均为无量纲量，保证了量纲一致性。这解释了为什么"放下"（停止思维）需要努力——$\tilde{\alpha} \cdot \tilde{B}(t)$ 必须克服 DMN 自维持通过 $w_{DI}$ 对岛叶的抑制以及岛叶自身的激活阈值。
 
 **训练效应**：长期冥想通过以下机制使切换更容易：
 - **降低 $w_{DD}$**（DMN 自维持权重）：减少反刍的"黏性"
@@ -290,6 +280,6 @@ $$\alpha \cdot B(t) > w_{DD} \cdot \sigma(D^*) + S_D(t) - \theta_I$$
 
 ---
 
-> 本文是 Project Dao.Science 心智模型系列的补充文件，连接了注意力动力学模型（`2_models/attention_model.md`）和神经重塑回路（`2_models/neuroplasticity_loop.md`）。**与 L0-L7 频谱的关系（`0_motivation/L0_L7_spectrum.md`）：** DMN 是 L2（个体实情/叙事自我）和 L3（文化传承/社会自我）的核心神经基质——它是"相"在神经层面的生成引擎。内感受（岛叶）是 L0（觉知本身）最直接的神经锚点——当下身体的感觉是唯一始终在"此时此地"的信号。冥想的"重心转移"（从 DMN→岛叶）在 L0-L7 频谱上对应从 L2-L3（被过去/未来叙事劫持）向 L0（觉知本身的裸露）的层级跃迁。"吾丧我"（叙事自我的暂时性解构）是这一跃迁的神经现象学描述。
+> 本文是 Project Dao.Science 心智模型系列（`2_models/`）的第四篇。前三篇为：`attention_model.md`（注意力动力学）、`100ms_model.md`（本能劫持与解离）、`neuroplasticity_loop.md`（神经重塑回路）。**与 L0-L7 频谱的关系（`0_motivation/L0_L7_spectrum.md`）：** DMN 是 L2（个体实情/叙事自我）和 L3（文化传承/社会自我）的核心神经基质——它是"相"在神经层面的生成引擎。内感受（岛叶）是 L0（觉知本身）最直接的神经锚点——当下身体的感觉是唯一始终在"此时此地"的信号。冥想的"重心转移"（从 DMN→岛叶）在 L0-L7 频谱上对应从 L2-L3（被过去/未来叙事劫持）向 L0（觉知本身的裸露）的层级跃迁。"吾丧我"（叙事自我的暂时性解构）是这一跃迁的神经现象学描述。
 >
-> 下一篇：见 `2_models/social_cognition.md`（社会认知与镜像共鸣——"同体大悲"的神经现象学）。
+> 下一篇：`2_models/social_cognition.md`（社会认知与镜像共鸣——"同体大悲"的神经现象学）。

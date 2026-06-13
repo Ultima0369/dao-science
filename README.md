@@ -90,6 +90,7 @@ dao-science/
 - **实修方法**：`3_methodology/`
 - **应用**：`4_applications/`
 - **术语**：`GLOSSARY.md`
+- **符号与证据等级**：`NOTATION.md`
 
 ## 关键数字
 - **26** 个核心内容模块，涵盖动机、第一性原理、心智模型、实践方法与应用
