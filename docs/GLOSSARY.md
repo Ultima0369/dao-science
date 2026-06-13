@@ -12,7 +12,7 @@
 
 | 术语 | 英文 | 定义 | 主要文件 |
 |------|------|------|---------|
-| 道 (Dao) | Dao / The Way | 意识启用的动态过程 ≡ $-\nabla_\theta G(\pi_\theta)$（连续参数化）或 $\pi_{\text{顺道}} = \arg\min_\pi G(\pi)$（离散选择）——预期自由能上的梯度流 | `1_first_principles/01_dao_as_process.md` |
+| 道 (Dao) | Dao / The Way | 意识启用的动态过程 ≡ $-\nabla_\theta G(\pi_\theta)$（连续参数化）或 $\pi_{\text{顺道}} = \arg\min_\pi G(\pi)$（离散选择）——预期自由能上的梯度流。符号约定见 [`NOTATION.md`](NOTATION.md) | `1_first_principles/01_dao_as_process.md`、`NOTATION.md` |
 | 一 (Yi) | One / Unity | 无阻塞的觉知带宽 $AB(t) = 1 - [R_{\text{DMN}}(t) - R_0] / [R_{\text{max}} - R_0]$ | `1_first_principles/02_one_as_bandwidth.md` |
 | 相非物 | Map Not Territory | 心智内容百分百是万物之相，非万物全部 | `1_first_principles/03_map_not_territory.md` |
 | L0-L7 频谱 | L0-L7 Spectrum | 从物自体（L0）到关系坍缩（L7）的八层认知地形图 | `0_motivation/L0_L7_spectrum.md` |
@@ -47,7 +47,7 @@
 | 预测误差 | Prediction Error | $\xi$ | 感官输入与生成模型预测之间的差异 |
 | 感知推理 | Perceptual Inference | $\dot{\mu}$ | 通过梯度下降更新隐藏状态估计以最小化预测误差 |
 | 主动推理 | Active Inference | | 通过选择行动策略 $\pi$ 以最小化预期自由能 |
-| 策略选择 | Policy Selection | $P(\pi) = \sigma(-\gamma G(\pi))$ | 软最大化预期自由能以选择行动策略（式 13ℴ） |
+| 策略选择 | Policy Selection | $P(\pi) = \sigma(-\gamma G(\pi))$ | 软最大化预期自由能以选择行动策略（式 13a） |
 | 先验偏好 | Prior Preferences | $P(o\|C)$ | 系统期望接收的感官状态类型 |
 | 认知价值 | Epistemic Value | | EFE 的信息增益组分——行动以减少不确定性 |
 | 实用价值 | Pragmatic Value | | EFE 的偏好满足组分——行动以获得期望结果 |
@@ -58,7 +58,7 @@
 
 | 道家概念 | 英文 | 形式化定义 | 方程编号 |
 |---------|------|-----------|---------|
-| 道 (Dao) | The Way | $\text{Dao} \equiv -\nabla_\theta G(\pi_\theta)$（连续参数化）; $\pi_{\text{顺道}} = \arg\min_\pi G(\pi)$（离散选择） | (11) / (13) |
+| 道 (Dao) | The Way | $\text{Dao} \equiv -\nabla_\theta G(\pi_\theta)$（连续参数化）; $\pi_{\text{顺道}} = \arg\min_\pi G(\pi)$（离散选择）。符号约定见 [`NOTATION.md`](NOTATION.md) | (11) / (13) |
 | 无为 (Wu-wei) | Effortless Action | 行动于 $\|\nabla_\theta G(\pi_\theta)\| < \tau$ 时 | (14) |
 | 德 (De) | Virtue / Potency | $\Pi_{\text{德}} \equiv$ 生成模型的精度矩阵 | (15) |
 | 自然 (Ziran) | Spontaneity | $\dot{\mu} = -\nabla_\mu F$（自组织动力学） | — |
@@ -168,11 +168,11 @@
 | (11) | $\text{道} \equiv -\nabla_\theta G(\pi_\theta)$ | 道作为梯度流（连续参数化） | `01_dao_as_process.md` |
 | (12) | $\frac{d\theta}{dt} = -\eta \cdot \nabla_\theta G(\pi_\theta)$ | 策略参数的梯度流动力学 | `01_dao_as_process.md` |
 | (13) | $\pi_{\text{顺道}} = \arg\min_\pi G(\pi)$ | 顺道的最优策略选择（离散形式） | `01_dao_as_process.md` |
-| (13ℴ) | $P(\pi) = \sigma(-\gamma \cdot G(\pi))$ | 顺道的软最大化策略分布 | `01_dao_as_process.md` |
+| (13a) | $P(\pi) = \sigma(-\gamma \cdot G(\pi))$ | 顺道的软最大化策略分布 | `01_dao_as_process.md` |
 | (14) | $\text{无为} \equiv$ 行动于 $\|\nabla_\theta G(\pi_\theta)\| < \tau$ | 无为的阈值定义 | `01_dao_as_process.md` |
 | (15) | $\Pi_{\text{德}} \equiv$ 生成模型的精度矩阵 | 德作为精度 | `01_dao_as_process.md` |
 | (16) | $\Pi^{\text{eff}} = \Pi^{\text{base}} \otimes \Pi^{\text{attn}}$ | 注意力调制的有效精度 | `01_dao_as_process.md` |
-| (20) | $\Pi^{\text{attn}}_{\text{观}} \approx \frac{1}{N} I_N$ | 观作为均匀精度 | `01_dao_as_process.md` |
+| (20) | $\tilde{\Pi}^{\text{attn}}_{\text{观}} \approx \frac{1}{N} I_N$ | 观作为归一化均匀精度 | `01_dao_as_process.md` |
 | (21) | $\text{明} \equiv H[Q(s\|o)] \to 0$ | 明 = 低熵后验（清晰的觉知） | `01_dao_as_process.md` |
 | AB(t) | $AB(t) = 1 - [R_{\text{DMN}}(t) - R_0] / [R_{\text{max}} - R_0]$ | 觉知带宽（标准化） | `02_one_as_bandwidth.md` |
 | α | $\alpha \in [0, 1]$ | 注意力焦点-全局连续谱参数 | `attention_model.md` |
