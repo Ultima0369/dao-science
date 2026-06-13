@@ -32,7 +32,8 @@ tools/n_of_1/
 │   └── l0_l7_snapshot.md     # Quick cognitive-relational level assessment
 ├── scripts/                  # Python helpers
 │   ├── log_entry.py          # Create a structured log entry
-│   └── analyze.py            # Analyze CSV data and generate report
+│   ├── analyze.py            # Analyze CSV data and generate report
+│   └── l0_l7_radar.py        # Draw L0-L7 cognitive-relational radar chart
 └── examples/                 # Example data and report
     ├── sample_data.csv
     └── sample_report.md
@@ -74,6 +75,19 @@ python scripts/analyze.py \
 ```
 
 It will compute means by phase, simple effect sizes, and produce a Markdown report with optional plots.
+
+### 4. Optional: L0-L7 radar snapshot
+
+Before designing an experiment, you can use the L0-L7 snapshot to locate the target phenomenon on the cognitive-relational spectrum:
+
+```bash
+python scripts/l0_l7_radar.py \
+  --share 2 --revise 4 --validate 2 --relation 5 --update 3 \
+  --label "I feel ignored" \
+  --out ~/my_nof1/l0l7_snapshot.png
+```
+
+Omit `--out` to display the chart interactively, or omit all scores to enter interactive mode.
 
 ---
 

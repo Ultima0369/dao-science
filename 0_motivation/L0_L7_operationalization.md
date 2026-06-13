@@ -176,7 +176,14 @@
 
 ### 3.2 雷达图模板
 
-可直接复制使用的空白模板见 `tools/n_of_1/templates/l0_l7_snapshot.md`，适用于对一次体验、信念、关系或事件进行快速层级定位。
+可直接复制使用的空白模板见 `tools/n_of_1/templates/l0_l7_snapshot.md`，适用于对一次体验、信念、关系或事件进行快速层级定位。如果你更喜欢自动生成图表，可使用配套脚本 `tools/n_of_1/scripts/l0_l7_radar.py`：
+
+```bash
+python tools/n_of_1/scripts/l0_l7_radar.py \
+  --share 2 --revise 4 --validate 2 --relation 5 --update 3 \
+  --label "我感到被忽视" \
+  --out ~/my_nof1/l0l7_snapshot.png
+```
 
 ```markdown
 | 现象 | 可共享性 | 可修正性 | 主体间验证 | 关系后果 | 预测误差更新 | 主要层级 | 备注 |

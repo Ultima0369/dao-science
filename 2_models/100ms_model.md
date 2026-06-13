@@ -351,7 +351,9 @@ $$A^* = \frac{\alpha_B \cdot S}{\alpha_T \cdot (\beta \cdot A^* / \gamma_P) + \g
 
 $$\frac{\alpha_T \beta}{\gamma_P} \cdot (A^*)^2 + \gamma_A \cdot A^* - \alpha_B S = 0$$
 
-**量纲说明**：为保持方程量纲一致，$A(t)$ 和 $P(t)$ 应理解为各自脑区的归一化激活水平（无量纲，$A, P \in [0, 1]$），此时所有系数 $\alpha_B, \alpha_T, \gamma_A, \beta, \gamma_P$ 均具有量纲 $[t]^{-1}$，方程各项量纲均为 $[t]^{-1}$。
+**量纲说明**：为保持方程量纲一致，$A(t)$ 和 $P(t)$ 应理解为各自脑区的归一化激活水平（无量纲，$A, P \in [0, 1]$），此时所有系数 $\alpha_B, \alpha_T, \gamma_A, \beta, \gamma_P$ 均具有量纲 $[t]^{-1}$，方程各项量纲均为 $[t]^{-1}$。完整的量纲约定见 [`NOTATION.md`](../NOTATION.md)。
+
+**边界条件与饱和**：方程 (7.1) 中的竞争项 $\alpha_T P A$ 在 $A \to 1$ 时仍有正反馈可能。实际数值积分中应对 $A(t)$ 和 $P(t)$ 做 $[0, 1]$ 裁剪（或引入 sigmoid 饱和函数），以保证生理合理性。稳态二次方程的解仅在 $A^* \in [0, 1]$ 时有生理意义；若解析解超出该区间，则系统在实际积分中会饱和在边界 $A^* = 1$（杏仁核完全劫持）或 $A^* = 0$（无情绪反应）。
 
 为便于求解，定义 $\tilde{A} = A^* / A_{\text{max}}$（$A_{\text{max}}$ 为最大可能激活，无量纲），并令 $\kappa = \alpha_T \beta A_{\text{max}} / \gamma_P$、$\tilde{\gamma}_A = \gamma_A / \kappa$、$\tilde{S} = \alpha_B S / (\kappa A_{\text{max}})$，则方程可写为：
 

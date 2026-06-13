@@ -139,7 +139,8 @@ $$\tau_I \frac{dI}{dt} = -I + w_{II} \cdot \sigma(I) - w_{DI} \cdot \sigma(D) + 
 其中：
 - $D(t)$：DMN 活动水平（mPFC-PCC 同步）
 - $I(t)$：岛叶/内感受网络活动水平（前岛叶-ACC 同步）
-- $\sigma(x) = 1/(1 + e^{-\beta(x - \theta)})$：sigmoid 激活函数（$\beta$ = 增益，$\theta$ = 阈值）
+- $\sigma(x) = 1/(1 + e^{-\beta(x - \theta)})$：sigmoid 激活函数（$\beta$ = 增益，$\theta$ = 阈值；$\sigma(x)$ 无量纲）
+- 状态变量 $D(t), I(t) \in [0, 1]$ 为归一化激活水平；完整量纲约定见 [`NOTATION.md`](../NOTATION.md)
 - $w_{DD}$：DMN 的自维持权重（反刍的正反馈——"一个念头勾出另一个念头"）
 - $w_{ID}$：岛叶→DMN 的抑制权重（内感受锚定对叙事的抑制）
 - $w_{DI}$：DMN→岛叶的抑制权重（叙事沉浸对身体觉知的压抑）
@@ -172,6 +173,8 @@ $$\tau_I \frac{dI}{dt} \approx -I - w_{DI} \cdot \sigma(D^*) + S_I(t) + \alpha \
 $$\tilde{\alpha} \cdot \tilde{B}(t) + \tilde{S}_I(t) > \tilde{w}_{DI} \cdot \sigma(D^*) + 1 \quad \text{[F/S]}$$
 
 其中 $D^*$ 是 DMN 占优稳态下的活动水平，$\sigma(D^*)$ 为 sigmoid 输出（无量纲）。不等式两边均为无量纲量，保证了量纲一致性。这解释了为什么"放下"（停止思维）需要努力——$\tilde{\alpha} \cdot \tilde{B}(t)$ 必须克服 DMN 自维持通过 $w_{DI}$ 对岛叶的抑制以及岛叶自身的激活阈值。
+
+> **边界说明**：上述不等式是岛叶活动从接近零开始增长的**充分条件**，而非完整切换的充分必要条件。实际能否完成从 DMN 占优稳态到岛叶占优稳态的切换，还取决于岛叶自维持权重 $w_{II}$、DMN→岛叶抑制 $w_{DI}$ 的完整非线性动力学，以及数值积分中的 $[0, 1]$ 裁剪。可运行仿真见 `verifiable_units/vu_01_dmn_insula.md`。
 
 **训练效应**：长期冥想通过以下机制使切换更容易：
 - **降低 $w_{DD}$**（DMN 自维持权重）：减少反刍的"黏性"
