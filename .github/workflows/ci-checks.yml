@@ -56,6 +56,11 @@ jobs:
           pip install ruff
           ruff check scripts tests simulations tools
 
+      - name: Type-check Python code
+        run: |
+          pip install mypy
+          mypy scripts tests tools/n_of_1/scripts
+
       - name: Run tests
         run: |
           pip install pytest
@@ -75,6 +80,9 @@ jobs:
 
       - name: Audit nav coverage
         run: python scripts/audit_nav_coverage.py
+
+      - name: Audit badge and equation consistency
+        run: python scripts/audit_consistency.py
 
       - name: Run all simulations
         run: |

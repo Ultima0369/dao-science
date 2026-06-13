@@ -26,7 +26,7 @@ def parse_numeric(value: str) -> float | None:
         return None
 
 
-def summarize(rows: list[dict[str, str]]) -> dict:
+def summarize(rows: list[dict[str, str]]) -> tuple[dict, list[str]]:
     """Compute summary statistics by phase for numeric columns."""
     numeric_keys = set()
     for row in rows:
@@ -43,11 +43,11 @@ def summarize(rows: list[dict[str, str]]) -> dict:
     for row in rows:
         phase = row.get("phase", "unknown")
         for key in numeric_keys:
-            value = parse_numeric(row.get(key, ""))
-            if value is not None:
-                by_phase[phase][key].append(value)
+            num_value = parse_numeric(row.get(key, ""))
+            if num_value is not None:
+                by_phase[phase][key].append(num_value)
 
-    summary = {}
+    summary: dict[str, dict[str, dict[str, float | int]]] = {}
     for phase, vars_data in by_phase.items():
         summary[phase] = {}
         for var, values in vars_data.items():
@@ -67,7 +67,7 @@ def effect_size(baseline_mean: float, intervention_mean: float) -> float:
     return round(intervention_mean - baseline_mean, 2)
 
 
-def generate_report(rows: list[dict[str, str]], summary: dict, variables: list[str]) -> str:
+def generate_report(rows: list[dict[str, str]], summary: dict[str, dict[str, dict[str, float | int]]], variables: list[str]) -> str:
     lines = [
         "# N-of-1 Analysis Report",
         "",

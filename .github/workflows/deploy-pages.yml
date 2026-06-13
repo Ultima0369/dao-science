@@ -53,6 +53,9 @@ jobs:
       - name: Audit nav coverage
         run: python scripts/audit_nav_coverage.py
 
+      - name: Audit badge and equation consistency
+        run: python scripts/audit_consistency.py
+
       - name: Build MkDocs site
         run: mkdocs build --strict
 

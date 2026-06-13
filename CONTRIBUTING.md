@@ -106,6 +106,7 @@ python scripts/sync_docs.py
 python scripts/audit_links.py
 python scripts/audit_nav_coverage.py
 python scripts/audit_math_delimiters.py
+python scripts/audit_consistency.py
 mkdocs build --strict
 ```
 

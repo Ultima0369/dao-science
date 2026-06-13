@@ -16,7 +16,7 @@ CONTENT_DIRS = [
     ROOT / "verifiable_units",
 ]
 
-md_files = []
+md_files: list[Path] = []
 for d in CONTENT_DIRS:
     if d.is_dir():
         md_files.extend(d.rglob("*.md"))
@@ -25,7 +25,7 @@ for d in CONTENT_DIRS:
 
 existing = {str(p.resolve()).replace("\\", "/") for p in md_files}
 
-broken = []
+broken: list[tuple[str, str, str]] = []
 for p in md_files:
     text = p.read_text(encoding="utf-8")
     for m in re.finditer(r"\[([^\]]+)\]\(([^)]+)\)", text):
@@ -40,8 +40,8 @@ for p in md_files:
 
 if broken:
     print(f"BROKEN INTERNAL LINKS ({len(broken)}):")
-    for src, link, target in broken:
-        print(f"  {src} -> {link} (resolved: {target})")
+    for src, link, target_str in broken:
+        print(f"  {src} -> {link} (resolved: {target_str})")
     raise SystemExit(1)
 else:
     print("No broken internal .md links found.")

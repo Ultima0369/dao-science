@@ -163,8 +163,14 @@
 |------|------|------|---------|
 | (1) | $v^{(i)} = g^{(i)}(v^{(i+1)}, \theta^{(i)}) + z^{(i)}$ | 层级化生成模型 | `01_dao_as_process.md` |
 | (2) | $\xi^{(i)} = v^{(i)} - g^{(i)}(v^{(i+1)}, \theta^{(i)})$ | 预测误差 | `01_dao_as_process.md` |
+| (3) | $\dot{\mu}^{(i)} = -\frac{\partial \tilde{\epsilon}^{(i)T}}{\partial \mu^{(i)}} \Pi^{(i)} \tilde{\epsilon}^{(i)} + \frac{\partial g^{(i)T}}{\partial \mu^{(i)}} \Pi_{v}^{(i-1)} \tilde{\epsilon}_{v}^{(i-1)} - \Pi_{v}^{(i)} \tilde{\epsilon}_{v}^{(i)}$ | 感知推理动态 | `01_dao_as_process.md` |
 | (4) | $F = D_{KL}[Q(s) \| P(s\|o)] - \ln P(o)$ | 变分自由能 | `01_dao_as_process.md` |
+| (5) | $F \geq -\ln P(o)$ | 自由能的不等式 | `01_dao_as_process.md` |
+| (6) | $F = -E_{Q(s)}[\ln P(o \| s)] + D_{KL}[Q(s) \| P(s)]$ | 自由能的精度-复杂度分解 | `01_dao_as_process.md` |
 | (7) | $G(\pi) = E_{Q(o, s\|\pi)}[\ln Q(s\|\pi) - \ln P(o, s\|\pi)]$ | 预期自由能 | `01_dao_as_process.md` |
+| (8) | $G(\pi) = -E_{Q(o\|\pi)}[D_{KL}[Q(s\|o, \pi) \| Q(s\|\pi)]] - E_{Q(o\|\pi)}[\ln P(o\|C)]$ | EFE 的认知-实用分解 | `01_dao_as_process.md` |
+| (9) | $G(\pi) = D_{KL}[Q(o\|\pi) \| P(o\|C)] + E_{Q(s\|\pi)}[H[P(o\|s)]]$ | EFE 的风险-歧义分解 | `01_dao_as_process.md` |
+| (10) | $P(\pi) = \sigma(-\gamma \cdot G(\pi))$ | 策略选择（离散软最大化） | `01_dao_as_process.md` |
 | (11) | $\text{道} \equiv -\nabla_\theta G(\pi_\theta)$ | 道作为梯度流（连续参数化） | `01_dao_as_process.md` |
 | (12) | $\frac{d\theta}{dt} = -\eta \cdot \nabla_\theta G(\pi_\theta)$ | 策略参数的梯度流动力学 | `01_dao_as_process.md` |
 | (13) | $\pi_{\text{顺道}} = \arg\min_\pi G(\pi)$ | 顺道的最优策略选择（离散形式） | `01_dao_as_process.md` |
@@ -172,6 +178,9 @@
 | (14) | $\text{无为} \equiv$ 行动于 $\|\nabla_\theta G(\pi_\theta)\| < \tau$ | 无为的阈值定义 | `01_dao_as_process.md` |
 | (15) | $\Pi_{\text{德}} \equiv$ 生成模型的精度矩阵 | 德作为精度 | `01_dao_as_process.md` |
 | (16) | $\Pi^{\text{eff}} = \Pi^{\text{base}} \otimes \Pi^{\text{attn}}$ | 注意力调制的有效精度 | `01_dao_as_process.md` |
+| (17) | $\|\Pi^{\text{attn}}\|_{\text{max}} \gg \|\Pi^{\text{attn}}\|_{\text{min}}$ | 收——会聚精度配置 | `01_dao_as_process.md` |
+| (18) | $\|\Pi^{\text{attn}}\|_{\text{max}} \approx \|\Pi^{\text{attn}}\|_{\text{min}}$ | 放——散布精度配置 | `01_dao_as_process.md` |
+| (19) | $\text{Dynamic Range} = \frac{\max_t \|\Pi^{\text{attn}}(t)\|_{\max}}{\min_t \|\Pi^{\text{attn}}(t)\|_{\max}} \gg 1$ | 自如——精度动态范围 | `01_dao_as_process.md` |
 | (20) | $\tilde{\Pi}^{\text{attn}}_{\text{观}} \approx \frac{1}{N} I_N$ | 观作为归一化均匀精度 | `01_dao_as_process.md` |
 | (21) | $\text{明} \equiv H[Q(s\|o)] \to 0$ | 明 = 低熵后验（清晰的觉知） | `01_dao_as_process.md` |
 | AB(t) | $AB(t) = 1 - [R_{\text{DMN}}(t) - R_0] / [R_{\text{max}} - R_0]$ | 觉知带宽（标准化） | `02_one_as_bandwidth.md` |

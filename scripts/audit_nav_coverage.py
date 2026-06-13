@@ -6,8 +6,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-with open(ROOT / "mkdocs.yml", encoding="utf-8") as f:
-    text = f.read()
+with open(ROOT / "mkdocs.yml", encoding="utf-8") as mkdocs_file:
+    text = mkdocs_file.read()
 
 nav_paths = set()
 for line in text.splitlines():
@@ -44,8 +44,8 @@ ALLOWLIST = {
 unreferenced = (set(all_files) - nav_paths) - ALLOWLIST
 if unreferenced:
     print("Unreferenced .md files:")
-    for f in sorted(unreferenced):
-        print(f"  - {f}")
+    for path in sorted(unreferenced):
+        print(f"  - {path}")
     raise SystemExit(1)
 else:
     print("All .md files in content dirs are referenced in nav.")

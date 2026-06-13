@@ -114,8 +114,8 @@ def draw_radar(scores: dict[str, int], label: str, out_path: Path | None) -> Non
     angles += angles[:1]
 
     fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(polar=True))
-    ax.set_theta_offset(np.pi / 2)
-    ax.set_theta_direction(-1)
+    ax.set_theta_offset(np.pi / 2)  # type: ignore[attr-defined]
+    ax.set_theta_direction(-1)  # type: ignore[attr-defined]
 
     ax.set_xticks(angles[:-1])
     ax.set_xticklabels(DIMENSIONS, fontsize=9)
@@ -142,7 +142,7 @@ def draw_radar(scores: dict[str, int], label: str, out_path: Path | None) -> Non
         color="#333333",
     )
 
-    plt.tight_layout(rect=[0, 0.05, 1, 1])
+    plt.tight_layout(rect=(0, 0.05, 1, 1))
 
     if out_path:
         out_path = Path(out_path)

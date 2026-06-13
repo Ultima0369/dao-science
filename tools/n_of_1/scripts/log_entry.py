@@ -16,7 +16,7 @@ from pathlib import Path
 
 def parse_variables(text: str) -> dict[str, str]:
     """Parse 'a=1,b=2' into dict."""
-    result = {}
+    result: dict[str, str] = {}
     if not text:
         return result
     for pair in text.split(","):
