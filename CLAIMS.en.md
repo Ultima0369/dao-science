@@ -226,6 +226,20 @@
 
 ---
 
+### C23: De Is Vital-Energy Attention Allocation; Ming Is Innate Optimization Capacity
+
+**Claim**: "De" is a living system's capacity for attentional allocation of vital energy, directing it to the right channels at the right time to produce positive-feedback decisions and action. "Ming" is the system's innate capacity to hit an effective range under incomplete information and to iteratively optimize. Attentional hijacking obscures Ming, causing the system to deviate from the path of least action.
+
+| Field | Content |
+|---|---|
+| Evidence badges | **F + B + N + M** |
+| Confidence | Medium-High |
+| Falsification condition | Discovery that living systems can persist long-term with completely random or non-optimized energy allocation; or proof that attentional hijacking does not degrade decision quality or survival outcomes |
+| Related files | `1_first_principles/10_de_and_ming.md`, `1_first_principles/01_dao_as_process.md`, `2_models/attention_model.md`, `2_models/100ms_model.md`, `2_models/dmn_self_model.md` |
+| Open questions | What is the neural correlate of De? How can Ming's "effective-range hit rate" be quantified? |
+
+---
+
 ## IV. Deviation and Ethics
 
 ### C13: Cost of Deviation Can Be Formalized
@@ -361,6 +375,7 @@
 | C11 Space/time are mind-constructed | F + M | Medium-High | Space/time independent of mind |
 | C12 Reference frames prevent overload | F + B + M | Medium | No-reference-frame processing possible |
 | C22 Nodes are non-doing translation layers | F + M | Medium | Subsystems connect efficiently without nodes |
+| C23 De is energy allocation, Ming is innate optimization | F + B + N + M | Medium-High | Random energy allocation sustains life |
 | C13 Cost of deviation formalizable | F | Medium | Cost function predicts nothing |
 | C14 First-person irreducible | F + B + M | High | Direct subjective-experience reader |
 | C15 AI needs stopping protocols | F + M | Medium | Static rules solve all AI safety |

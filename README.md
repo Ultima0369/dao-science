@@ -71,6 +71,7 @@
 | 想看碳硅共生任务分配仿真 | [`verifiable_units/vu_07_carbon_silicon_symbiosis.md`](verifiable_units/vu_07_carbon_silicon_symbiosis.md) | 20 min |
 | 想了解关系调谐模型 | [`2_models/relational_attunement.md`](2_models/relational_attunement.md) | 20 min |
 | 想了解节点与无为转译层 | [`1_first_principles/09_node_and_translation.md`](1_first_principles/09_node_and_translation.md) | 20 min |
+| 想了解德与明 | [`1_first_principles/10_de_and_ming.md`](1_first_principles/10_de_and_ming.md) | 20 min |
 | 想检查每个主张的证据状态 | [`CLAIMS.md`](CLAIMS.md) | 15 min |
 | 想查术语 | [`GLOSSARY.md`](GLOSSARY.md) | 按需 |
 

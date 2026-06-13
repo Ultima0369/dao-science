@@ -70,6 +70,7 @@ Full positioning statement: [`POSITIONING.en.md`](POSITIONING.en.md).
 | See carbon-silicon task allocation simulation | [`verifiable_units/vu_07_carbon_silicon_symbiosis.md`](verifiable_units/vu_07_carbon_silicon_symbiosis.md) | 20 min |
 | Learn about relational attunement | [`2_models/relational_attunement.md`](2_models/relational_attunement.md) | 20 min |
 | Learn about nodes and non-doing translation | [`1_first_principles/09_node_and_translation.md`](1_first_principles/09_node_and_translation.md) | 20 min |
+| Learn about De and Ming | [`1_first_principles/10_de_and_ming.md`](1_first_principles/10_de_and_ming.md) | 20 min |
 | Check the evidence status of each claim | [`CLAIMS.md`](CLAIMS.md) | 15 min |
 | Look up terms | [`GLOSSARY.md`](GLOSSARY.md) | On demand |
 

@@ -25,6 +25,7 @@ flowchart TB
         COST["偏离代价<br/>07_cost_of_deviation.md<br/>Cost = G(π_actual) − G(π_opt)<br/>预警信号 + 价值对齐失败"]
         STM["时空与建模<br/>08_space_time_and_modeling.md<br/>参考系作为心智建构"]
         NODE["节点与转译<br/>09_node_and_translation.md<br/>无为的四通管+笛卡尔原点"]
+        DEMING["德与明<br/>10_de_and_ming.md<br/>精力调配+本具觉知"]
     end
     
     subgraph "Layer 2: 心智模型"
@@ -71,6 +72,11 @@ flowchart TB
     FPE --> EMR
     ONE --> NODE
     EMR --> COST
+    COST --> STM
+    STM --> NODE
+    NODE --> DEMING
+    DEMING --> RELAT
+    DEMING --> SYMBIOSIS
     EMR --> LIRU
     EMR --> ATTN
     FPE --> AI
@@ -122,6 +128,7 @@ flowchart TB
     style COST fill:#e3f2fd,stroke:#1565c0
     style STM fill:#e3f2fd,stroke:#1565c0
     style NODE fill:#e3f2fd,stroke:#1565c0
+    style DEMING fill:#e3f2fd,stroke:#1565c0
     style ATTN fill:#fce4ec,stroke:#c62828
     style AMYG fill:#fce4ec,stroke:#c62828
     style NEURO fill:#fce4ec,stroke:#c62828
@@ -157,7 +164,8 @@ flowchart TB
 9. `1_first_principles/07_cost_of_deviation.md` — 偏离道的代价函数：预警信号与价值对齐失败
 10. `1_first_principles/08_space_time_and_modeling.md` — 时空与心智建模
 11. `1_first_principles/09_node_and_translation.md` — 节点：无为的转译层与系统连通
-12. → 然后进入 Layer 2（心智模型）或 Layer 3（实践方法）
+12. `1_first_principles/10_de_and_ming.md` — 德与明：生命能量的注意力调配
+13. → 然后进入 Layer 2（心智模型）或 Layer 3（实践方法）
 
 ### 路径 2：经验优先（从误会觉察开始）
 适合希望从日常经验出发、先建立直观理解的读者。
