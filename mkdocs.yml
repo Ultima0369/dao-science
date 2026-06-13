@@ -94,6 +94,7 @@ plugins:
             附录: "Appendices"
             概念索引与术语表: "Glossary"
             符号与约定: "Notation"
+            翻译声明: "Translation Statement"
             贡献指南: "Contributing"
       reconfigure_material: true
       reconfigure_search: true
@@ -147,4 +148,5 @@ nav:
   - 附录:
     - 概念索引与术语表: GLOSSARY.md
     - 符号与约定: NOTATION.md
+    - 翻译声明: TRANSLATION.md
     - 贡献指南: CONTRIBUTING.md

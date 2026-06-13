@@ -27,6 +27,7 @@ TOP_FILES = [
     "FINAL_VISION.md",
     "GLOSSARY.md",
     "NOTATION.md",
+    "TRANSLATION.md",
     "CONTRIBUTING.md",
 ]
 

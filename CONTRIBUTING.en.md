@@ -115,6 +115,7 @@ The project follows the principle of least action in `POSITIONING.md`: every con
 - The default language of the project is Chinese.
 - English translations use the `.<locale>.md` suffix convention (e.g., `README.en.md`).
 - English versions should preserve the conceptual precision of the Chinese original; literal translation is secondary.
+- See [`TRANSLATION.en.md`](TRANSLATION.en.md) for the project's translation policy, including which Chinese terms must be kept untranslated.
 - When a full English translation is not yet available, create a stub with title, abstract, and a note stating "Full English translation in progress."
 
 ### Citation Format
