@@ -166,4 +166,14 @@
 
 ---
 
+## 进阶阅读
+
+如果你已经理解本节所述的自我优化方向，并希望进一步探讨**环境如何塑造组织成员的行为、注意力与习惯**——即“控场”的伦理与技术——请阅读姊妹篇：
+
+> [`4_applications/management_field_theory.md`](management_field_theory.md)
+
+该文件直接讨论影响力、叙事权、定义权，并以“释放型场 vs 捕获型场”作为核心伦理剃刀。
+
+---
+
 > 返回导航入口：[`0_motivation/project_map.md`](../0_motivation/project_map.md)。
