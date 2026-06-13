@@ -23,6 +23,8 @@ flowchart TB
         FPE["第一人称认识论<br/>05_first_person_epistemology.md<br/>个体=不可还原数据源"]
         EMR["涌现性<br/>06_emergence.md<br/>从部分之和到层级跃迁"]
         COST["偏离代价<br/>07_cost_of_deviation.md<br/>Cost = G(π_actual) − G(π_opt)<br/>预警信号 + 价值对齐失败"]
+        STM["时空与建模<br/>08_space_time_and_modeling.md<br/>参考系作为心智建构"]
+        NODE["节点与转译<br/>09_node_and_translation.md<br/>无为的四通管+笛卡尔原点"]
     end
     
     subgraph "Layer 2: 心智模型"
@@ -64,8 +66,10 @@ flowchart TB
     DAO --> MAP
     ONE --> ATTN
     MAP --> DMN
+    MAP --> NODE
     PHIL --> FPE
     FPE --> EMR
+    ONE --> NODE
     EMR --> COST
     EMR --> LIRU
     EMR --> ATTN
@@ -116,6 +120,8 @@ flowchart TB
     style FPE fill:#e3f2fd,stroke:#1565c0
     style EMR fill:#e3f2fd,stroke:#1565c0
     style COST fill:#e3f2fd,stroke:#1565c0
+    style STM fill:#e3f2fd,stroke:#1565c0
+    style NODE fill:#e3f2fd,stroke:#1565c0
     style ATTN fill:#fce4ec,stroke:#c62828
     style AMYG fill:#fce4ec,stroke:#c62828
     style NEURO fill:#fce4ec,stroke:#c62828
@@ -149,7 +155,9 @@ flowchart TB
 7. `1_first_principles/05_first_person_epistemology.md` — 第一人称认识论与个体独特性
 8. `1_first_principles/06_emergence.md` — 涌现性：从部分之和到层级跃迁
 9. `1_first_principles/07_cost_of_deviation.md` — 偏离道的代价函数：预警信号与价值对齐失败
-10. → 然后进入 Layer 2（心智模型）或 Layer 3（实践方法）
+10. `1_first_principles/08_space_time_and_modeling.md` — 时空与心智建模
+11. `1_first_principles/09_node_and_translation.md` — 节点：无为的转译层与系统连通
+12. → 然后进入 Layer 2（心智模型）或 Layer 3（实践方法）
 
 ### 路径 2：经验优先（从误会觉察开始）
 适合希望从日常经验出发、先建立直观理解的读者。

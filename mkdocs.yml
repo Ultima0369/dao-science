@@ -65,6 +65,7 @@ plugins:
             涌现性: "Emergence"
             偏离代价: "Cost of Deviation"
             时空与心智建模: "Space, Time, and Mind-Made Modeling"
+            节点：无为的转译层: "Node: Non-Doing Translation Layer"
             心智模型: "Models of Mind"
             注意力动力学: "Attention Dynamics"
             本能劫持: "Instinct Hijacking"
@@ -126,6 +127,7 @@ nav:
     - 涌现性: 1_first_principles/06_emergence.md
     - 偏离代价: 1_first_principles/07_cost_of_deviation.md
     - 时空与心智建模: 1_first_principles/08_space_time_and_modeling.md
+    - 节点：无为的转译层: 1_first_principles/09_node_and_translation.md
   - 心智模型:
     - 注意力动力学: 2_models/attention_model.md
     - 本能劫持: 2_models/100ms_model.md

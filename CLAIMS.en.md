@@ -212,6 +212,20 @@
 
 ---
 
+### C22: Nodes Are Non-Doing Translation Layers
+
+**Claim**: In complex systems, nodes are invisible hubs that enable heterogeneous flows to connect, translate, and emerge. A well-functioning node is overlooked by the system yet cannot be removed without causing blockage; treating a node as a controllable valve increases free energy and blocks flow.
+
+| Field | Content |
+|---|---|
+| Evidence badges | **F + M** |
+| Confidence | Medium |
+| Falsification condition | Discovery that complex systems can efficiently connect heterogeneous subsystems without any translation node; or proof that all nodes inevitably become valves |
+| Related files | `1_first_principles/09_node_and_translation.md`, `2_models/relational_attunement.md`, `4_applications/management_field_theory.md`, `4_applications/carbon_silicon_symbiosis.md` |
+| Open questions | How can a node's "transparency" and "appropriability" be quantified? |
+
+---
+
 ## IV. Deviation and Ethics
 
 ### C13: Cost of Deviation Can Be Formalized
@@ -346,6 +360,7 @@
 | C10 Emergence ≠ phase transition | F + M | Medium | All macro properties reducible |
 | C11 Space/time are mind-constructed | F + M | Medium-High | Space/time independent of mind |
 | C12 Reference frames prevent overload | F + B + M | Medium | No-reference-frame processing possible |
+| C22 Nodes are non-doing translation layers | F + M | Medium | Subsystems connect efficiently without nodes |
 | C13 Cost of deviation formalizable | F | Medium | Cost function predicts nothing |
 | C14 First-person irreducible | F + B + M | High | Direct subjective-experience reader |
 | C15 AI needs stopping protocols | F + M | Medium | Static rules solve all AI safety |
