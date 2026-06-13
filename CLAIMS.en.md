@@ -228,7 +228,7 @@
 
 ### C23: De Is Vital-Energy Attention Allocation; Ming Is Innate Optimization Capacity
 
-**Claim**: "De" is a living system's capacity for attentional allocation of vital energy. Its sole test is whether, from thought through action to effect feedback, it maintains and improves the existence quality of individuals and groups. "Ming" is the system's innate capacity to hit an effective range under incomplete information and to iteratively optimize. Attentional hijacking obscures Ming, causing the system to deviate from the path of least action.
+**Claim**: "De" is a living system's capacity for attentional allocation of vital energy. Its sole test is whether, from thought through action to effect feedback, it maintains and improves the existence quality of individuals and groups. "Ming" is the capacity to judge De in real time: a penetrating awareness that, under bandwidth constraints, unifies yin and yang, identifies patterns (constants) and real-time signals (variables), and outputs determinate action. Attentional hijacking disrupts Ming's yin-yang balance, causing the system to deviate from the path of least action.
 
 | Field | Content |
 |---|---|
