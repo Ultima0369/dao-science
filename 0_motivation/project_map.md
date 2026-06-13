@@ -198,6 +198,9 @@ flowchart TB
 
 ---
 
+> **证据等级**：形式化 [F]
+
+
 > 本文档是 Project Dao.Science 的导航入口。将本文档添加到 `mkdocs.yml` 的 nav 中作为首页可提供交互式导航。
 >
 > 下一篇：`0_motivation/why_this_matters.md`（技术文明的三重危机与道学科学的回应）。

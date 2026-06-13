@@ -23,6 +23,9 @@ $$\text{Cost}(\pi_{\text{dev}}) = G(\pi_{\text{actual}}) - G(\pi_{\text{optimal}
 
 ---
 
+> **证据等级**：形式化 [F] + 行为预测 [B]
+
+
 ## 1. 为什么需要代价函数
 
 ### 1.1 "道"的两个面向
