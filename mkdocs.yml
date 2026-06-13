@@ -94,6 +94,7 @@ plugins:
             VU-03 DMN-ECN 顿悟耦合: "VU-03 DMN-ECN Insight Coupling"
             涌现 ≠ 相变: "VU-04 Emergence vs Phase Transition"
             注意力作为精度优化: "VU-05 Attention as Precision Optimization"
+            AI 知止协议: "VU-06 AI Stopping Protocol"
             附录: "Appendices"
             概念索引与术语表: "Glossary"
             符号与约定: "Notation"
@@ -152,6 +153,7 @@ nav:
     - VU-03 DMN-ECN 顿悟耦合: verifiable_units/vu_03_dmn_ecn.md
     - 涌现 ≠ 相变: verifiable_units/vu_04_emergence_vs_phase_transition.md
     - 注意力作为精度优化: verifiable_units/vu_05_attention_precision_optimization.md
+    - AI 知止协议: verifiable_units/vu_06_ai_stopping_protocol.md
   - 附录:
     - 概念索引与术语表: GLOSSARY.md
     - 符号与约定: NOTATION.md

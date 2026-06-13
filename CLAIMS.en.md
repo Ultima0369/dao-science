@@ -239,7 +239,7 @@
 | Evidence badges | **F + M** |
 | Confidence | Medium |
 | Falsification condition | Proof that all AI safety problems can be solved by static rules without dynamic stopping mechanisms |
-| Related files | `4_applications/ai_governance.md` |
+| Related files | `4_applications/ai_governance.md`, `verifiable_units/vu_06_ai_stopping_protocol.md` |
 | Open questions | How to implement reliable stopping mechanisms without degrading system usability? |
 
 ---

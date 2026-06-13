@@ -239,7 +239,7 @@
 | 证据徽章 | **F + M** |
 | 可信度 | 中 |
 | 可证伪条件 | 证明所有 AI 安全问题都可以通过静态规则解决，无需动态停止机制 |
-| 关联文件 | `4_applications/ai_governance.md` |
+| 关联文件 | `4_applications/ai_governance.md`、`verifiable_units/vu_06_ai_stopping_protocol.md` |
 | 开放问题 | 如何在不影响系统可用性的前提下实现可靠的停止机制？ |
 
 ---
