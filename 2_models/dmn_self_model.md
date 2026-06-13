@@ -10,6 +10,8 @@
 
 **关键词**：默认模式网络，自我模型，内感受，岛叶，叙事自我，最小自我，冥想，无我，吾丧我
 
+> **证据等级**：形式化 [F] + 仿真 [S]（见 `verifiable_units/vu_01_dmn_insula.md`）+ 神经证据 [N]
+
 ---
 
 ```mermaid
@@ -130,9 +132,9 @@ $$\Pi^{\text{attn}} \rightarrow \Pi^{\text{interoceptive}} \gg \Pi^{\text{DMN}}$
 
 DMN（叙事自我）和岛叶/TPN（最小自我/当下觉知）之间的动态可以被形式化为一个**双稳态竞争系统**（bistable competition system）：
 
-$$\tau_D \frac{dD}{dt} = -D + w_{DD} \cdot \sigma(D) - w_{ID} \cdot \sigma(I) + S_D(t)$$
+$$\tau_D \frac{dD}{dt} = -D + w_{DD} \cdot \sigma(D) - w_{ID} \cdot \sigma(I) + S_D(t) \quad \text{[F/S]}$$
 
-$$\tau_I \frac{dI}{dt} = -I + w_{II} \cdot \sigma(I) - w_{DI} \cdot \sigma(D) + S_I(t) + \alpha \cdot B(t)$$
+$$\tau_I \frac{dI}{dt} = -I + w_{II} \cdot \sigma(I) - w_{DI} \cdot \sigma(D) + S_I(t) + \alpha \cdot B(t) \quad \text{[F/S]}$$
 
 其中：
 - $D(t)$：DMN 活动水平（mPFC-PCC 同步）
@@ -167,7 +169,7 @@ $$\tau_I \frac{dI}{dt} \approx -I - w_{DI} \cdot \sigma(D^*) + S_I(t) + \alpha \
 
 临界条件为：
 
-$$\tilde{\alpha} \cdot \tilde{B}(t) + \tilde{S}_I(t) > \tilde{w}_{DI} \cdot \sigma(D^*) + 1$$
+$$\tilde{\alpha} \cdot \tilde{B}(t) + \tilde{S}_I(t) > \tilde{w}_{DI} \cdot \sigma(D^*) + 1 \quad \text{[F/S]}$$
 
 其中 $D^*$ 是 DMN 占优稳态下的活动水平，$\sigma(D^*)$ 为 sigmoid 输出（无量纲）。不等式两边均为无量纲量，保证了量纲一致性。这解释了为什么"放下"（停止思维）需要努力——$\tilde{\alpha} \cdot \tilde{B}(t)$ 必须克服 DMN 自维持通过 $w_{DI}$ 对岛叶的抑制以及岛叶自身的激活阈值。
 
