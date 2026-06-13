@@ -1,30 +1,65 @@
 site_name: Project Dao.Science
 site_description: 'Dao as Process - A Handbook for the Tech-Soul'
 repo_url: https://github.com/Ultima0369/dao-science
+docs_dir: docs
+site_dir: site
 theme:
   name: material
   features:
     - navigation.tabs
     - search.highlight
+    - content.code.copy
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - tables
+  - toc:
+      permalink: true
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3.2.2/es5/tex-mml-chtml.js
 nav:
   - 首页: README.md
+  - 定位声明: POSITIONING.md
+  - 最终愿景: FINAL_VISION.md
   - 项目图谱: 0_motivation/project_map.md
   - 动机:
     - 为什么重要: 0_motivation/why_this_matters.md
+    - 认知过程正在进行时: 0_motivation/cognition_in_progress.md
+    - 两棵树：抽象的解释说: 0_motivation/abstraction_dialogue.md
     - L0-L7 事实频谱: 0_motivation/L0_L7_spectrum.md
+    - 反驳与回应: 0_motivation/objections_and_replies.md
   - 第一性原理:
     - 道作为过程: 1_first_principles/01_dao_as_process.md
     - 一即带宽: 1_first_principles/02_one_as_bandwidth.md
     - 相非物: 1_first_principles/03_map_not_territory.md
     - 科学哲学与认知层级: 1_first_principles/04_philosophy_of_science.md
+    - 第一人称认识论: 1_first_principles/05_first_person_epistemology.md
+    - 涌现性: 1_first_principles/06_emergence.md
+    - 偏离代价: 1_first_principles/07_cost_of_deviation.md
   - 心智模型:
     - 注意力动力学: 2_models/attention_model.md
     - 本能劫持: 2_models/100ms_model.md
     - 神经重塑回路: 2_models/neuroplasticity_loop.md
     - DMN与自我模型: 2_models/dmn_self_model.md
     - 社会认知与镜像共鸣: 2_models/social_cognition.md
+    - 缺氧与五十阴魔: 2_models/hypoxia_fifty_demons.md
   - 实践方法:
     - 理入: 3_methodology/li_ru.md
+    - N-of-1 实践协议: 3_methodology/n_of_1_protocol.md
     - 行入四行:
       - 报冤行: 3_methodology/xing_ru/01_embrace_suffering.md
       - 随缘行: 3_methodology/xing_ru/02_flow_with_causes.md

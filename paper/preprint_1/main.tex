@@ -55,7 +55,7 @@
 \maketitle
 
 \begin{abstract}
-This paper proposes an operational, mathematically precise definition of \textit{Dao} (道)---conceptualizing it as the dynamic process of consciousness activation, formalized through the predictive coding and active inference theoretical framework. The core proposition is: the operation of Dao is equivalent to gradient flow on expected free energy, i.e., $\text{Dao} \equiv -\nabla_\pi G(\pi)$. Within this framework, \textit{Wu-wei} (无为, effortless action) corresponds to action under low expected free energy states; \textit{De} (德, virtue/potency) corresponds to the precision of the generative model; \textit{Ziran} (自然, spontaneity) corresponds to self-organized dynamics; \textit{Guan} (观, open monitoring) corresponds to a flattened precision landscape; and \textit{Ming} (明, clarity) corresponds to high-precision posterior beliefs. We derive a set of testable neuroscientific predictions, thereby formally integrating classical Chinese philosophical concepts into the computational framework of contemporary cognitive science.
+This paper proposes an operational, mathematically precise definition of \textit{Dao} (道)---conceptualizing it as the dynamic process of consciousness activation, formalized through the predictive coding and active inference theoretical framework. The core proposition is: the operation of Dao is equivalent to gradient flow on expected free energy, i.e., $\text{Dao} \equiv -\nabla_\theta G(\pi_\theta)$, where $\pi_\theta$ is a cognitive-action policy parameterized by continuous parameters $\theta \in \mathbb{R}^d$. Within this framework, \textit{Wu-wei} (无为, effortless action) corresponds to action under low expected free energy states; \textit{De} (德, virtue/potency) corresponds to the precision of the generative model; \textit{Ziran} (自然, spontaneity) corresponds to self-organized dynamics; \textit{Guan} (观, open monitoring) corresponds to a flattened precision landscape; and \textit{Ming} (明, clarity) corresponds to high-precision posterior beliefs. We derive a set of testable neuroscientific predictions, thereby formally integrating classical Chinese philosophical concepts into the computational framework of contemporary cognitive science.
 
 \textbf{Keywords:} Dao, predictive coding, active inference, free energy principle, consciousness, attention, gradient flow, generative model
 \end{abstract}
@@ -215,11 +215,11 @@ Formally, if precision $\Pi$ (inverse variance) is high, the same magnitude of p
 The core formal proposition of this paper is:
 
 \begin{equation}
-\boxed{\text{Dao} \equiv -\nabla_\pi G(\pi)}
+\boxed{\text{Dao} \equiv -\nabla_\theta G(\pi_\theta)}
 \label{eq:dao_gradient}
 \end{equation}
 
-In natural language: \textbf{Dao is equivalent to the negative gradient of expected free energy with respect to possible action policies.}
+where $\pi_\theta$ denotes a cognitive-action policy parameterized by continuous parameters $\theta \in \mathbb{R}^d$. In natural language: \textbf{Dao is equivalent to the negative gradient of expected free energy with respect to policy parameters.}
 
 The implication of this proposition is: the fundamental dynamic faced by a cognitive-action system at any given moment---the ``force'' driving it from its current state toward future states---is precisely the direction that minimizes expected free energy. ``Following the Dao'' means moving along this gradient direction, selecting policies that minimize the expected value of expected free energy.
 
@@ -234,7 +234,7 @@ Gradient flow is a core concept in differential geometry and dynamical systems t
 
 This means the system always evolves along the direction that causes the fastest decrease of the potential function. In physical systems, this corresponds to a ball rolling down a hill (potential is gravitational); in thermodynamic systems, it corresponds to a system evolving toward the equilibrium state of minimum free energy.
 
-Taking expected free energy $G(\pi)$ as the ``potential'' defined on policy space, we can naturally understand the meaning of ``following the Dao'': it does not mean passively yielding to some external force, but actively moving along the most energy-efficient trajectory in the cognitive-action landscape, maximizing the coordination between action and the world's causal structure.
+Taking expected free energy $G(\pi_\theta)$ as the ``potential'' defined on policy-parameter space, we can naturally understand the meaning of ``following the Dao'': it means updating policy parameters along the direction of steepest descent of expected free energy. it does not mean passively yielding to some external force, but actively moving along the most energy-efficient trajectory in the cognitive-action landscape, maximizing the coordination between action and the world's causal structure.
 
 This aligns closely with the Chinese philosophical concept of \textit{shun-shi-er-wei} (顺势而为, acting in accordance with the natural tendency of things). The \textit{Zhuangzi}'s fable of Cook Ding (庖丁解牛) precisely illustrates how a highly refined generative model---formed through extensive practice---enables action to unfold naturally and effortlessly along the ``gaps'' (paths of minimum expected free energy):
 
@@ -246,19 +246,19 @@ Cook Ding's ``inserting what has no thickness into spaces'' precisely describes 
 
 \subsection{``Following the Dao'' Mapped to Policy Selection}
 
-In the above framework, ``following the Dao'' is precisely operationalized as:
+In the above framework, ``following the Dao'' is precisely operationalized as selecting the policy that minimizes expected free energy:
 
 \begin{equation}
-P(\pi_{\text{follow-Dao}}) = \sigma\left(-\gamma \cdot \min_\pi G(\pi)\right)
+\pi_{\text{follow-Dao}} = \arg\min_\pi G(\pi)
 \label{eq:follow_dao}
 \end{equation}
 
-That is, the system selects with high probability the policy that minimizes expected free energy. Conversely, ``going against the Dao'' corresponds to selecting policies with high expected free energy---this is not logically impossible, but requires expending more cognitive-metabolic resources to fight against the gradient, and is therefore unsustainable on evolutionary or learning timescales.
+For discrete policy selection, the softmax distribution over policies is given by Eq.~(\ref{eq:policy}). Conversely, ``going against the Dao'' corresponds to selecting policies with high expected free energy---this is not logically impossible, but requires expending more cognitive-metabolic resources to fight against the gradient, and is therefore unsustainable on evolutionary or learning timescales.
 
 Furthermore, we formalize \textit{Wu-wei} (无为) as:
 
 \begin{equation}
-\text{Wu-wei} \equiv \text{Action under policies where } \|\nabla_\pi G(\pi)\| < \tau
+\text{Wu-wei} \equiv \text{Action under policies where } \|\nabla_\theta G(\pi_\theta)\| < \tau
 \label{eq:wuwei}
 \end{equation}
 
@@ -366,9 +366,9 @@ Table \ref{tab:mapping} provides the formal correspondences between the major Da
 \toprule
 \textbf{Daoist Concept} & \textbf{Meaning} & \textbf{PC/AI Counterpart} & \textbf{Formal Definition} \\
 \midrule
-道 (Dao) & Cosmic dynamic order / consciousness activation process & Gradient flow on expected free energy & $\text{Dao} \equiv -\nabla_\pi G(\pi)$ \\
+道 (Dao) & Cosmic dynamic order / consciousness activation process & Gradient flow on expected free energy & $\text{Dao} \equiv -\nabla_\theta G(\pi_\theta)$ \\
 \addlinespace
-无为 (Wu-wei) & Effortless, non-coercive action & Policy selection under low EFE states & $P(\pi)$ when $\|\nabla_\pi G(\pi)\| < \tau$ \\
+无为 (Wu-wei) & Effortless, non-coercive action & Policy selection under low EFE states & $\|\nabla_\theta G(\pi_\theta)\| < \tau$ \\
 \addlinespace
 德 (De) & Individual inner perfection / generative capacity & Precision of the generative model & $\Pi_{\text{gen}} \equiv \text{precision matrix}$ \\
 \addlinespace
@@ -503,7 +503,7 @@ If the core propositions of this paper receive support from future empirical res
 \section{Conclusion}
 % =================================================================
 
-This paper has argued that the core concept of classical Chinese Daoist philosophy---Dao---can be precisely defined as the dynamic process of consciousness activation, and that this process is computationally equivalent to gradient flow on expected free energy. The core formula $\text{Dao} \equiv -\nabla_\pi G(\pi)$ translates the ancient wisdom of ``following the Dao'' into the language of contemporary neuroscience: selecting cognitive-action policies along the direction that minimizes expected free energy.
+This paper has argued that the core concept of classical Chinese Daoist philosophy---Dao---can be precisely defined as the dynamic process of consciousness activation, and that this process is computationally equivalent to gradient flow on expected free energy. The core formula $\text{Dao} \equiv -\nabla_\theta G(\pi_\theta)$ translates the ancient wisdom of ``following the Dao'' into the language of contemporary neuroscience: updating cognitive-action policy parameters along the direction that minimizes expected free energy.
 
 Attention, as the computational mechanism of precision optimization, provides a mathematically transparent explanatory framework for understanding core Daoist cultivation concepts---\textit{shou-fang-zi-ru} (flexible focus), \textit{Guan} (open awareness), and \textit{Ming} (clarity/insight). The systematic concept mapping table (Table \ref{tab:mapping}) demonstrates the deep isomorphism between Daoist thought and the predictive coding / active inference framework, moving beyond vague analogy into precise formal correspondence.
 
@@ -642,13 +642,13 @@ EFE risk-ambiguity decomposition & $G(\pi) = D_{KL}[Q(o|\pi) \| P(o|C)] + E_{Q(s
 \addlinespace
 Policy selection & $P(\pi) = \sigma(-\gamma \cdot G(\pi))$ & (10) \\
 \addlinespace
-\textbf{Dao as gradient flow} & $\mathbf{\text{Dao} \equiv -\nabla_\pi G(\pi)}$ & \textbf{(11)} \\
+\textbf{Dao as gradient flow} & $\mathbf{\text{Dao} \equiv -\nabla_\theta G(\pi_\theta)}$ & \textbf{(11)} \\
 \addlinespace
 Gradient flow dynamics & $\dot{x} = -\nabla_x U(x)$ & (12) \\
 \addlinespace
-Following-Dao policy selection & $P(\pi_{\text{follow-Dao}}) = \sigma(-\gamma \cdot \min_\pi G(\pi))$ & (13) \\
+Following-Dao policy selection & $\pi_{\text{follow-Dao}} = \arg\min_\pi G(\pi)$ & (13) \\
 \addlinespace
-Wu-wei threshold definition & $\text{Wu-wei} \equiv \text{Action when } \|\nabla_\pi G(\pi)\| < \tau$ & (14) \\
+Wu-wei threshold definition & $\text{Wu-wei} \equiv \text{Action when } \|\nabla_\theta G(\pi_\theta)\| < \tau$ & (14) \\
 \addlinespace
 De as generative model precision & $\Pi_{\text{De}} \equiv \text{Precision matrix of generative model}$ & (15) \\
 \addlinespace

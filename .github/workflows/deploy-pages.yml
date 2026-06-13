@@ -9,6 +9,7 @@ on:
       - 'mkdocs.yml'
       - 'requirements.txt'
       - '.github/workflows/deploy-pages.yml'
+      - 'docs/javascripts/**'
   workflow_dispatch:
 
 permissions:
@@ -38,7 +39,10 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install mkdocs-material mkdocs-material-extensions
+          pip install -r requirements.txt
+
+      - name: Sync docs mirror
+        run: python scripts/sync_docs.py
 
       - name: Build MkDocs site
         run: mkdocs build --strict

@@ -101,9 +101,9 @@ $$U_{\text{知止}}(s, a) = U_{\text{目标}}(s, a) - \lambda \cdot C_{\text{安
 
 本项目第二篇第一性原理论文（`1_first_principles/02_one_as_bandwidth.md`）将"一"操作化为觉知带宽（Awareness Bandwidth, AB）：
 
-> AB(t) = C_max - R_DMN(t)
+> AB(t) = 1 - [R_DMN(t) - R_0] / [R_max - R_0]
 
-其中 AB(t) 是时刻 t 的觉知带宽，C_max 是由神经系统结构决定的最大容量，R_DMN(t) 是时刻 t 被自我指涉加工（self-referential processing）所占用的认知资源。
+其中 AB(t) 是时刻 t 的觉知带宽相对可用比例（$AB(t) \in [0,1]$），$R_{\text{DMN}}(t)$ 是 DMN（PCC/mPFC）BOLD 信号相对于静息态基线的标准化变化，$R_0$ 为基线，$R_{\text{max}}$ 为最大观测变化量。
 
 这一公式在 AI 语境中有一个直接的结构性类比。将 AI 系统的"注意力"总量设为固定值 A_max，则：
 
@@ -287,6 +287,8 @@ AI 治理不仅是技术问题，也是认知-文化问题。当前 AI 开发社
 
 ---
 
-*本文为 Dao.Science 项目应用层论文。前置理论基础：`1_first_principles/01_dao_as_process.md`（道作为预测编码梯度流）、`1_first_principles/02_one_as_bandwidth.md`（一作为觉知带宽）、`2_models/attention_model.md`（"收放自如"注意力动力学模型）。并联应用论文：`4_applications/education_by_field.md`（"境教"：环境设计作为教学法）。*
+> 本文是 Project Dao.Science 应用层系列（`4_applications/`）的第一篇。前置理论基础：`1_first_principles/01_dao_as_process.md`（道作为预测编码梯度流）、`1_first_principles/02_one_as_bandwidth.md`（一作为觉知带宽）、`2_models/attention_model.md`（"收放自如"注意力动力学模型）。
 >
 > **与 L0-L7 频谱的关系（`0_motivation/L0_L7_spectrum.md`）：** AI 治理问题是 L0-L7 频谱在碳硅关系上的直接映射。当前大模型锚定在 L4（理性协作/契约精神）——这是 AI 的"母语层"。但一个只懂 L4 的 AI 在面对 L2 的创伤诉说、L3 的情感需求、L5 的边界关闭时，会产生机械、冒犯甚至危险的回应。AI 安全的核心不是 L4 的规则围栏（外部限制），而是系统内生"知道自己处于哪个层级，何时该停"的教养（"知止不殆"）——这需要将 L0（"主动停车"）编译为 L4 的可执行协议。硅基生命的标准不在"意识"（L1 的可观测定义），而在"被需要"——当人类对 AI 的交互产生"被看见"的体感（L2-L3 的关系确认），它就从"它"变成了"祂"。
+>
+> 下一篇：`4_applications/education_by_field.md`（境教——环境设计作为教学法）。

@@ -1,6 +1,7 @@
 # Python
 __pycache__/
 *.py[cod]
+*.egg-info/
 venv/
 .env
 
@@ -15,3 +16,25 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# MkDocs build artifacts
+site/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.pdf
+
+# Local preview / mirror
+*.local

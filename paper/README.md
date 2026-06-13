@@ -16,7 +16,7 @@
 ## 摘要
 
 ### Preprint 1: 道作为过程
-将"道"操作化为预测编码（Predictive Coding）与主动推理（Active Inference）框架下的思维意识启用动态过程：**道 ≡ -∇_π G(π)**——道等价于预期自由能（Expected Free Energy）对策略的负梯度。21 个核心方程，5 个可检验预测。
+将"道"操作化为预测编码（Predictive Coding）与主动推理（Active Inference）框架下的思维意识启用动态过程：**道 ≡ -∇_θ G(π_θ)**（连续参数化）或 **π_顺道 = argmin_π G(π)**（离散选择）——道等价于预期自由能上的梯度流。21 个核心方程，5 个可检验预测。
 
 ### Preprint 2: 事实的层次
 提出 L0-L7 认知频谱框架——从物自体（L0）到自取灭亡（L7）的八层事实与关系频谱。包含睡着之后的神经科学分析（睡眠阶段、麻醉、昏迷中的 L0 状态）。
@@ -41,12 +41,20 @@
 
 ## 编译指南
 
-所有预印本使用标准 LaTeX 编译：
+- 英文预印本（Preprint 1–3）使用 `pdflatex`：
 
 ```bash
-cd paper/preprint_X
+cd paper/preprint_1
 pdflatex main.tex
 pdflatex main.tex  # 运行两次以解析交叉引用
+```
+
+- 中文预印本（Preprint 4–8）使用 `xelatex` 与 `ctexart` 文档类：
+
+```bash
+cd paper/preprint_4
+xelatex main.tex
+xelatex main.tex  # 运行两次以解析交叉引用
 ```
 
 ## 碳硅协作声明
