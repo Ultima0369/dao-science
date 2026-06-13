@@ -160,10 +160,10 @@
 
 | Field | Content |
 |---|---|
-| Evidence badges | **F + B + M** |
+| Evidence badges | **F + S + B + M** |
 | Confidence | Medium |
 | Falsification condition | Rigorously controlled experiments show that increasing one agent's attentional precision toward another does not change the other's physiological or behavioral markers; or complementary (anti-phase) interaction is never more effective than in-phase collaboration |
-| Related files | `2_models/relational_attunement.md`, `2_models/attention_model.md`, `2_models/social_cognition.md`, `4_applications/management_field_theory.md` |
+| Related files | `2_models/relational_attunement.md`, `2_models/attention_model.md`, `2_models/social_cognition.md`, `4_applications/management_field_theory.md`, `verifiable_units/vu_08_relational_attunement_oscillator.md` |
 | Open questions | How can vital tension $T(t)$ and the critical handover point $t^*$ be measured in real interpersonal interaction? |
 
 ---
@@ -399,7 +399,7 @@
 | C24 AI expansion constrained by Earth's thermodynamic limit | F + S + M | High | Earth radiates arbitrary heat or zero-entropy computation |
 | C19 N-of-1 produces personal knowledge | F + B + M | Medium-High | Single-subject designs invalid |
 | C20 Four Practices reshape circuits | F + B + N | Medium | RCTs show Four Practices ineffective |
-| C21 Relational attunement reduces tension | F + B + M | Medium | Attentional presence cannot regulate interpersonal tension |
+| C21 Relational attunement reduces tension | F + S + B + M | Medium | Attentional presence cannot regulate interpersonal tension |
 
 ---
 

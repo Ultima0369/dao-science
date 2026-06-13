@@ -68,6 +68,7 @@ Full positioning statement: [`POSITIONING.en.md`](POSITIONING.en.md).
 | See attention precision optimization simulation | [`verifiable_units/vu_05_attention_precision_optimization.md`](verifiable_units/vu_05_attention_precision_optimization.md) | 20 min |
 | See AI stopping protocol simulation | [`verifiable_units/vu_06_ai_stopping_protocol.md`](verifiable_units/vu_06_ai_stopping_protocol.md) | 20 min |
 | See carbon-silicon task allocation simulation | [`verifiable_units/vu_07_carbon_silicon_symbiosis.md`](verifiable_units/vu_07_carbon_silicon_symbiosis.md) | 20 min |
+| See relational attunement oscillator | [`verifiable_units/vu_08_relational_attunement_oscillator.md`](verifiable_units/vu_08_relational_attunement_oscillator.md) | 20 min |
 | See planetary thermodynamic boundary for AI | [`verifiable_units/vu_10_planetary_ai_thermodynamics.md`](verifiable_units/vu_10_planetary_ai_thermodynamics.md) | 20 min |
 | Learn about relational attunement | [`2_models/relational_attunement.md`](2_models/relational_attunement.md) | 20 min |
 | Learn about nodes and non-doing translation | [`1_first_principles/09_node_and_translation.md`](1_first_principles/09_node_and_translation.md) | 20 min |

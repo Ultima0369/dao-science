@@ -99,6 +99,7 @@ plugins:
             注意力作为精度优化: "VU-05 Attention as Precision Optimization"
             AI 知止协议: "VU-06 AI Stopping Protocol"
             碳硅共生生态位分工: "VU-07 Carbon-Silicon Niche Complementarity"
+            关系调谐耦合振荡器: "VU-08 Relational Attunement Oscillator"
             AI 扩张的行星热力学边界: "VU-10 Planetary Thermodynamic Boundary"
             附录: "Appendices"
             概念索引与术语表: "Glossary"
@@ -163,6 +164,7 @@ nav:
     - 注意力作为精度优化: verifiable_units/vu_05_attention_precision_optimization.md
     - AI 知止协议: verifiable_units/vu_06_ai_stopping_protocol.md
     - 碳硅共生生态位分工: verifiable_units/vu_07_carbon_silicon_symbiosis.md
+    - 关系调谐耦合振荡器: verifiable_units/vu_08_relational_attunement_oscillator.md
     - AI 扩张的行星热力学边界: verifiable_units/vu_10_planetary_ai_thermodynamics.md
   - 附录:
     - 概念索引与术语表: GLOSSARY.md

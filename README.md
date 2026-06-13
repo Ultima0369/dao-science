@@ -69,6 +69,7 @@
 | 想看注意力精度优化仿真 | [`verifiable_units/vu_05_attention_precision_optimization.md`](verifiable_units/vu_05_attention_precision_optimization.md) | 20 min |
 | 想看 AI 知止协议仿真 | [`verifiable_units/vu_06_ai_stopping_protocol.md`](verifiable_units/vu_06_ai_stopping_protocol.md) | 20 min |
 | 想看碳硅共生任务分配仿真 | [`verifiable_units/vu_07_carbon_silicon_symbiosis.md`](verifiable_units/vu_07_carbon_silicon_symbiosis.md) | 20 min |
+| 想看关系调谐耦合振荡器 | [`verifiable_units/vu_08_relational_attunement_oscillator.md`](verifiable_units/vu_08_relational_attunement_oscillator.md) | 20 min |
 | 想看 AI 扩张的行星热力学边界 | [`verifiable_units/vu_10_planetary_ai_thermodynamics.md`](verifiable_units/vu_10_planetary_ai_thermodynamics.md) | 20 min |
 | 想了解关系调谐模型 | [`2_models/relational_attunement.md`](2_models/relational_attunement.md) | 20 min |
 | 想了解节点与无为转译层 | [`1_first_principles/09_node_and_translation.md`](1_first_principles/09_node_and_translation.md) | 20 min |
