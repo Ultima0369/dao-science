@@ -34,6 +34,7 @@ for d in content_dirs:
 ALLOWLIST = {
     "AUDIT_REPORT_2026-06-13.md",
     "AUDIT_FIX_LOG_2026-06-13.md",
+    "AUDIT_REPORT_2026-06-14.md",
     "CODE_OF_CONDUCT.md",
     "对话记录.md",
     "对话记录2.md",
