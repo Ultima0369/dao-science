@@ -93,7 +93,7 @@
 | 证据徽章 | **F + N + B** |
 | 可信度 | 高 |
 | 可证伪条件 | 预测编码框架被证伪；或大规模实验显示注意力分配与精度权重无系统关联 |
-| 关联文件 | `2_models/attention_model.md` |
+| 关联文件 | `2_models/attention_model.md`、`verifiable_units/vu_05_attention_precision_optimization.md` |
 | 开放问题 | α 参数如何在个体层面测量和训练？ |
 
 ---

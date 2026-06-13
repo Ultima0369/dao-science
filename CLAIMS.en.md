@@ -93,7 +93,7 @@
 | Evidence badges | **F + N + B** |
 | Confidence | High |
 | Falsification condition | Predictive coding framework refuted; or large-scale experiments show attention allocation is unrelated to precision weighting |
-| Related files | `2_models/attention_model.md` |
+| Related files | `2_models/attention_model.md`, `verifiable_units/vu_05_attention_precision_optimization.md` |
 | Open questions | How can α be measured and trained at the individual level? |
 
 ---

@@ -203,8 +203,9 @@ flowchart TB
 适合希望用可运行代码验证抽象区分的读者。
 
 1. `verifiable_units/vu_04_emergence_vs_phase_transition.md` — 涌现 ≠ 相变
-2. → 回到 `1_first_principles/06_emergence.md` 理解理论含义
-3. → 扩展到 `4_applications/management_field_theory.md` 与 `4_applications/creativity_innovation.md`
+2. `verifiable_units/vu_05_attention_precision_optimization.md` — 注意力作为精度优化
+3. → 回到 `1_first_principles/06_emergence.md` 与 `2_models/attention_model.md` 理解理论含义
+4. → 扩展到 `4_applications/management_field_theory.md` 与 `4_applications/creativity_innovation.md`
 
 ## 学术预印本
 

@@ -65,6 +65,7 @@ Full positioning statement: [`POSITIONING.en.md`](POSITIONING.en.md).
 | See formalized definitions | [`1_first_principles/01_dao_as_process.md`](1_first_principles/01_dao_as_process.md) | 25 min |
 | Run executable simulations | [`verifiable_units/vu_01_dmn_insula.md`](verifiable_units/vu_01_dmn_insula.md) | 30 min |
 | See emergence vs phase-transition simulation | [`verifiable_units/vu_04_emergence_vs_phase_transition.md`](verifiable_units/vu_04_emergence_vs_phase_transition.md) | 25 min |
+| See attention precision optimization simulation | [`verifiable_units/vu_05_attention_precision_optimization.md`](verifiable_units/vu_05_attention_precision_optimization.md) | 20 min |
 | Check the evidence status of each claim | [`CLAIMS.md`](CLAIMS.md) | 15 min |
 | Look up terms | [`GLOSSARY.md`](GLOSSARY.md) | On demand |
 
