@@ -68,6 +68,7 @@ Full positioning statement: [`POSITIONING.en.md`](POSITIONING.en.md).
 | See attention precision optimization simulation | [`verifiable_units/vu_05_attention_precision_optimization.md`](verifiable_units/vu_05_attention_precision_optimization.md) | 20 min |
 | See AI stopping protocol simulation | [`verifiable_units/vu_06_ai_stopping_protocol.md`](verifiable_units/vu_06_ai_stopping_protocol.md) | 20 min |
 | See carbon-silicon task allocation simulation | [`verifiable_units/vu_07_carbon_silicon_symbiosis.md`](verifiable_units/vu_07_carbon_silicon_symbiosis.md) | 20 min |
+| Learn about relational attunement | [`2_models/relational_attunement.md`](2_models/relational_attunement.md) | 20 min |
 | Check the evidence status of each claim | [`CLAIMS.md`](CLAIMS.md) | 15 min |
 | Look up terms | [`GLOSSARY.md`](GLOSSARY.md) | On demand |
 

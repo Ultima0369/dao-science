@@ -71,6 +71,7 @@ plugins:
             神经重塑回路: "Neuroplasticity Loop"
             DMN与自我模型: "DMN and Self Model"
             社会认知与镜像共鸣: "Social Cognition"
+            关系调谐模型: "Relational Attunement"
             缺氧与五十阴魔: "Hypoxia and Fifty Demons"
             实践方法: "Methodology"
             理入: "Li Ru"
@@ -131,6 +132,7 @@ nav:
     - 神经重塑回路: 2_models/neuroplasticity_loop.md
     - DMN与自我模型: 2_models/dmn_self_model.md
     - 社会认知与镜像共鸣: 2_models/social_cognition.md
+    - 关系调谐模型: 2_models/relational_attunement.md
     - 缺氧与五十阴魔: 2_models/hypoxia_fifty_demons.md
   - 实践方法:
     - 理入: 3_methodology/li_ru.md

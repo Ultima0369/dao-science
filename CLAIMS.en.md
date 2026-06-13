@@ -154,6 +154,20 @@
 
 ---
 
+### C21: Relational Attunement Can Reduce Vital Tension
+
+**Claim**: By allocating attentional precision to another (being seen) and actively taking over leadership at the critical point where the other's impulse fatigues, a relational system can transform antagonistic tension into a cooperative ascending spiral, thereby reducing overall free energy.
+
+| Field | Content |
+|---|---|
+| Evidence badges | **F + B + M** |
+| Confidence | Medium |
+| Falsification condition | Rigorously controlled experiments show that increasing one agent's attentional precision toward another does not change the other's physiological or behavioral markers; or complementary (anti-phase) interaction is never more effective than in-phase collaboration |
+| Related files | `2_models/relational_attunement.md`, `2_models/attention_model.md`, `2_models/social_cognition.md`, `4_applications/management_field_theory.md` |
+| Open questions | How can vital tension $T(t)$ and the critical handover point $t^*$ be measured in real interpersonal interaction? |
+
+---
+
 ## III. Emergence and Spacetime
 
 ### C10: Emergence ≠ Phase Transition
@@ -340,6 +354,7 @@
 | C18 Carbon-silicon niche complementarity | F + M | Medium | AI has first-person experience |
 | C19 N-of-1 produces personal knowledge | F + B + M | Medium-High | Single-subject designs invalid |
 | C20 Four Practices reshape circuits | F + B + N | Medium | RCTs show Four Practices ineffective |
+| C21 Relational attunement reduces tension | F + B + M | Medium | Attentional presence cannot regulate interpersonal tension |
 
 ---
 

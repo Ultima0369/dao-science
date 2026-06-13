@@ -31,6 +31,7 @@ flowchart TB
         NEURO["神经重塑回路<br/>neuroplasticity_loop.md<br/>理入→行入→Hebbian"]
         DMN["DMN-自我-内感受<br/>dmn_self_model.md<br/>吾丧我的神经三角"]
         SOCIAL["社会认知<br/>social_cognition.md<br/>镜像共鸣+同体大悲"]
+        RELAT["关系调谐<br/>relational_attunement.md<br/>注意力共舞+临界承接"]
         HYPOXIA["缺氧五十阴魔<br/>hypoxia_fifty_demons.md<br/>前额叶抑制解除→幻觉"]
     end
     
@@ -81,8 +82,11 @@ flowchart TB
     ATTN --> AMYG
     AMYG --> NEURO
     DMN --> SOCIAL
-    SOCIAL --> HYPOXIA
+    SOCIAL --> RELAT
+    RELAT --> HYPOXIA
     HYPOXIA --> LIRU
+    ATTN --> RELAT
+    AMYG --> RELAT
     DMN --> LIRU
     
     LIRU --> N1
@@ -117,6 +121,7 @@ flowchart TB
     style NEURO fill:#fce4ec,stroke:#c62828
     style DMN fill:#fce4ec,stroke:#c62828
     style SOCIAL fill:#fce4ec,stroke:#c62828
+    style RELAT fill:#fce4ec,stroke:#c62828
     style HYPOXIA fill:#fce4ec,stroke:#c62828
     style LIRU fill:#f3e5f5,stroke:#6a1b9a
     style BAO fill:#f3e5f5,stroke:#6a1b9a
@@ -208,6 +213,16 @@ flowchart TB
 4. `verifiable_units/vu_07_carbon_silicon_symbiosis.md` — 碳硅共生生态位分工
 5. → 回到 `1_first_principles/06_emergence.md`、`2_models/attention_model.md`、`4_applications/ai_governance.md` 与 `4_applications/carbon_silicon_symbiosis.md` 理解理论含义
 6. → 扩展到 `4_applications/management_field_theory.md` 与 `4_applications/creativity_innovation.md`
+
+### 路径 9：关系与领导力优先
+适合关注人际调谐、管理、教育、咨询、亲子、碳硅协作的读者。
+
+1. `2_models/relational_attunement.md` — 关系调谐：注意力作为生命张力的共舞
+2. `2_models/attention_model.md` — 注意力的收放自如
+3. `2_models/social_cognition.md` — 镜像共鸣与同体大悲
+4. `4_applications/management_field_theory.md` — 场的营造与伦理剃刀
+5. `4_applications/carbon_silicon_symbiosis.md` — 碳硅共生：生态位互补
+6. → 回到 `1_first_principles/01_dao_as_process.md` 理解关系调谐的最小作用量含义
 
 ## 学术预印本
 
