@@ -43,7 +43,6 @@ audit:
 	python scripts/audit_nav_coverage.py
 	python scripts/audit_math_delimiters.py
 	python scripts/audit_consistency.py
-	python scripts/audit_consistency.py
 
 clean:
 	python scripts/sync_docs.py
