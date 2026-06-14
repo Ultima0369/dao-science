@@ -26,10 +26,11 @@ Outputs:
 
 from pathlib import Path
 
+import _compat  # noqa: F401  # ensures dao_science is importable
 import matplotlib
 import numpy as np
 
-from dao_science.core import generalized_sigmoid
+from dao_science.core import critical_handover_signal, generalized_sigmoid
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -67,17 +68,12 @@ def impulse_train(t: float, phase: float) -> float:
 # Attention / handover functions
 # ---------------------------------------------------------------------------
 
-def handover_signal(T: float, dT: float) -> float:
-    """High when tension is high but declining (critical handover point t*)."""
-    return generalized_sigmoid(T * (-dT) - 0.5, beta=8.0, theta=0.0)
-
-
 def attention_attuned(T_other: float, dT_other: float, T_self: float) -> float:
     """Adaptive attention: peak when partner is at t* (high but declining).
 
     The agent withdraws attention if it is itself overwhelmed.
     """
-    at_handover = handover_signal(T_other, dT_other)
+    at_handover = critical_handover_signal(tension=T_other, d_tension=dT_other)
     not_overwhelmed = 1.0 - generalized_sigmoid(T_self - 4.0, beta=2.0, theta=0.0)
     return at_handover * not_overwhelmed
 
