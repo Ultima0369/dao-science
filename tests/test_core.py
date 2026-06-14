@@ -12,6 +12,7 @@ from dao_science.core import (
     de_ming_allocation,
     de_precision_matrix,
     expected_free_energy,
+    generalized_sigmoid,
     gradient_flow,
     impermanence_corrected_rpe,
     planetary_heat_budget_occupancy,
@@ -81,6 +82,8 @@ def test_de_ming_allocation_sums_to_budget():
     allocation = de_ming_allocation(mu, sigma, total_energy=10.0)
     assert pytest.approx(allocation.sum()) == 10.0
     assert np.all(allocation >= 0)
+    # Higher mu/sigma ratio → higher allocation
+    assert allocation[1] > allocation[0] > allocation[2]
 
 
 def test_critical_handover_signal_peaks_when_tension_high_and_declining():
@@ -106,6 +109,23 @@ def test_sigmoid_zero():
 def test_sigmoid_extremes():
     assert sigmoid(-10.0) < 0.01
     assert sigmoid(10.0) > 0.99
+
+
+def test_generalized_sigmoid_standard():
+    """At x=theta, output should be 0.5."""
+    assert generalized_sigmoid(0.5, beta=10.0, theta=0.5) == pytest.approx(0.5)
+
+
+def test_generalized_sigmoid_extremes():
+    """Far from theta, output should saturate."""
+    assert generalized_sigmoid(-10.0, beta=1.0, theta=0.0) < 0.01
+    assert generalized_sigmoid(10.0, beta=1.0, theta=0.0) > 0.99
+
+
+def test_generalized_sigmoid_array():
+    result = generalized_sigmoid(np.array([-10.0, 0.0, 10.0]), beta=1.0, theta=0.0)
+    assert result.shape == (3,)
+    assert result[1] == pytest.approx(0.5)
 
 
 def test_softmax_normalized():

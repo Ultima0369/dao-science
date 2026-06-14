@@ -47,6 +47,27 @@ def sigmoid(x: float | FloatArray) -> float | FloatArray:
     return 1.0 / (1.0 + np.exp(-x_arr))
 
 
+def generalized_sigmoid(
+    x: float | FloatArray,
+    beta: float = 10.0,
+    theta: float = 0.5,
+) -> float | FloatArray:
+    r"""Generalized logistic sigmoid with steepness and threshold.
+
+    ``sigma(x; beta, theta) = 1 / (1 + exp(-beta * (x - theta)))``.
+
+    Args:
+        x: Input value(s).
+        beta: Steepness parameter (larger = sharper transition).
+        theta: Threshold parameter (center of transition).
+
+    Returns:
+        Sigmoid activation in (0, 1).
+    """
+    x_arr = np.asarray(x, dtype=np.float64)
+    return 1.0 / (1.0 + np.exp(-beta * (x_arr - theta)))
+
+
 def softmax(
     x: FloatArray,
     axis: int | None = None,

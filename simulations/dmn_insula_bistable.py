@@ -18,19 +18,17 @@ Outputs:
 
 from pathlib import Path
 
+import _compat  # noqa: F401  # ensures dao_science is importable
 import matplotlib
 import numpy as np
 from scipy.integrate import solve_ivp
+
+from dao_science.core import generalized_sigmoid
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 OUT_DIR = Path(__file__).parent
-
-
-def sigmoid(x, beta=10.0, theta=0.5):
-    """Sigmoid activation function."""
-    return 1.0 / (1.0 + np.exp(-beta * (x - theta)))
 
 
 def dmn_insula_ode(t, y, params):
@@ -51,8 +49,8 @@ def dmn_insula_ode(t, y, params):
     alpha = params["alpha"]
     B = params["B"]
 
-    dDdt = (-D + w_DD * sigmoid(D) - w_ID * sigmoid(I) + S_D) / tau_D
-    dIdt = (-I + w_II * sigmoid(I) - w_DI * sigmoid(D) + S_I + alpha * B) / tau_I
+    dDdt = (-D + w_DD * generalized_sigmoid(D) - w_ID * generalized_sigmoid(I) + S_D) / tau_D
+    dIdt = (-I + w_II * generalized_sigmoid(I) - w_DI * generalized_sigmoid(D) + S_I + alpha * B) / tau_I
     return [dDdt, dIdt]
 
 
@@ -151,7 +149,7 @@ def plot_phase_portrait(params):
     I_null_D = []
     for D in D_grid:
         for I in I_grid:
-            if abs(-D + params["w_DD"] * sigmoid(D) - params["w_ID"] * sigmoid(I) + params["S_D"]) < 0.03:
+            if abs(-D + params["w_DD"] * generalized_sigmoid(D) - params["w_ID"] * generalized_sigmoid(I) + params["S_D"]) < 0.03:
                 D_null.append(D)
                 I_null_D.append(I)
 
@@ -159,7 +157,7 @@ def plot_phase_portrait(params):
     I_null = []
     for D in D_grid:
         for I in I_grid:
-            if abs(-I + params["w_II"] * sigmoid(I) - params["w_DI"] * sigmoid(D) + params["S_I"] + params["alpha"] * params["B"]) < 0.03:
+            if abs(-I + params["w_II"] * generalized_sigmoid(I) - params["w_DI"] * generalized_sigmoid(D) + params["S_I"] + params["alpha"] * params["B"]) < 0.03:
                 D_null_I.append(D)
                 I_null.append(I)
 
