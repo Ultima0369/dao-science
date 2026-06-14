@@ -45,6 +45,7 @@ plugins:
           name: English
           build: true
           nav_translations:
+            在你读任何东西之前: "Before You Read Anything"
             首页: "Home"
             定位声明: "Positioning"
             最终愿景: "Ultimate Vision"
@@ -111,6 +112,9 @@ plugins:
             翻译声明: "Translation Statement"
             主张登记册: "Claim Registry"
             贡献指南: "Contributing"
+            认知过程：书籍版: "Cognition in Progress (Book Edition)"
+            对话记录: "Dialogue Records"
+            对话记录2: "Dialogue Records 2"
       reconfigure_material: true
       reconfigure_search: true
 nav:
