@@ -303,7 +303,7 @@
 | 7 | [碳硅共生](https://github.com/Ultima0369/dao-science/blob/main/paper/preprint_7/main.tex) | `carbon_silicon_symbiosis.md` | 知止 EFE 形式化（2 方程） | 12 |
 | 8 | [境教](https://github.com/Ultima0369/dao-science/blob/main/paper/preprint_8/main.tex) | `education_by_field.md` | 四大道场设计原则 | 12 |
 
-所有预印本使用标准 LaTeX 编译（`pdflatex main.tex` × 2）。详见 `paper/README.md`。
+英文预印本（preprint_1–3）使用 `pdflatex` 编译，中文预印本（preprint_4–8）使用 `xelatex` 编译（均需两次以解析交叉引用）。详见 `paper/README.md`。
 
 ---
 
