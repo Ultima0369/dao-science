@@ -114,6 +114,7 @@ plugins:
       reconfigure_material: true
       reconfigure_search: true
 nav:
+  - 在你读任何东西之前: BEFORE_YOU_READ_ANYTHING.md
   - 首页: README.md
   - 定位声明: POSITIONING.md
   - 最终愿景: FINAL_VISION.md
@@ -180,3 +181,6 @@ nav:
     - 翻译声明: TRANSLATION.md
     - 主张登记册: CLAIMS.md
     - 贡献指南: CONTRIBUTING.md
+    - 认知过程：书籍版: 认知过程正在进行时_书籍.md
+    - 对话记录: 对话记录.md
+    - 对话记录2: 对话记录2.md

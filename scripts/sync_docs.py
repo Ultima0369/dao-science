@@ -22,6 +22,7 @@ CONTENT_DIRS = [
     "verifiable_units",
 ]
 TOP_FILES = [
+    "BEFORE_YOU_READ_ANYTHING.md",
     "README.md",
     "POSITIONING.md",
     "FINAL_VISION.md",
@@ -30,6 +31,9 @@ TOP_FILES = [
     "TRANSLATION.md",
     "CONTRIBUTING.md",
     "CLAIMS.md",
+    "认知过程正在进行时_书籍.md",
+    "对话记录.md",
+    "对话记录2.md",
 ]
 
 # Files/directories that should not be mirrored even if listed above.
