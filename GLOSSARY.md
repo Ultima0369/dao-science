@@ -190,6 +190,8 @@
 | 念起即觉 | $T_{\text{awareness}} = T_{\text{amygdala}} + \Delta T_{\text{detection}}$ | 觉知延迟 | `100ms_model.md` |
 | 杏仁核-PFC 竞争 | $\tau_a \frac{da}{dt} = -a + w_{sa}S + w_{aa}f(a) - w_{pa}p$ | 竞争动力学 | `100ms_model.md` |
 | DMN-岛叶竞争 | $\tau_D \frac{dD}{dt} = -D + w_{DD}\sigma(D) - w_{ID}\sigma(I) + S_D$ | 双稳态系统 | `dmn_self_model.md` |
+| (11.1) | $S(s) = \alpha (\ln s - \ln s_{\text{opt}})^2 + S_0$ | 道德沉默的尺度依赖 | `vu_11_scale_and_moral_silence.md` |
+| (11.2) | $A(s) = A_{\max} \exp(-|\ln s - \ln s_{\text{opt}}| / \tau)$ | 可行动倾向的尺度依赖 | `vu_11_scale_and_moral_silence.md` |
 
 ---
 

@@ -82,6 +82,20 @@
 
 ---
 
+### C26: Scale Expansion Induces Moral Silence and Weakens Action Propensity
+
+**Claim**: For the same moral event, different observational scales trigger varying degrees of moral silence. At scales that are too small (personal trauma) or too large (planetary/cosmic), subjects find it harder to articulate a moral judgment and are less willing to take concrete action.
+
+| Field | Content |
+|---|---|
+| Evidence badges | **F + B** |
+| Confidence | Medium |
+| Falsification condition | The cosmic-scale version produces the highest action propensity; or personal-trauma and cosmic scales do not differ in moral silence and are both lower than intermediate scales |
+| Related files | `1_first_principles/11_scale_and_moral_silence.en.md`, `verifiable_units/vu_11_scale_and_moral_silence.en.md` |
+| Open questions | Does $s_{\text{opt}}$ shift across cultures? Is moral silence accompanied by specific DMN-insula or DMN-ECN neural patterns? |
+
+---
+
 ## II. Models of Mind
 
 ### C05: Attention Is Precision Optimization
@@ -415,12 +429,46 @@
 | C19 N-of-1 produces personal knowledge | F + B + M | Medium-High | Single-subject designs invalid |
 | C20 Four Practices reshape circuits | F + B + N | Medium | RCTs show Four Practices ineffective |
 | C21 Relational attunement reduces tension | F + S + B + M | Medium | Attentional presence cannot regulate interpersonal tension |
+| C26 Scale expansion induces moral silence | F + B | Medium | Cosmic scale produces highest action propensity |
 
 ---
 
 ## VIII. Statement
 
 This registry itself is a map. The "confidence" levels and "evidence badges" it assigns will be updated as new evidence arrives. If a falsification condition for any claim is ever satisfied, that claim will be revised or removed—this is precisely the project's proclaimed L4 (rational cooperation/contractual spirit) applied at the meta-level.
+
+---
+
+## IX. Claim ↔ Verifiable Unit (VU) Traceability Matrix
+
+| Claim | Linked VU | Primary evidence | Notes |
+|---|---|---|---|
+| C01 Dao ≡ −∇G(π) | — | F | Formal core, see `NOTATION.md` |
+| C02 One = AB(t) | — | F + N | Awareness-bandwidth formula, pending independent VU |
+| C03 Mental content = representation | — | F + N + B + M | Epistemological foundation |
+| C04 L0-L7 spectrum | — | F + B + M | Classification framework |
+| C05 Attention = precision optimization | VU-05 | F + S + N + B | `verifiable_units/vu_05_attention_precision_optimization.en.md` |
+| C06 100ms window | VU-02 | F + S + N + B | `verifiable_units/vu_02_amygdala_pfc.en.md` |
+| C07 DMN down-regulation releases bandwidth | VU-01 | F + S + N + B | `verifiable_units/vu_01_dmn_insula.en.md` |
+| C08 3–5 year neuroplasticity | — | F + N + B | Longitudinal study |
+| C09 Knowledge can form mental veils | — | F + B + M | Epistemology-ethics intersection |
+| C10 Emergence ≠ phase transition | VU-04 | F + S + M | `verifiable_units/vu_04_emergence_vs_phase_transition.en.md` |
+| C11 Space/time are mind-constructed | — | F + M | Metaphysical formalization |
+| C12 Reference frames prevent overload | — | F + B + M | Pending independent VU |
+| C13 Cost of deviation formalizable | — | F | `1_first_principles/07_cost_of_deviation.en.md` |
+| C14 First-person irreducible | — | F + B + M | Epistemological foundation |
+| C15 AI needs stopping protocols | VU-06 | F + S + M | `verifiable_units/vu_06_ai_stopping_protocol.en.md` |
+| C16 Management is self-training | — | F + B + M | `4_applications/management.en.md` |
+| C17 Environmental design shapes behavior | — | F + B | `4_applications/education_by_field.en.md` |
+| C18 Carbon-silicon niche complementarity | VU-07 | F + S + M | `verifiable_units/vu_07_carbon_silicon_symbiosis.en.md` |
+| C19 N-of-1 produces personal knowledge | — | F + B + M | `tools/n_of_1/` |
+| C20 Four Practices reshape circuits | — | F + B + N | `3_methodology/xing_ru/` |
+| C21 Relational attunement reduces tension | VU-08 | F + S + B + M | `verifiable_units/vu_08_relational_attunement_oscillator.en.md` |
+| C22 Nodes are non-doing translation layers | — | F + M | `1_first_principles/09_node_and_translation.en.md` |
+| C23 De is energy allocation, Ming is innate optimization | VU-09 | F + S + B + N + M | `verifiable_units/vu_09_de_ming_energy_allocation.en.md` |
+| C24 AI expansion constrained by thermodynamic limit | VU-10 | F + S + M | `verifiable_units/vu_10_planetary_ai_thermodynamics.en.md` |
+| C25 Creativity arises from DMN-ECN coupling | VU-03 | F + S + N + B | `verifiable_units/vu_03_dmn_ecn.en.md` |
+| C26 Scale expansion induces moral silence | VU-11 | F + B | `verifiable_units/vu_11_scale_and_moral_silence.en.md` |
 
 ---
 

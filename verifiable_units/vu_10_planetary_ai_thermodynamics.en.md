@@ -48,6 +48,16 @@ Outputs:
 - `simulations/ai_heat_trajectory.png`
 - `simulations/ai_heat_policy_comparison.png`
 - `simulations/ai_heat_governance_dashboard.png`
+- `simulations/ai_heat_observer_events.png`
+- `simulations/ai_heat_observer_events.csv`
+
+### 3.1 Hard-Boundary Observer
+
+To move VU-10 from post-hoc simulation to online observability, the script includes `PowerThermalObserver`:
+
+- Monitors three hard boundaries: $P_{\max}$ (max AI power), $T_{\max}$ (junction/ambient temperature ceiling), and $\max |dT/dt|$ (temperature rate limit).
+- Crossing any boundary triggers `THROTTLE` (frequency scaling / migration) or `HALT` (shutdown), with events logged to `ai_heat_observer_events.csv`.
+- Shares the same state semantics as the three-state breaker `BreakerFSM` in `src/dao_science/hardware.py`: `NORMAL → THROTTLE → HALT`. State transitions depend only on local sensor thresholds, so the breaker can act even if software locks up.
 
 ## 4. Experimental / Data Protocol (Draft)
 

@@ -73,6 +73,14 @@ PHBO 把抽象的「德」转化为可监测、可审计、可自动触发的物
 - 地球向外散热的主要机制是红外辐射。
 - 忽略人类主动把废热排向太空的工程方案（当前不在技术经济可行范围内）。
 
+### 1.6 功率-热边界观测器
+
+为将 VU-10 从「事后仿真」推进到「在线可观测」，脚本内置 `PowerThermalObserver`：
+
+- 监测三个硬边界：$P_{\max}$（AI 最大功率）、$T_{\max}$（结温/环境温度上限）、$\max |dT/dt|$（温变速率）。
+- 任一越界即触发 `THROTTLE`（降频/迁移）或 `HALT`（停机）动作，并写入事件日志 `simulations/ai_heat_observer_events.csv`。
+- 与 `src/dao_science/hardware.py` 中的三态熔断器 `BreakerFSM` 共享同一状态语义：`NORMAL → THROTTLE → HALT`，转换仅依赖本地传感器阈值，可在软件死锁时独立动作。
+
 ---
 
 ## 2. 仿真脚本

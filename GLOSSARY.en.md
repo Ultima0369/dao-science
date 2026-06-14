@@ -184,6 +184,8 @@
 | Awareness at thought's arising | $T_{\text{awareness}} = T_{\text{amygdala}} + \Delta T_{\text{detection}}$ | Awareness latency | `2_models/100ms_model.md` |
 | Amygdala-PFC competition | $\tau_a \frac{da}{dt} = -a + w_{sa}S + w_{aa}f(a) - w_{pa}p$ | Competitive dynamics | `2_models/100ms_model.md` |
 | DMN-Insula competition | $\tau_D \frac{dD}{dt} = -D + w_{DD}\sigma(D) - w_{ID}\sigma(I) + S_D$ | Bistable system | `2_models/dmn_self_model.md` |
+| (11.1) | $S(s) = \alpha (\ln s - \ln s_{\text{opt}})^2 + S_0$ | Scale dependence of moral silence | `verifiable_units/vu_11_scale_and_moral_silence.en.md` |
+| (11.2) | $A(s) = A_{\max} \exp(-|\ln s - \ln s_{\text{opt}}| / \tau)$ | Scale dependence of action propensity | `verifiable_units/vu_11_scale_and_moral_silence.en.md` |
 
 ---
 

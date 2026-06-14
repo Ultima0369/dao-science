@@ -22,6 +22,8 @@ Outputs:
     simulations/ai_heat_trajectory.png
     simulations/ai_heat_policy_comparison.png
     simulations/ai_heat_governance_dashboard.png
+    simulations/ai_heat_observer_events.png
+    simulations/ai_heat_observer_events.csv
 """
 
 from pathlib import Path
@@ -80,6 +82,118 @@ def equilibrium_temperature(p_ai: float) -> float:
     """Equilibrium surface temperature for a given AI waste heat [W]."""
     total = P_SOLAR + p_ai
     return (total / (SIGMA * EPSILON * A_RADIATE)) ** 0.25
+
+
+class PowerThermalObserver:
+    """Hard-boundary observer for AI power-thermal limits.
+
+    Implements a NORMAL -> THROTTLE -> HALT state machine driven purely by
+    local sensor thresholds. The observer caps or shuts down AI waste heat
+    when any hard boundary is violated.
+
+    Boundaries:
+    - P_max: maximum allowed AI waste-heat power.
+    - T_max: maximum allowed junction/surface temperature.
+    - dTdt_max: maximum allowed temperature rise rate.
+    """
+
+    NORMAL = "NORMAL"
+    THROTTLE = "THROTTLE"
+    HALT = "HALT"
+
+    def __init__(
+        self,
+        p_max: float,
+        t_max: float,
+        dTdt_max: float,
+        throttle_factor: float = 0.5,
+        safe_power: float = 0.0,
+    ) -> None:
+        self.p_max = float(p_max)
+        self.t_max = float(t_max)
+        self.dTdt_max = float(dTdt_max)
+        self.throttle_factor = float(throttle_factor)
+        self.safe_power = float(safe_power)
+        self.state = self.NORMAL
+        self.events: list[tuple[float, str, float, float]] = []
+
+    def observe(
+        self,
+        year: float,
+        p_ai: float,
+        temperature: float,
+        prev_temperature: float | None = None,
+        dt_years: float = 1.0,
+    ) -> float:
+        """Return allowed AI power after enforcing hard boundaries.
+
+        State transitions are local and do not depend on OS scheduling.
+        """
+        dTdt = 0.0
+        if prev_temperature is not None and dt_years > 0:
+            dTdt = (temperature - prev_temperature) / dt_years
+
+        violate = (
+            p_ai > self.p_max
+            or temperature > self.t_max
+            or dTdt > self.dTdt_max
+        )
+
+        if not violate:
+            return p_ai
+
+        if self.state == self.NORMAL:
+            self.state = self.THROTTLE
+            allowed = p_ai * self.throttle_factor
+            self.events.append((year, self.THROTTLE, p_ai, allowed))
+            return allowed
+
+        # Already throttled and still violating -> halt.
+        self.state = self.HALT
+        self.events.append((year, self.HALT, p_ai, self.safe_power))
+        return self.safe_power
+
+    def reset(self) -> None:
+        """Reset observer state and event log."""
+        self.state = self.NORMAL
+        self.events.clear()
+
+
+def simulate_with_observer(
+    p_ai_func,
+    years: np.ndarray,
+    observer: PowerThermalObserver,
+    t0: float = T_EQ,
+    max_temp: float = 10000.0,
+    dt_days: float = 1.0,
+) -> tuple[np.ndarray, np.ndarray]:
+    """Integrate temperature with a hard-boundary observer intervening yearly."""
+    dt = dt_days * 24 * 3600  # seconds
+    t = t0
+    temps = []
+    powers = []
+    prev_t = None
+    prev_year = years[0]
+    for year in years:
+        # Unobserved (desired) power for this year
+        desired = p_ai_func(year)
+        # Observer enforces hard boundaries based on last known temperature
+        dt_years = year - prev_year if prev_t is not None else 1.0
+        allowed = observer.observe(year, desired, t, prev_t, dt_years=dt_years)
+        # Integrate over the year with the allowed power
+        span = 365.25 * 24 * 3600  # seconds per year
+        n_steps = max(1, int(np.ceil(span / dt)))
+        dt_local = span / n_steps
+        for _ in range(n_steps):
+            if t >= max_temp:
+                break
+            dTdt = (P_SOLAR + allowed - radiated_power(t)) / C_EARTH
+            t = min(t + dTdt * dt_local, max_temp)
+        temps.append(t)
+        powers.append(allowed)
+        prev_t = t
+        prev_year = year
+    return np.array(powers), np.array(temps)
 
 
 def simulate_temperature(
@@ -246,6 +360,83 @@ def plot_policy_comparison() -> None:
     plt.close(fig)
 
 
+def plot_observer_events() -> None:
+    """Compare unconstrained AI growth vs. hard-boundary observer intervention."""
+    years = np.linspace(0, 150, 151)
+    p0 = 0.05e12
+    rate = 0.30
+
+    p_max = 0.10 * P_SOLAR
+    t_max = T_EQ + 10.0  # 10 K above pre-industrial baseline
+    dTdt_max = 0.5  # K per year
+
+    # Unconstrained scenario
+    p_unconstrained = exponential_growth(p0, rate, years)
+    t_unconstrained = simulate_temperature(
+        lambda y: p0 * np.exp(rate * y), years
+    )
+
+    # Observer scenario
+    observer = PowerThermalObserver(
+        p_max=p_max,
+        t_max=t_max,
+        dTdt_max=dTdt_max,
+        throttle_factor=0.5,
+        safe_power=0.01 * p_max,
+    )
+    p_observed, t_observed = simulate_with_observer(
+        lambda y: p0 * np.exp(rate * y), years, observer
+    )
+
+    fig, axes = plt.subplots(3, 1, figsize=(10, 10), sharex=True)
+
+    # Power
+    axes[0].semilogy(years, p_unconstrained / 1e12, label="Unconstrained", color="#c62828")
+    axes[0].semilogy(years, p_observed / 1e12, label="With observer", color="#1565c0")
+    axes[0].axhline(p_max / 1e12, color="orange", linestyle="--", label="P_max")
+    axes[0].set_ylabel("AI waste heat [TW]")
+    axes[0].set_title("Hard-boundary observer: AI power")
+    axes[0].legend()
+    axes[0].grid(True, alpha=0.3)
+
+    # Temperature
+    axes[1].plot(years, t_unconstrained - 273.15, label="Unconstrained", color="#c62828")
+    axes[1].plot(years, t_observed - 273.15, label="With observer", color="#1565c0")
+    axes[1].axhline(t_max - 273.15, color="orange", linestyle="--", label="T_max")
+    axes[1].set_ylabel("Global mean temperature [C]")
+    axes[1].set_title("Hard-boundary observer: temperature")
+    axes[1].legend()
+    axes[1].grid(True, alpha=0.3)
+
+    # State events
+    states = np.array([observer.NORMAL] * len(years), dtype=object)
+    for event_year, state, _, _ in observer.events:
+        idx = np.searchsorted(years, event_year)
+        if idx < len(states):
+            states[idx:] = state
+    state_map = {observer.NORMAL: 0, observer.THROTTLE: 1, observer.HALT: 2}
+    state_values = [state_map[s] for s in states]
+    axes[2].fill_between(years, 0, state_values, step="post", color="#1565c0", alpha=0.3)
+    axes[2].set_yticks([0, 1, 2])
+    axes[2].set_yticklabels([observer.NORMAL, observer.THROTTLE, observer.HALT])
+    axes[2].set_ylabel("Observer state")
+    axes[2].set_xlabel("Years from now")
+    axes[2].set_title("Observer state trajectory")
+    axes[2].grid(True, alpha=0.3)
+
+    fig.tight_layout()
+    fig.savefig(OUT_DIR / "ai_heat_observer_events.png", dpi=150)
+    plt.close(fig)
+
+    # Save event log as CSV
+    log_path = OUT_DIR / "ai_heat_observer_events.csv"
+    with log_path.open("w", encoding="utf-8") as f:
+        f.write("year,state,desired_power_w,allowed_power_w\n")
+        for event in observer.events:
+            f.write(f"{event[0]},{event[1]},{event[2]:.6e},{event[3]:.6e}\n")
+    print(f"Observer event log saved to {log_path}")
+
+
 def plot_governance_dashboard() -> None:
     """Planetary heat-budget occupancy dashboard with traffic-light zones."""
     years = np.linspace(0, 120, 600)
@@ -294,6 +485,9 @@ def main() -> None:
 
     print("Plotting governance dashboard...")
     plot_governance_dashboard()
+
+    print("Plotting hard-boundary observer events...")
+    plot_observer_events()
 
     print(f"Figures saved to {OUT_DIR}")
     print(f"Solar absorbed: {P_SOLAR/1e12:.1f} TW")

@@ -8,11 +8,16 @@ on:
     paths:
       - '**.md'
       - 'mkdocs.yml'
+      - 'pyproject.toml'
       - 'requirements.txt'
+      - 'Makefile'
       - '.github/workflows/**'
       - 'docs/javascripts/**'
       - 'scripts/**'
+      - 'src/**'
+      - 'tests/**'
       - 'simulations/**'
+      - 'tools/**'
       - 'paper/**'
   push:
     branches:
@@ -21,11 +26,16 @@ on:
     paths:
       - '**.md'
       - 'mkdocs.yml'
+      - 'pyproject.toml'
       - 'requirements.txt'
+      - 'Makefile'
       - '.github/workflows/**'
       - 'docs/javascripts/**'
       - 'scripts/**'
+      - 'src/**'
+      - 'tests/**'
       - 'simulations/**'
+      - 'tools/**'
       - 'paper/**'
 
 jobs:
@@ -50,39 +60,23 @@ jobs:
           pip install -r requirements.txt
           pip install -r simulations/requirements.txt
           pip install -r tools/n_of_1/requirements.txt
+          pip install -e .
+          pip install ruff mypy pytest
 
       - name: Lint Python code
-        run: |
-          pip install ruff
-          ruff check scripts tests simulations tools
+        run: make lint
 
       - name: Type-check Python code
-        run: |
-          pip install mypy
-          mypy scripts tests tools/n_of_1/scripts
+        run: make typecheck
 
       - name: Run tests
-        run: |
-          pip install pytest
-          pytest -q
+        run: make test
 
-      - name: Sync docs mirror
-        run: python scripts/sync_docs.py
+      - name: Run audits
+        run: make audit
 
       - name: Build MkDocs site (strict)
-        run: mkdocs build --strict
-
-      - name: Audit internal links
-        run: python scripts/audit_links.py
-
-      - name: Audit math delimiter balance
-        run: python scripts/audit_math_delimiters.py
-
-      - name: Audit nav coverage
-        run: python scripts/audit_nav_coverage.py
-
-      - name: Audit badge and equation consistency
-        run: python scripts/audit_consistency.py
+        run: make build
 
       - name: Run all simulations
         run: |

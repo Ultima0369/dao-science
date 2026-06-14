@@ -103,7 +103,9 @@ plugins:
             关系调谐耦合振荡器: "VU-08 Relational Attunement Oscillator"
             德-明能量调配模型: "VU-09 De-Ming Energy Allocation"
             AI 扩张的行星热力学边界: "VU-10 Planetary Thermodynamic Boundary"
+            尺度与道德沉默: "VU-11 Scale and Moral Silence"
             附录: "Appendices"
+            工程接口: "Engineering API"
             概念索引与术语表: "Glossary"
             符号与约定: "Notation"
             翻译声明: "Translation Statement"
@@ -170,6 +172,8 @@ nav:
     - 关系调谐耦合振荡器: verifiable_units/vu_08_relational_attunement_oscillator.md
     - 德-明能量调配模型: verifiable_units/vu_09_de_ming_energy_allocation.md
     - AI 扩张的行星热力学边界: verifiable_units/vu_10_planetary_ai_thermodynamics.md
+    - 尺度与道德沉默: verifiable_units/vu_11_scale_and_moral_silence.md
+  - 工程接口: reference/api.md
   - 附录:
     - 概念索引与术语表: GLOSSARY.md
     - 符号与约定: NOTATION.md

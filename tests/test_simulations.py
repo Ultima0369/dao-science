@@ -58,11 +58,16 @@ EXPECTED_OUTPUTS = {
         "ai_heat_trajectory.png",
         "ai_heat_policy_comparison.png",
         "ai_heat_governance_dashboard.png",
+        "ai_heat_observer_events.png",
+        "ai_heat_observer_events.csv",
     ],
     "relational_attunement_oscillator.py": [
         "relational_attunement_timeseries.png",
         "relational_attunement_phase_portrait.png",
         "relational_attunement_metrics.png",
+    ],
+    "scale_moral_silence.py": [
+        "scale_moral_silence.png",
     ],
 }
 

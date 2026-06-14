@@ -9,6 +9,7 @@ help:
 	@echo "  serve     Serve MkDocs site locally"
 	@echo "  test      Run pytest suite"
 	@echo "  lint      Run ruff linter"
+	@echo "  typecheck Run mypy type checker"
 	@echo "  audit     Run all audit scripts"
 	@echo "  clean     Remove generated docs/, site/, and simulation outputs"
 
@@ -16,6 +17,7 @@ install:
 	pip install -r requirements.txt
 	pip install -r simulations/requirements.txt
 	pip install -r tools/n_of_1/requirements.txt
+	pip install -e .
 	pip install pytest ruff mypy
 
 sync:
@@ -31,7 +33,10 @@ test:
 	pytest -q
 
 lint:
-	ruff check scripts tests simulations tools
+	ruff check scripts tests simulations tools src
+
+typecheck:
+	mypy src tests scripts tools/n_of_1/scripts
 
 audit:
 	python scripts/audit_links.py

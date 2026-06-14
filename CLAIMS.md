@@ -82,6 +82,20 @@
 
 ---
 
+### C26：尺度放大导致道德沉默并削弱行动倾向
+
+**主张**：同一道德事件在不同观察尺度下会触发不同程度的道德沉默；当尺度过小（个人创伤）或过大（行星/宇宙）时，被试更难用语言输出道德判断，也更不愿意采取具体行动。
+
+| 维度 | 内容 |
+|---|---|
+| 证据徽章 | **F + B** |
+| 可信度 | 中 |
+| 可证伪条件 | 宇宙尺度版本反而产生最高行动倾向；或个人创伤尺度与宇宙尺度在道德沉默上无差异且均低于中间尺度 |
+| 关联文件 | `1_first_principles/11_scale_and_moral_silence.md`、`verifiable_units/vu_11_scale_and_moral_silence.md` |
+| 开放问题 | $s_{\text{opt}}$ 是否存在跨文化偏移？道德沉默是否伴随 DMN-岛叶或 DMN-ECN 的特定神经模式？ |
+
+---
+
 ## 二、心智模型层
 
 ### C05：注意力是精度优化
@@ -415,12 +429,46 @@
 | C19 N-of-1 产生个人知识 | F + B + M | 中-高 | 单被试设计原则上无效 |
 | C20 四行重塑神经回路 | F + B + N | 中 | RCT 显示四行无效 |
 | C21 关系调谐降低生命力张力 | F + S + B + M | 中 | 注意力在场不能调节人际张力 |
+| C26 尺度放大导致道德沉默 | F + B | 中 | 宇宙尺度反而产生最高行动倾向 |
 
 ---
 
 ## 八、声明
 
 本登记册本身也是一张地图。它所标注的「可信度」和「证据徽章」，也会随着新证据而更新。如果未来发现某个主张的可证伪条件被满足，该主张将被修正或删除——这正是项目所宣称的 L4（理性协作/契约精神）在元层次上的应用。
+
+---
+
+## 九、主张 ↔ 可验证单元（VU）可追溯矩阵
+
+| 主张 | 关联 VU | 主要证据类型 | 备注 |
+|---|---|---|---|
+| C01 道 ≡ −∇G(π) | — | F | 形式化核心，见 `NOTATION.md` |
+| C02 一 = AB(t) | — | F + N | 觉知带宽公式，待独立 VU |
+| C03 心智内容=相 | — | F + N + B + M | 认识论基础 |
+| C04 L0-L7 频谱 | — | F + B + M | 分类框架 |
+| C05 注意力=精度优化 | VU-05 | F + S + N + B | `verifiable_units/vu_05_attention_precision_optimization.md` |
+| C06 100ms 窗口 | VU-02 | F + S + N + B | `verifiable_units/vu_02_amygdala_pfc.md` |
+| C07 DMN 下调释放带宽 | VU-01 | F + S + N + B | `verifiable_units/vu_01_dmn_insula.md` |
+| C08 3-5 年神经重塑 | — | F + N + B | 长期纵向研究 |
+| C09 知识可形成心灵遮蔽 | — | F + B + M | 认识论-伦理交叉 |
+| C10 涌现 ≠ 相变 | VU-04 | F + S + M | `verifiable_units/vu_04_emergence_vs_phase_transition.md` |
+| C11 时空是心智建构 | — | F + M | 形而上学形式化 |
+| C12 参考系防止意识超载 | — | F + B + M | 待独立 VU |
+| C13 偏离代价可形式化 | — | F | `1_first_principles/07_cost_of_deviation.md` |
+| C14 第一人称不可还原 | — | F + B + M | 认识论基础 |
+| C15 AI 需要知止协议 | VU-06 | F + S + M | `verifiable_units/vu_06_ai_stopping_protocol.md` |
+| C16 管理是心智训练 | — | F + B + M | `4_applications/management.md` |
+| C17 环境设计塑造行为 | — | F + B | `4_applications/education_by_field.md` |
+| C18 碳硅生态位互补 | VU-07 | F + S + M | `verifiable_units/vu_07_carbon_silicon_symbiosis.md` |
+| C19 N-of-1 产生个人知识 | — | F + B + M | `tools/n_of_1/` |
+| C20 四行重塑神经回路 | — | F + B + N | `3_methodology/xing_ru/` |
+| C21 关系调谐降低生命力张力 | VU-08 | F + S + B + M | `verifiable_units/vu_08_relational_attunement_oscillator.md` |
+| C22 节点是无为的转译层 | — | F + M | `1_first_principles/09_node_and_translation.md` |
+| C23 德是精力调配，明是本具优化 | VU-09 | F + S + B + N + M | `verifiable_units/vu_09_de_ming_energy_allocation.md` |
+| C24 AI 扩张受地球热力学极限约束 | VU-10 | F + S + M | `verifiable_units/vu_10_planetary_ai_thermodynamics.md` |
+| C25 创造力源于 DMN-ECN 动态耦合 | VU-03 | F + S + N + B | `verifiable_units/vu_03_dmn_ecn.md` |
+| C26 尺度放大导致道德沉默 | VU-11 | F + B | `verifiable_units/vu_11_scale_and_moral_silence.md` |
 
 ---
 
