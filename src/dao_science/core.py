@@ -47,7 +47,11 @@ def sigmoid(x: float | FloatArray) -> float | FloatArray:
     return 1.0 / (1.0 + np.exp(-x_arr))
 
 
-def softmax(x: FloatArray, axis: int | None = None) -> FloatArray:
+def softmax(
+    x: FloatArray,
+    axis: int | None = None,
+    beta: float = 1.0,
+) -> FloatArray:
     """Numerically stable softmax over an array.
 
     Equation (13a): `P(pi) = sigma(-gamma * G(pi))`.
@@ -55,12 +59,14 @@ def softmax(x: FloatArray, axis: int | None = None) -> FloatArray:
     Args:
         x: Input logits or energies.
         axis: Axis along which to compute softmax. Defaults to all elements.
+        beta: Inverse temperature; larger values make the distribution sharper.
 
     Returns:
         Probability distribution summing to 1.
     """
     x_arr = np.asarray(x, dtype=np.float64)
-    shifted = x_arr - np.max(x_arr, axis=axis, keepdims=True)
+    scaled = beta * x_arr
+    shifted = scaled - np.max(scaled, axis=axis, keepdims=True)
     exp_shifted = np.exp(shifted)
     return exp_shifted / np.sum(exp_shifted, axis=axis, keepdims=True)
 

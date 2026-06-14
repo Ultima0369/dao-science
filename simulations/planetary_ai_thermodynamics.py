@@ -28,8 +28,11 @@ Outputs:
 
 from pathlib import Path
 
+import _compat  # noqa: F401  # ensures dao_science is importable
 import matplotlib
 import numpy as np
+
+from dao_science.core import planetary_heat_budget_occupancy
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -445,7 +448,9 @@ def plot_governance_dashboard() -> None:
     eta = 0.10  # 10% solar budget as threshold
 
     p_ai = exponential_growth(p0, rate, years)
-    occupancy = p_ai / (eta * P_SOLAR)
+    occupancy = np.array(
+        [planetary_heat_budget_occupancy(p, eta, P_SOLAR) for p in p_ai]
+    )
 
     fig, ax = plt.subplots(figsize=(10, 5))
 

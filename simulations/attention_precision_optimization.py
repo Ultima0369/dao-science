@@ -25,22 +25,17 @@ Outputs:
 
 from pathlib import Path
 
+import _compat  # noqa: F401  # ensures dao_science is importable
 import matplotlib
 import numpy as np
+
+from dao_science.core import softmax
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 OUT_DIR = Path(__file__).parent
 RNG = np.random.default_rng(42)
-
-
-def softmax(x: np.ndarray, beta: float = 1.0) -> np.ndarray:
-    """Numerically stable softmax."""
-    x = np.asarray(x)
-    z = beta * (x - x.max())
-    e = np.exp(z)
-    return e / e.sum()
 
 
 def allocate_weights(precisions: np.ndarray, alpha: float, beta: float = 4.0) -> np.ndarray:

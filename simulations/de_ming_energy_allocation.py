@@ -26,8 +26,11 @@ Outputs:
 
 from pathlib import Path
 
+import _compat  # noqa: F401  # ensures dao_science is importable
 import matplotlib
 import numpy as np
+
+from dao_science.core import softmax
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -122,8 +125,7 @@ class DeMingAgent(Agent):
     def allocate(self, t: int) -> np.ndarray:
         # De: allocate by signal-to-uncertainty ratio
         score = self.mu / (self.sigma + 0.05)
-        weights = np.exp(self.beta * score)
-        weights /= weights.sum()
+        weights = softmax(score, beta=self.beta)
         return self.total_energy * weights
 
     def update(self, t: int, outcome: np.ndarray, env: "Environment") -> None:
